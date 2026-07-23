@@ -1,0 +1,18 @@
+# Android
+*.iml
+.gradle/
+local.properties
+.idea/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.keystore
+
+# Brainstorm companion
+.superpowers/
+
+# macOS
+.DS_Store
