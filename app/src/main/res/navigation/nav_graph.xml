@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment"
+        android:name="com.parkgolf.score.ui.home.HomeFragment" />
+    <fragment android:id="@+id/startFragment"
+        android:name="com.parkgolf.score.ui.start.StartFragment" />
+    <fragment android:id="@+id/courseSetupFragment"
+        android:name="com.parkgolf.score.ui.start.CourseSetupFragment" />
+    <fragment android:id="@+id/playerSetupFragment"
+        android:name="com.parkgolf.score.ui.start.PlayerSetupFragment" />
+    <fragment android:id="@+id/holeInputFragment"
+        android:name="com.parkgolf.score.ui.hole.HoleInputFragment" />
+    <fragment android:id="@+id/gridViewFragment"
+        android:name="com.parkgolf.score.ui.grid.GridViewFragment" />
+    <fragment android:id="@+id/roundSummaryFragment"
+        android:name="com.parkgolf.score.ui.summary.RoundSummaryFragment" />
+    <fragment android:id="@+id/historyFragment"
+        android:name="com.parkgolf.score.ui.history.HistoryFragment" />
+    <fragment android:id="@+id/roundDetailFragment"
+        android:name="com.parkgolf.score.ui.history.RoundDetailFragment" />
+    <fragment android:id="@+id/myCoursesFragment"
+        android:name="com.parkgolf.score.ui.courses.MyCoursesFragment" />
+    <fragment android:id="@+id/courseEditFragment"
+        android:name="com.parkgolf.score.ui.courses.CourseEditFragment" />
+</navigation>
