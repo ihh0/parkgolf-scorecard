@@ -38,4 +38,9 @@
     <string name="to_home">홈으로</string>
     <string name="rank_suffix">%1$d위</string>
     <string name="strokes_suffix">%1$d타</string>
+    <string name="venue_name_hint">구장 이름</string>
+    <string name="course_name_hint">코스 이름 (예: A코스)</string>
+    <string name="hole_count_hint">홀 수 (예: 9)</string>
+    <string name="hole_number">%1$d홀</string>
+    <string name="no_courses_yet">아직 등록된 구장이 없습니다</string>
 </resources>
