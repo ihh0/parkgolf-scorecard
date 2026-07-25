@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_primary">#0A7D2C</color>
+    <color name="green_light">#EAFBE7</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_muted">#F4F6F8</color>
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_muted">#5A5A5A</color>
+    <color name="under_par">#1565C0</color>
+    <color name="even_par">#1A1A1A</color>
+    <color name="over_par">#C62828</color>
+    <color name="stepper_bg">#E0E0E0</color>
+</resources>

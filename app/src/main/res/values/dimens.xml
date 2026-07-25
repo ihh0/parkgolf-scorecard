@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="touch_min">56dp</dimen>
+    <dimen name="stepper_size">64dp</dimen>
+    <dimen name="score_text">34sp</dimen>
+    <dimen name="button_text">20sp</dimen>
+    <dimen name="body_text">18sp</dimen>
+    <dimen name="title_text">24sp</dimen>
+    <dimen name="screen_padding">16dp</dimen>
+</resources>
