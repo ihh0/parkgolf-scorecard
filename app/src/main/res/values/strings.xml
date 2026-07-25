@@ -34,4 +34,8 @@
     <string name="start_play">시작</string>
     <string name="companion_default">동반자 %1$d</string>
     <string name="next_step">다음 ▶</string>
+    <string name="round_complete">라운드 완료</string>
+    <string name="to_home">홈으로</string>
+    <string name="rank_suffix">%1$d위</string>
+    <string name="strokes_suffix">%1$d타</string>
 </resources>
