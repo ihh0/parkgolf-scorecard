@@ -47,6 +47,11 @@ class HoleInputFragment : Fragment(R.layout.fragment_hole_input) {
         binding.btnPrev.setOnClickListener { holeVm.prev(); render(binding, rows) }
         binding.btnGrid.setOnClickListener { findNavController().navigate(R.id.gridViewFragment) }
 
+        findNavController().currentBackStackEntry?.savedStateHandle
+            ?.getLiveData<Int>("jumpToHole")?.observe(viewLifecycleOwner) { idx ->
+                holeVm.goTo(idx); render(binding, rows)
+            }
+
         render(binding, rows)
     }
 
