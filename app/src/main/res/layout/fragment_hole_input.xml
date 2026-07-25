@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="@dimen/screen_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/tvVenue"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:textColor="@color/text_muted" />
+            <TextView android:id="@+id/tvCumulative"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/tvHole"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="@dimen/title_text" android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+        <TextView android:id="@+id/tvPar"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="@color/green_primary" android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout android:id="@+id/playerContainer"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="12dp">
+            <Button android:id="@+id/btnPrev"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:minHeight="@dimen/touch_min"
+                android:text="@string/prev_hole"
+                style="?attr/materialButtonOutlinedStyle" />
+            <Button android:id="@+id/btnNext"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="2" android:minHeight="@dimen/touch_min"
+                android:layout_marginStart="8dp"
+                android:text="@string/next_hole" android:textSize="@dimen/button_text" />
+        </LinearLayout>
+
+        <Button android:id="@+id/btnGrid"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:minHeight="@dimen/touch_min" android:layout_marginTop="8dp"
+            android:text="@string/full_grid" />
+    </LinearLayout>
+</ScrollView>
