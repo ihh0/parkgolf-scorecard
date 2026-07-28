@@ -12,6 +12,8 @@ import com.parkgolf.score.databinding.FragmentHoleInputBinding
 import com.parkgolf.score.databinding.ViewPlayerScoreRowBinding
 import com.parkgolf.score.domain.Scoring
 import com.parkgolf.score.ui.RoundSessionViewModel
+import com.parkgolf.score.ui.common.confirmYesNo
+import com.parkgolf.score.ui.common.onBackPressed
 import kotlinx.coroutines.launch
 
 class HoleInputFragment : Fragment(R.layout.fragment_hole_input) {
@@ -22,6 +24,14 @@ class HoleInputFragment : Fragment(R.layout.fragment_hole_input) {
         val binding = FragmentHoleInputBinding.bind(view)
         val repo = App.repo(requireActivity().application)
         val round = session.round.value ?: run { findNavController().popBackStack(); return }
+        binding.topBar.tvBarTitle.text = getString(R.string.game_recording)
+        val exitToHome = {
+            confirmYesNo(R.string.confirm_exit_game) {
+                findNavController().popBackStack(R.id.homeFragment, false)
+            }
+        }
+        binding.topBar.btnBack.setOnClickListener { exitToHome() }
+        onBackPressed { exitToHome() }
         holeVm = HoleInputViewModel(totalHoles = round.holes.size)
 
         val rows = round.players.indices.map { p ->
