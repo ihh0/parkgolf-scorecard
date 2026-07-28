@@ -34,7 +34,11 @@ class StartFragment : Fragment(R.layout.fragment_start) {
 
         binding.btnNewCourse.setOnClickListener {
             SelectionHolder.reset()
-            findNavController().navigate(R.id.courseEditFragment)
+            findNavController().currentBackStackEntry?.savedStateHandle?.apply {
+                set("wizardVenueId", 0L)
+                set("wizardCourseId", 0L)
+            }
+            findNavController().navigate(R.id.courseWizardFragment)
         }
 
         viewLifecycleOwner.lifecycleScope.launch {
