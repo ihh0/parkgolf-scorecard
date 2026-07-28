@@ -10,4 +10,5 @@
     <color name="even_par">#1A1A1A</color>
     <color name="over_par">#C62828</color>
     <color name="stepper_bg">#E0E0E0</color>
+    <color name="green_disabled">#A8D5B5</color>
 </resources>
