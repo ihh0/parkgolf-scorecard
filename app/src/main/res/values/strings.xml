@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">파크골프 스코어</string>
+    <string name="total_par_value">총 파 %1$d</string>
     <string name="start_round">＋ 라운드 시작</string>
     <string name="past_records">📋 지난 기록</string>
     <string name="my_courses">🏳️ 내 구장 관리</string>
