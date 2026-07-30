@@ -21,6 +21,8 @@ class RoundSummaryFragment : Fragment(R.layout.fragment_round_summary) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val binding = FragmentRoundSummaryBinding.bind(view)
+        binding.topBar.tvBarTitle.text = getString(R.string.title_summary)
+        binding.topBar.btnBack.setOnClickListener { findNavController().popBackStack() }
         val repo = App.repo(requireActivity().application)
         val round = session.round.value ?: run { findNavController().popBackStack(); return }
 

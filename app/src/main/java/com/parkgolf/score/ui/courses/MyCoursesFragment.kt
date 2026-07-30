@@ -17,6 +17,8 @@ import kotlinx.coroutines.launch
 class MyCoursesFragment : Fragment(R.layout.fragment_my_courses) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val binding = FragmentMyCoursesBinding.bind(view)
+        binding.topBar.tvBarTitle.text = getString(R.string.title_my_courses)
+        binding.topBar.btnBack.setOnClickListener { findNavController().popBackStack() }
         val repo = App.repo(requireActivity().application)
         binding.rvVenues.layoutManager = LinearLayoutManager(requireContext())
         val adapter = VenueAdapter { venueId -> onVenueTapped(repo, venueId) }

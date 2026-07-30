@@ -14,6 +14,8 @@ import kotlinx.coroutines.launch
 class StartFragment : Fragment(R.layout.fragment_start) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val binding = FragmentStartBinding.bind(view)
+        binding.topBar.tvBarTitle.text = getString(R.string.title_start)
+        binding.topBar.btnBack.setOnClickListener { findNavController().popBackStack() }
         val repo = App.repo(requireActivity().application)
         binding.rvRecent.layoutManager = LinearLayoutManager(requireContext())
         binding.rvPresets.layoutManager = LinearLayoutManager(requireContext())

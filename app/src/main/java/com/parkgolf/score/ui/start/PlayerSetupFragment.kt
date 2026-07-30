@@ -20,6 +20,8 @@ class PlayerSetupFragment : Fragment(R.layout.fragment_player_setup) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val binding = FragmentPlayerSetupBinding.bind(view)
+        binding.topBar.tvBarTitle.text = getString(R.string.title_player_setup)
+        binding.topBar.btnBack.setOnClickListener { findNavController().popBackStack() }
         val repo = App.repo(requireActivity().application)
 
         fun addPlayerRow(initial: String) {

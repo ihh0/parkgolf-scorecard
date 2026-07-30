@@ -17,6 +17,8 @@ import kotlinx.coroutines.launch
 class RoundDetailFragment : Fragment(R.layout.fragment_round_detail) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val binding = FragmentRoundDetailBinding.bind(view)
+        binding.topBar.tvBarTitle.text = getString(R.string.title_round_detail)
+        binding.topBar.btnBack.setOnClickListener { findNavController().popBackStack() }
         val repo = App.repo(requireActivity().application)
         val roundId = findNavController().previousBackStackEntry
             ?.savedStateHandle?.get<Long>("roundId") ?: run { findNavController().popBackStack(); return }

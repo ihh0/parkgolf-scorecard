@@ -94,4 +94,13 @@
     <string name="confirm_cancel_create">코스 작성을 취소하시겠습니까?</string>
     <string name="confirm_cancel_edit">코스 편집을 취소하시겠습니까?</string>
     <string name="confirm_exit_game">현재 게임을 저장하지 않고 나가시겠습니까?</string>
+    <!-- Non-home screen titles -->
+    <string name="title_start">라운드 시작</string>
+    <string name="title_course_setup">코스 선택</string>
+    <string name="title_player_setup">함께 하는 사람</string>
+    <string name="title_grid">전체 보기</string>
+    <string name="title_summary">라운드 완료</string>
+    <string name="title_history">지난 기록</string>
+    <string name="title_round_detail">기록 상세</string>
+    <string name="title_my_courses">내 구장 관리</string>
 </resources>

@@ -14,6 +14,8 @@ import kotlinx.coroutines.launch
 class HistoryFragment : Fragment(R.layout.fragment_history) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val binding = FragmentHistoryBinding.bind(view)
+        binding.topBar.tvBarTitle.text = getString(R.string.title_history)
+        binding.topBar.btnBack.setOnClickListener { findNavController().popBackStack() }
         val repo = App.repo(requireActivity().application)
         binding.rvRounds.layoutManager = LinearLayoutManager(requireContext())
         val adapter = HistoryAdapter { roundId ->

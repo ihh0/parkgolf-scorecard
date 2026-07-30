@@ -15,6 +15,8 @@ import kotlinx.coroutines.launch
 class CourseSetupFragment : Fragment(R.layout.fragment_course_setup) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val binding = FragmentCourseSetupBinding.bind(view)
+        binding.topBar.tvBarTitle.text = getString(R.string.title_course_setup)
+        binding.topBar.btnBack.setOnClickListener { findNavController().popBackStack() }
         val repo = App.repo(requireActivity().application)
 
         var refresh: () -> Unit = {}

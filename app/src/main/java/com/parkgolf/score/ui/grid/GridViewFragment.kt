@@ -17,6 +17,8 @@ class GridViewFragment : Fragment(R.layout.fragment_grid_view) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val binding = FragmentGridViewBinding.bind(view)
+        binding.topBar.tvBarTitle.text = getString(R.string.title_grid)
+        binding.topBar.btnBack.setOnClickListener { findNavController().popBackStack() }
         val round = session.round.value ?: run { findNavController().popBackStack(); return }
 
         fun cell(text: String) = TextView(requireContext()).apply {
