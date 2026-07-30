@@ -4,34 +4,62 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/surface"
-    android:minHeight="@dimen/touch_min">
+    android:background="@color/background"
+    android:minHeight="64dp"
+    android:paddingHorizontal="4dp">
 
-    <ImageButton
+    <LinearLayout
         android:id="@+id/btnBack"
-        android:layout_width="@dimen/touch_min"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/touch_min"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_arrow_back"
-        android:scaleType="center"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
         android:contentDescription="@string/back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            android:layout_width="22dp" android:layout_height="22dp"
+            android:src="@drawable/ic_chevron_left"
+            android:importantForAccessibility="no" />
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="@string/back"
+            android:textColor="@color/foreground"
+            android:textSize="@dimen/body_text"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvBarTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="16dp"
-        android:textSize="@dimen/title_text"
+        android:gravity="center"
+        android:textSize="@dimen/body_text"
         android:textStyle="bold"
-        android:textColor="@color/text_primary"
+        android:textColor="@color/foreground"
         android:maxLines="1"
         android:ellipsize="end"
         app:layout_constraintStart_toEndOf="@id/btnBack"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/barSpacer"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Space
+        android:id="@+id/barSpacer"
+        android:layout_width="72dp"
+        android:layout_height="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View android:layout_width="0dp" android:layout_height="@dimen/border_width"
+        android:background="@color/border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
