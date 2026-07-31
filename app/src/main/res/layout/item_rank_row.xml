@@ -5,7 +5,7 @@
     android:orientation="horizontal"
     android:gravity="center_vertical"
     android:minHeight="@dimen/touch_min"
-    android:background="@color/surface_muted"
+    android:background="?attr/parkSecondary"
     android:padding="12dp"
     android:layout_marginBottom="8dp">
     <TextView android:id="@+id/tvRank"

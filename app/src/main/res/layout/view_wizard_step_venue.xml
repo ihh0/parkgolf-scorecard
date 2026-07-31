@@ -6,9 +6,9 @@
         android:orientation="vertical">
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:text="@string/venue_name_label" android:textSize="@dimen/title_text"
-            android:textStyle="bold" android:textColor="@color/foreground" />
+            android:textStyle="bold" android:textColor="?attr/parkForeground" />
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/venue_name_helper" android:textColor="@color/muted_foreground"
+            android:text="@string/venue_name_helper" android:textColor="?attr/parkMutedForeground"
             android:layout_marginTop="4dp" android:layout_marginBottom="20dp" />
         <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
             <EditText android:id="@+id/etVenueName"
@@ -16,23 +16,23 @@
                 android:background="@drawable/bg_input" android:paddingHorizontal="20dp"
                 android:paddingVertical="16dp" android:minHeight="@dimen/touch_min"
                 android:hint="@string/venue_name_example" android:textSize="@dimen/body_text"
-                android:inputType="text" android:textColor="@color/foreground" />
+                android:inputType="text" android:textColor="?attr/parkForeground" />
             <LinearLayout android:id="@+id/badgeExisting"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:layout_gravity="end|center_vertical" android:layout_marginEnd="16dp"
                 android:orientation="horizontal" android:gravity="center_vertical" android:visibility="gone">
                 <ImageView android:layout_width="16dp" android:layout_height="16dp"
                     android:src="@drawable/ic_check" android:importantForAccessibility="no"
-                    app:tint="@color/primary" xmlns:app="http://schemas.android.com/apk/res-auto" />
+                    app:tint="?attr/parkPrimary" xmlns:app="http://schemas.android.com/apk/res-auto" />
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:layout_marginStart="4dp" android:text="@string/existing_venue"
-                    android:textColor="@color/primary" android:textStyle="bold" android:textSize="14sp" />
+                    android:textColor="?attr/parkPrimary" android:textStyle="bold" android:textSize="14sp" />
             </LinearLayout>
         </FrameLayout>
 
         <TextView android:id="@+id/tvSuggestLabel"
             android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/saved_venues" android:textColor="@color/muted_foreground"
+            android:text="@string/saved_venues" android:textColor="?attr/parkMutedForeground"
             android:textStyle="bold" android:layout_marginTop="20dp" android:visibility="gone" />
         <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvSuggestions"
             android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -44,10 +44,10 @@
             android:padding="16dp" android:layout_marginTop="20dp" android:visibility="gone">
             <ImageView android:layout_width="20dp" android:layout_height="20dp"
                 android:src="@drawable/ic_alert_circle" android:importantForAccessibility="no"
-                app:tint="@color/primary" xmlns:app="http://schemas.android.com/apk/res-auto" />
+                app:tint="?attr/parkPrimary" xmlns:app="http://schemas.android.com/apk/res-auto" />
             <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
                 android:layout_marginStart="12dp" android:text="@string/existing_venue_banner"
-                android:textColor="@color/primary" />
+                android:textColor="?attr/parkPrimary" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

@@ -7,20 +7,20 @@
         <TextView android:id="@+id/chipVenue"
             android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:background="@drawable/bg_pill_primary" android:paddingHorizontal="12dp"
-            android:paddingVertical="6dp" android:textColor="@color/primary" android:textStyle="bold"
+            android:paddingVertical="6dp" android:textColor="?attr/parkPrimary" android:textStyle="bold"
             android:textSize="14sp" android:layout_marginBottom="12dp" />
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:text="@string/course_name_label" android:textSize="@dimen/title_text"
-            android:textStyle="bold" android:textColor="@color/foreground" />
+            android:textStyle="bold" android:textColor="?attr/parkForeground" />
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/course_name_helper" android:textColor="@color/muted_foreground"
+            android:text="@string/course_name_helper" android:textColor="?attr/parkMutedForeground"
             android:layout_marginTop="4dp" android:layout_marginBottom="20dp" />
         <EditText android:id="@+id/etCourseName"
             android:layout_width="match_parent" android:layout_height="wrap_content"
             android:background="@drawable/bg_input" android:paddingHorizontal="20dp"
             android:paddingVertical="16dp" android:minHeight="@dimen/touch_min"
             android:hint="@string/course_name_example" android:textSize="@dimen/body_text"
-            android:inputType="text" android:textColor="@color/foreground" />
+            android:inputType="text" android:textColor="?attr/parkForeground" />
         <LinearLayout android:id="@+id/errorDuplicate"
             android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:orientation="horizontal" android:gravity="center_vertical"
@@ -33,7 +33,7 @@
         </LinearLayout>
         <TextView android:id="@+id/tvExistingLabel"
             android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/existing_courses_label" android:textColor="@color/muted_foreground"
+            android:text="@string/existing_courses_label" android:textColor="?attr/parkMutedForeground"
             android:textStyle="bold" android:layout_marginTop="20dp" android:visibility="gone" />
         <com.google.android.flexbox.FlexboxLayout android:id="@+id/flexExistingCourses"
             android:layout_width="match_parent" android:layout_height="wrap_content"

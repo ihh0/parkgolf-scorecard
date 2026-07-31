@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="wrap_content"
     android:orientation="vertical" android:minHeight="@dimen/touch_min"
-    android:padding="12dp" android:background="@color/surface_muted"
+    android:padding="12dp" android:background="?attr/parkSecondary"
     android:layout_marginBottom="8dp">
     <TextView android:id="@+id/tvVenueName"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:textSize="@dimen/body_text" android:textStyle="bold" />
     <TextView android:id="@+id/tvCourseSummary"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:textColor="@color/text_muted" />
+        android:textColor="?attr/parkMutedForeground" />
 </LinearLayout>

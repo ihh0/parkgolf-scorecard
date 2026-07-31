@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical" android:background="@color/background">
+    android:orientation="vertical" android:background="?attr/parkBackground">
 
     <include android:id="@+id/topBar" layout="@layout/view_top_bar" />
 
@@ -22,7 +22,7 @@
                 android:text="@string/step_venue" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="4dp" />
         </LinearLayout>
         <View android:id="@+id/conn0" android:layout_width="24dp" android:layout_height="2dp"
-            android:layout_marginBottom="18dp" android:background="@color/border" />
+            android:layout_marginBottom="18dp" android:background="?attr/parkBorder" />
         <LinearLayout android:id="@+id/step1" android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:orientation="vertical" android:gravity="center">
             <FrameLayout android:layout_width="48dp" android:layout_height="48dp">
@@ -36,7 +36,7 @@
                 android:text="@string/step_course" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="4dp" />
         </LinearLayout>
         <View android:id="@+id/conn1" android:layout_width="24dp" android:layout_height="2dp"
-            android:layout_marginBottom="18dp" android:background="@color/border" />
+            android:layout_marginBottom="18dp" android:background="?attr/parkBorder" />
         <LinearLayout android:id="@+id/step2" android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:orientation="vertical" android:gravity="center">
             <FrameLayout android:layout_width="48dp" android:layout_height="48dp">
@@ -50,7 +50,7 @@
                 android:text="@string/step_holes" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="4dp" />
         </LinearLayout>
         <View android:id="@+id/conn2" android:layout_width="24dp" android:layout_height="2dp"
-            android:layout_marginBottom="18dp" android:background="@color/border" />
+            android:layout_marginBottom="18dp" android:background="?attr/parkBorder" />
         <LinearLayout android:id="@+id/step3" android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:orientation="vertical" android:gravity="center">
             <FrameLayout android:layout_width="48dp" android:layout_height="48dp">
@@ -65,7 +65,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <View android:layout_width="match_parent" android:layout_height="@dimen/border_width" android:background="@color/border" />
+    <View android:layout_width="match_parent" android:layout_height="@dimen/border_width" android:background="?attr/parkBorder" />
 
     <ViewFlipper android:id="@+id/flipper"
         android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">

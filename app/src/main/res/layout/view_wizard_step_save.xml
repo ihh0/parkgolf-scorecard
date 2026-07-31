@@ -7,23 +7,23 @@
         android:orientation="vertical">
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:text="@string/save_confirm_title" android:textSize="@dimen/title_text"
-            android:textStyle="bold" android:textColor="@color/foreground" />
+            android:textStyle="bold" android:textColor="?attr/parkForeground" />
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/save_confirm_helper" android:textColor="@color/muted_foreground"
+            android:text="@string/save_confirm_helper" android:textColor="?attr/parkMutedForeground"
             android:layout_marginTop="4dp" android:layout_marginBottom="20dp" />
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
             android:orientation="vertical" android:background="@drawable/bg_card" android:padding="20dp">
             <TextView android:id="@+id/tvSumVenue" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:textColor="@color/foreground" android:textSize="@dimen/body_text" android:layout_marginBottom="10dp" />
+                android:textColor="?attr/parkForeground" android:textSize="@dimen/body_text" android:layout_marginBottom="10dp" />
             <TextView android:id="@+id/tvSumCourse" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:textColor="@color/foreground" android:textSize="@dimen/body_text" android:layout_marginBottom="10dp" />
+                android:textColor="?attr/parkForeground" android:textSize="@dimen/body_text" android:layout_marginBottom="10dp" />
             <TextView android:id="@+id/tvSumHoles" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:textColor="@color/foreground" android:textSize="@dimen/body_text" android:layout_marginBottom="10dp" />
+                android:textColor="?attr/parkForeground" android:textSize="@dimen/body_text" android:layout_marginBottom="10dp" />
             <TextView android:id="@+id/tvSumTotalPar" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:textColor="@color/primary" android:textStyle="bold" android:textSize="@dimen/body_text" />
+                android:textColor="?attr/parkPrimary" android:textStyle="bold" android:textSize="@dimen/body_text" />
         </LinearLayout>
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/par_preview_label" android:textColor="@color/muted_foreground"
+            android:text="@string/par_preview_label" android:textColor="?attr/parkMutedForeground"
             android:textStyle="bold" android:layout_marginTop="20dp" android:layout_marginBottom="8dp" />
         <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvParPreview"
             android:layout_width="match_parent" android:layout_height="wrap_content"

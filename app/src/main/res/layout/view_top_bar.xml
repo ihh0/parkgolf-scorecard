@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/background"
+    android:background="?attr/parkBackground"
     android:minHeight="64dp"
     android:paddingHorizontal="4dp">
 
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:text="@string/back"
-            android:textColor="@color/foreground"
+            android:textColor="?attr/parkForeground"
             android:textSize="@dimen/body_text"
             android:textStyle="bold" />
     </LinearLayout>
@@ -42,7 +42,7 @@
         android:gravity="center"
         android:textSize="@dimen/body_text"
         android:textStyle="bold"
-        android:textColor="@color/foreground"
+        android:textColor="?attr/parkForeground"
         android:maxLines="1"
         android:ellipsize="end"
         app:layout_constraintStart_toEndOf="@id/btnBack"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View android:layout_width="0dp" android:layout_height="@dimen/border_width"
-        android:background="@color/border"
+        android:background="?attr/parkBorder"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />

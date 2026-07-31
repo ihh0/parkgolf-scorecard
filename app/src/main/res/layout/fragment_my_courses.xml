@@ -12,7 +12,7 @@
         <TextView android:id="@+id/tvEmpty"
             android:layout_width="match_parent" android:layout_height="wrap_content"
             android:text="@string/no_courses_yet" android:gravity="center"
-            android:textColor="@color/text_muted" android:visibility="gone" />
+            android:textColor="?attr/parkMutedForeground" android:visibility="gone" />
         <Button android:id="@+id/btnAddVenue"
             android:layout_width="match_parent" android:layout_height="wrap_content"
             android:minHeight="@dimen/touch_min" android:text="@string/new_course"

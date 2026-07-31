@@ -3,7 +3,7 @@
     android:layout_width="match_parent" android:layout_height="wrap_content"
     android:orientation="horizontal" android:gravity="center_vertical"
     android:minHeight="@dimen/touch_min" android:padding="12dp"
-    android:background="@color/surface_muted" android:layout_marginBottom="8dp">
+    android:background="?attr/parkSecondary" android:layout_marginBottom="8dp">
     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
         android:layout_weight="1" android:orientation="vertical">
         <TextView android:id="@+id/tvDate"
@@ -11,7 +11,7 @@
             android:textSize="@dimen/body_text" android:textStyle="bold" />
         <TextView android:id="@+id/tvVenue"
             android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:textColor="@color/text_muted" />
+            android:textColor="?attr/parkMutedForeground" />
     </LinearLayout>
     <TextView android:id="@+id/tvTotal"
         android:layout_width="wrap_content" android:layout_height="wrap_content"

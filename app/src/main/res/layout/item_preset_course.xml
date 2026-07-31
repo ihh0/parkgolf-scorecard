@@ -6,7 +6,7 @@
     android:minHeight="@dimen/touch_min"
     android:gravity="center_vertical"
     android:paddingHorizontal="14dp"
-    android:background="@color/surface_muted"
+    android:background="?attr/parkSecondary"
     android:layout_marginBottom="6dp"
     android:textSize="@dimen/body_text"
-    android:textColor="@color/text_primary" />
+    android:textColor="?attr/parkForeground" />

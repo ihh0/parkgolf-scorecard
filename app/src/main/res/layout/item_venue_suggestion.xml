@@ -9,6 +9,6 @@
         android:src="@drawable/ic_map_pin" android:importantForAccessibility="no" />
     <TextView android:id="@+id/tvVenueName"
         android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
-        android:layout_marginStart="12dp" android:textColor="@color/foreground"
+        android:layout_marginStart="12dp" android:textColor="?attr/parkForeground"
         android:textStyle="bold" android:textSize="@dimen/body_text" />
 </LinearLayout>

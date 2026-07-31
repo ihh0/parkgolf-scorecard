@@ -13,26 +13,4 @@
     <color name="theme_blue">#1A6FA4</color>
     <color name="theme_orange">#C2601A</color>
     <color name="theme_purple">#6B3FA0</color>
-
-    <!-- TEMP: old tokens kept only until Task 3 migrates references, then deleted -->
-    <color name="primary">#030213</color>
-    <color name="primary_10">#1A030213</color>
-    <color name="background">#FFFFFF</color>
-    <color name="foreground">#252525</color>
-    <color name="secondary">#F1F1F4</color>
-    <color name="muted">#ECECF0</color>
-    <color name="muted_foreground">#717182</color>
-    <color name="accent">#E9EBEF</color>
-    <color name="accent_foreground">#030213</color>
-    <color name="border">#1A000000</color>
-    <color name="input_background">#F3F3F5</color>
-    <color name="secondary_foreground">#030213</color>
-    <color name="surface">#FFFFFF</color>
-    <color name="surface_muted">#F1F1F4</color>
-    <color name="text_primary">#252525</color>
-    <color name="text_muted">#717182</color>
-    <color name="green_primary">#030213</color>
-    <color name="green_light">#1A030213</color>
-    <color name="green_disabled">#ECECF0</color>
-    <color name="stepper_bg">#F1F1F4</color>
 </resources>

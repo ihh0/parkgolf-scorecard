@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Widget.App.Button.Primary" parent="Widget.Material3.Button">
-        <item name="backgroundTint">@color/primary</item>
+        <item name="backgroundTint">?attr/parkPrimary</item>
         <item name="android:textColor">@color/on_primary</item>
         <item name="cornerRadius">@dimen/radius_card</item>
         <item name="android:minHeight">@dimen/touch_min</item>
@@ -10,9 +10,9 @@
     </style>
 
     <style name="Widget.App.Button.Outline" parent="Widget.Material3.Button.OutlinedButton">
-        <item name="strokeColor">@color/border</item>
+        <item name="strokeColor">?attr/parkBorder</item>
         <item name="strokeWidth">@dimen/border_width</item>
-        <item name="android:textColor">@color/foreground</item>
+        <item name="android:textColor">?attr/parkForeground</item>
         <item name="cornerRadius">@dimen/radius_card</item>
         <item name="android:minHeight">@dimen/touch_min</item>
         <item name="android:textSize">@dimen/button_text</item>

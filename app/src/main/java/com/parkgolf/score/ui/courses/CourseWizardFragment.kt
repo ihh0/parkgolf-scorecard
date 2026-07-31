@@ -2,7 +2,6 @@ package com.parkgolf.score.ui.courses
 
 import android.os.Bundle
 import android.view.View
-import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
@@ -11,6 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.color.MaterialColors
 import com.parkgolf.score.App
 import com.parkgolf.score.R
 import com.parkgolf.score.data.ParkGolfRepository
@@ -219,9 +219,8 @@ class CourseWizardFragment : Fragment(R.layout.fragment_course_wizard) {
             )
             checks[i].isVisible = done
             icons[i].isVisible = !done
-            labels[i].setTextColor(
-                ContextCompat.getColor(requireContext(), if (active || done) R.color.primary else R.color.muted_foreground)
-            )
+            val attr = if (active || done) R.attr.parkPrimary else R.attr.parkMutedForeground
+            labels[i].setTextColor(MaterialColors.getColor(requireContext(), attr, 0))
         }
     }
 

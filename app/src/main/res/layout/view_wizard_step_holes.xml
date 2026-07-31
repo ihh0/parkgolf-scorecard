@@ -9,35 +9,35 @@
             <TextView android:id="@+id/chipVenue"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:background="@drawable/bg_pill_primary" android:paddingHorizontal="12dp"
-                android:paddingVertical="6dp" android:textColor="@color/primary" android:textStyle="bold" android:textSize="14sp" />
+                android:paddingVertical="6dp" android:textColor="?attr/parkPrimary" android:textStyle="bold" android:textSize="14sp" />
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text=" / " android:textColor="@color/muted_foreground" />
+                android:text=" / " android:textColor="?attr/parkMutedForeground" />
             <TextView android:id="@+id/chipCourse"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:background="@drawable/bg_pill_secondary" android:paddingHorizontal="12dp"
-                android:paddingVertical="6dp" android:textColor="@color/foreground" android:textStyle="bold" android:textSize="14sp" />
+                android:paddingVertical="6dp" android:textColor="?attr/parkForeground" android:textStyle="bold" android:textSize="14sp" />
         </LinearLayout>
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:text="@string/hole_setup_label" android:textSize="@dimen/title_text"
-            android:textStyle="bold" android:textColor="@color/foreground" />
+            android:textStyle="bold" android:textColor="?attr/parkForeground" />
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/hole_setup_helper" android:textColor="@color/muted_foreground"
+            android:text="@string/hole_setup_helper" android:textColor="?attr/parkMutedForeground"
             android:layout_marginTop="4dp" android:layout_marginBottom="16dp" />
 
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
             android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="16dp"
             android:gravity="center_vertical" android:layout_marginBottom="16dp">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="@string/total_holes_label" android:textColor="@color/muted_foreground" />
+                android:text="@string/total_holes_label" android:textColor="?attr/parkMutedForeground" />
             <TextView android:id="@+id/tvTotalHoles"
                 android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
-                android:layout_marginStart="8dp" android:textColor="@color/foreground"
+                android:layout_marginStart="8dp" android:textColor="?attr/parkForeground"
                 android:textStyle="bold" android:textSize="@dimen/title_text" />
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="@string/total_par_label" android:textColor="@color/muted_foreground" />
+                android:text="@string/total_par_label" android:textColor="?attr/parkMutedForeground" />
             <TextView android:id="@+id/tvTotalPar"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_marginStart="8dp" android:textColor="@color/primary"
+                android:layout_marginStart="8dp" android:textColor="?attr/parkPrimary"
                 android:textStyle="bold" android:textSize="@dimen/title_text" />
         </LinearLayout>
 
@@ -48,7 +48,7 @@
         <TextView android:id="@+id/btnAddHole"
             android:layout_width="match_parent" android:layout_height="wrap_content"
             android:background="@drawable/bg_dashed" android:gravity="center" android:padding="16dp"
-            android:text="@string/add_hole" android:textColor="@color/primary" android:textStyle="bold"
+            android:text="@string/add_hole" android:textColor="?attr/parkPrimary" android:textStyle="bold"
             android:drawablePadding="8dp" android:minHeight="@dimen/touch_min"
             android:clickable="true" android:focusable="true" android:layout_marginTop="4dp" />
     </LinearLayout>
