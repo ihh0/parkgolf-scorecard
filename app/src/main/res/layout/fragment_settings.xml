@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="?attr/parkBackground">
+
+    <include android:id="@+id/topBar" layout="@layout/view_top_bar" />
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:fillViewport="true" android:padding="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/theme_section_title" android:textSize="@dimen/title_text"
+                android:textStyle="bold" android:textColor="?attr/parkForeground" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/theme_section_desc" android:textColor="?attr/parkMutedForeground"
+                android:layout_marginTop="4dp" android:layout_marginBottom="16dp" />
+
+            <LinearLayout android:id="@+id/rowGreen" style="@style/ThemeRow">
+                <View style="@style/ThemeSwatch" android:backgroundTint="@color/theme_green" />
+                <TextView style="@style/ThemeRowLabel" android:text="@string/theme_green" />
+                <ImageView android:id="@+id/checkGreen" style="@style/ThemeCheck" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/rowBlue" style="@style/ThemeRow">
+                <View style="@style/ThemeSwatch" android:backgroundTint="@color/theme_blue" />
+                <TextView style="@style/ThemeRowLabel" android:text="@string/theme_blue" />
+                <ImageView android:id="@+id/checkBlue" style="@style/ThemeCheck" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/rowOrange" style="@style/ThemeRow">
+                <View style="@style/ThemeSwatch" android:backgroundTint="@color/theme_orange" />
+                <TextView style="@style/ThemeRowLabel" android:text="@string/theme_orange" />
+                <ImageView android:id="@+id/checkOrange" style="@style/ThemeCheck" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/rowPurple" style="@style/ThemeRow">
+                <View style="@style/ThemeSwatch" android:backgroundTint="@color/theme_purple" />
+                <TextView style="@style/ThemeRowLabel" android:text="@string/theme_purple" />
+                <ImageView android:id="@+id/checkPurple" style="@style/ThemeCheck" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="2dp"
+                android:background="?attr/parkBorder" android:layout_marginVertical="24dp" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/default_name_title" android:textSize="@dimen/title_text"
+                android:textStyle="bold" android:textColor="?attr/parkForeground" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/default_name_desc" android:textColor="?attr/parkMutedForeground"
+                android:layout_marginTop="4dp" android:layout_marginBottom="16dp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:background="@drawable/bg_card" android:paddingHorizontal="20dp" android:paddingVertical="16dp">
+                <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                    android:src="@drawable/ic_user" android:importantForAccessibility="no" />
+                <EditText android:id="@+id/etDefaultName"
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginStart="12dp" android:background="@android:color/transparent"
+                    android:hint="@string/default_name_hint" android:textSize="@dimen/body_text"
+                    android:textColor="?attr/parkForeground" android:inputType="text" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

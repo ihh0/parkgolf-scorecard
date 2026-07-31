@@ -18,4 +18,38 @@
         <item name="android:textSize">@dimen/button_text</item>
         <item name="android:textStyle">bold</item>
     </style>
+    <style name="ThemeRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:paddingHorizontal">20dp</item>
+        <item name="android:paddingVertical">16dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:minHeight">@dimen/touch_min</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <style name="ThemeSwatch">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/circle_solid</item>
+    </style>
+    <style name="ThemeRowLabel">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textSize">@dimen/body_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/parkForeground</item>
+    </style>
+    <style name="ThemeCheck">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:src">@drawable/ic_check</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:tint">?attr/parkPrimary</item>
+    </style>
 </resources>

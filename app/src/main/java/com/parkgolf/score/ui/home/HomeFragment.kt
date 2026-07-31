@@ -29,6 +29,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding.btnMyCourses.setOnClickListener {
             findNavController().navigate(R.id.myCoursesFragment)
         }
+        binding.btnSettings.setOnClickListener {
+            findNavController().navigate(R.id.settingsFragment)
+        }
 
         viewLifecycleOwner.lifecycleScope.launch {
             val current = repo.currentInProgressRound()
