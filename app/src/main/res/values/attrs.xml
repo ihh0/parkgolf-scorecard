@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="parkBackground" format="color" />
+    <attr name="parkForeground" format="color" />
+    <attr name="parkPrimary" format="color" />
+    <attr name="parkPrimary10" format="color" />
+    <attr name="parkSecondary" format="color" />
+    <attr name="parkMuted" format="color" />
+    <attr name="parkMutedForeground" format="color" />
+    <attr name="parkAccent" format="color" />
+    <attr name="parkAccentForeground" format="color" />
+    <attr name="parkBorder" format="color" />
+    <attr name="parkInputBg" format="color" />
+</resources>

@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- shadcn tokens (light) -->
-    <color name="primary">#030213</color>
+    <!-- theme-independent fixed colors -->
+    <color name="card">#FFFFFF</color>
     <color name="on_primary">#FFFFFF</color>
+    <color name="on_destructive">#FFFFFF</color>
+    <color name="destructive">#D4183D</color>
+    <color name="under_par">#1565C0</color>
+    <color name="even_par">#252525</color>
+    <color name="over_par">#C62828</color>
+    <!-- theme preview swatches (fixed) -->
+    <color name="theme_green">#2A7A3B</color>
+    <color name="theme_blue">#1A6FA4</color>
+    <color name="theme_orange">#C2601A</color>
+    <color name="theme_purple">#6B3FA0</color>
+
+    <!-- TEMP: old tokens kept only until Task 3 migrates references, then deleted -->
+    <color name="primary">#030213</color>
     <color name="primary_10">#1A030213</color>
     <color name="background">#FFFFFF</color>
     <color name="foreground">#252525</color>
     <color name="secondary">#F1F1F4</color>
-    <color name="secondary_foreground">#030213</color>
     <color name="muted">#ECECF0</color>
     <color name="muted_foreground">#717182</color>
     <color name="accent">#E9EBEF</color>
     <color name="accent_foreground">#030213</color>
     <color name="border">#1A000000</color>
-    <color name="destructive">#D4183D</color>
-    <color name="on_destructive">#FFFFFF</color>
     <color name="input_background">#F3F3F5</color>
-
-    <!-- semantic par-relation colors (unchanged) -->
-    <color name="under_par">#1565C0</color>
-    <color name="even_par">#252525</color>
-    <color name="over_par">#C62828</color>
-
-    <!-- legacy aliases → remapped to new palette so existing layouts recolor for free -->
-    <color name="surface">@color/background</color>
-    <color name="surface_muted">@color/secondary</color>
-    <color name="text_primary">@color/foreground</color>
-    <color name="text_muted">@color/muted_foreground</color>
-    <color name="green_primary">@color/primary</color>
-    <color name="green_light">@color/primary_10</color>
-    <color name="green_disabled">@color/muted</color>
-    <color name="stepper_bg">@color/secondary</color>
+    <color name="secondary_foreground">#030213</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_muted">#F1F1F4</color>
+    <color name="text_primary">#252525</color>
+    <color name="text_muted">#717182</color>
+    <color name="green_primary">#030213</color>
+    <color name="green_light">#1A030213</color>
+    <color name="green_disabled">#ECECF0</color>
+    <color name="stepper_bg">#F1F1F4</color>
 </resources>

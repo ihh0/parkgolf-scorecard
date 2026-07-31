@@ -1,9 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.ParkGolf" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/primary</item>
+    <style name="Theme.ParkGolf.Base" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorOnPrimary">@color/on_primary</item>
-        <item name="android:windowBackground">@color/background</item>
-        <item name="android:textColorPrimary">@color/foreground</item>
+        <item name="android:textColorPrimary">?attr/parkForeground</item>
     </style>
+
+    <style name="Theme.ParkGolf.Green" parent="Theme.ParkGolf.Base">
+        <item name="colorPrimary">#2A7A3B</item>
+        <item name="android:windowBackground">#F4F9F5</item>
+        <item name="parkBackground">#F4F9F5</item>
+        <item name="parkForeground">#1A2E1D</item>
+        <item name="parkPrimary">#2A7A3B</item>
+        <item name="parkPrimary10">#1A2A7A3B</item>
+        <item name="parkSecondary">#E6F2E8</item>
+        <item name="parkMuted">#EAF3EC</item>
+        <item name="parkMutedForeground">#4E7255</item>
+        <item name="parkAccent">#D2EBDA</item>
+        <item name="parkAccentForeground">#1A3D21</item>
+        <item name="parkBorder">#332A7A3B</item>
+        <item name="parkInputBg">#EAF3EC</item>
+    </style>
+
+    <style name="Theme.ParkGolf.Blue" parent="Theme.ParkGolf.Base">
+        <item name="colorPrimary">#1A6FA4</item>
+        <item name="android:windowBackground">#F0F6FB</item>
+        <item name="parkBackground">#F0F6FB</item>
+        <item name="parkForeground">#1A2535</item>
+        <item name="parkPrimary">#1A6FA4</item>
+        <item name="parkPrimary10">#1A1A6FA4</item>
+        <item name="parkSecondary">#E0EFF9</item>
+        <item name="parkMuted">#E8F3FB</item>
+        <item name="parkMutedForeground">#3D6A8A</item>
+        <item name="parkAccent">#C8E4F5</item>
+        <item name="parkAccentForeground">#0D3A5C</item>
+        <item name="parkBorder">#331A6FA4</item>
+        <item name="parkInputBg">#E8F3FB</item>
+    </style>
+
+    <style name="Theme.ParkGolf.Orange" parent="Theme.ParkGolf.Base">
+        <item name="colorPrimary">#C2601A</item>
+        <item name="android:windowBackground">#FDF6F0</item>
+        <item name="parkBackground">#FDF6F0</item>
+        <item name="parkForeground">#2D1A0E</item>
+        <item name="parkPrimary">#C2601A</item>
+        <item name="parkPrimary10">#1AC2601A</item>
+        <item name="parkSecondary">#FAEADE</item>
+        <item name="parkMuted">#FDF0E4</item>
+        <item name="parkMutedForeground">#8A5030</item>
+        <item name="parkAccent">#F5D9BC</item>
+        <item name="parkAccentForeground">#6B2D08</item>
+        <item name="parkBorder">#33C2601A</item>
+        <item name="parkInputBg">#FDF0E4</item>
+    </style>
+
+    <style name="Theme.ParkGolf.Purple" parent="Theme.ParkGolf.Base">
+        <item name="colorPrimary">#6B3FA0</item>
+        <item name="android:windowBackground">#F7F4FC</item>
+        <item name="parkBackground">#F7F4FC</item>
+        <item name="parkForeground">#1E1530</item>
+        <item name="parkPrimary">#6B3FA0</item>
+        <item name="parkPrimary10">#1A6B3FA0</item>
+        <item name="parkSecondary">#EDE7F6</item>
+        <item name="parkMuted">#F0EBFA</item>
+        <item name="parkMutedForeground">#6B5490</item>
+        <item name="parkAccent">#DDD0F0</item>
+        <item name="parkAccentForeground">#3A1A6B</item>
+        <item name="parkBorder">#336B3FA0</item>
+        <item name="parkInputBg">#F0EBFA</item>
+    </style>
+
+    <!-- Back-compat alias so the manifest's Theme.ParkGolf keeps resolving until runtime setTheme picks one. -->
+    <style name="Theme.ParkGolf" parent="Theme.ParkGolf.Green" />
 </resources>
