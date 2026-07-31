@@ -23,6 +23,7 @@ class PlayerSetupFragment : Fragment(R.layout.fragment_player_setup) {
         binding.topBar.tvBarTitle.text = getString(R.string.title_player_setup)
         binding.topBar.btnBack.setOnClickListener { findNavController().popBackStack() }
         val repo = App.repo(requireActivity().application)
+        val defaultName = App.settings(requireActivity().application).defaultPlayerName
 
         fun addPlayerRow(initial: String) {
             if (editTexts.size >= 4) return
@@ -35,7 +36,7 @@ class PlayerSetupFragment : Fragment(R.layout.fragment_player_setup) {
             binding.playersContainer.addView(et)
             binding.btnAddPlayer.isEnabled = editTexts.size < 4
         }
-        addPlayerRow(getString(R.string.me))
+        addPlayerRow(defaultName)
         binding.btnAddPlayer.setOnClickListener { addPlayerRow("") }
 
         binding.btnStartPlay.setOnClickListener {
@@ -49,7 +50,7 @@ class PlayerSetupFragment : Fragment(R.layout.fragment_player_setup) {
                 val players = editTexts.mapIndexed { i, et ->
                     val t = et.text.toString().trim()
                     if (t.isNotEmpty()) t
-                    else if (i == 0) getString(R.string.me) else getString(R.string.companion_default, i)
+                    else if (i == 0) defaultName else getString(R.string.companion_default, i)
                 }
                 val venueName = SelectionHolder.venueName ?: ""
                 val round = RoundFactory.newRound(venueName, players, coursePars, System.currentTimeMillis())
