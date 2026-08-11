@@ -55,13 +55,13 @@ class CourseWizardFragment : Fragment(R.layout.fragment_course_wizard) {
             val handle = findNavController().previousBackStackEntry?.savedStateHandle
             val venueId = handle?.get<Long>("wizardVenueId") ?: 0L
             val courseId = handle?.get<Long>("wizardCourseId") ?: 0L
-            if (venueId == 0L || courseId == 0L) vm.initNew("A코스")
+            if (venueId == 0L || courseId == 0L) vm.initNew("")
             else viewLifecycleOwner.lifecycleScope.launch {
                 val venue = repo.observeVenues().first().firstOrNull { it.id == venueId }
                 val course = repo.coursesForVenue(venueId).firstOrNull { it.id == courseId }
                 if (venue != null && course != null)
                     vm.loadForEdit(venue.id, course.id, venue.name, course.name, course.pars)
-                else vm.initNew("A코스")
+                else vm.initNew("")
             }
         }
 
@@ -90,7 +90,7 @@ class CourseWizardFragment : Fragment(R.layout.fragment_course_wizard) {
         onBackPressed { if (vm.draft.value?.step == 0) attemptExit() else vm.prev() }
 
         binding.stepSuccess.btnNewTemplate.setOnClickListener {
-            vm.initNew("A코스"); showEditing(binding)
+            vm.initNew(""); showEditing(binding)
         }
         binding.stepSuccess.btnToList.setOnClickListener { findNavController().popBackStack() }
 
@@ -138,10 +138,7 @@ class CourseWizardFragment : Fragment(R.layout.fragment_course_wizard) {
         val d = vm.draft.value ?: return
         if (!isStepValid(d.step, d)) return
         if (d.step == CourseWizardLogic.MAX_STEP) save(binding, repo)
-        else {
-            if (d.step == 0 && !vm.isEditing()) maybeSuggestCourseName()
-            vm.next()
-        }
+        else vm.next()
     }
 
     private fun refreshExistingCourses(repo: ParkGolfRepository, venueName: String) {
@@ -152,10 +149,6 @@ class CourseWizardFragment : Fragment(R.layout.fragment_course_wizard) {
             existingCourseNames = repo.coursesForVenue(vid)
                 .filter { it.id != editingId }.map { it.name }
         }
-    }
-
-    private fun maybeSuggestCourseName() {
-        vm.setCourseName(CourseWizardLogic.suggestCourseName(existingCourseNames))
     }
 
     private fun renderStep1(binding: FragmentCourseWizardBinding, adapter: VenueSuggestionAdapter) {

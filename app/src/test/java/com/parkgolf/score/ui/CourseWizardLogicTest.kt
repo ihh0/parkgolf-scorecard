@@ -54,10 +54,6 @@ class CourseWizardLogicTest {
         assertThat(CourseWizardLogic.holeStepValid(listOf(3))).isTrue()
     }
 
-    @Test fun suggestCourseName_skipsUsedLetters() {
-        assertThat(CourseWizardLogic.suggestCourseName(listOf("A코스", "B코스"))).isEqualTo("C코스")
-    }
-
     @Test fun resolveVenueId_matchOrNull() {
         val venues = listOf(VenueEntity(id = 7, name = "한강"))
         assertThat(CourseWizardLogic.resolveVenueId("한강", venues, null)).isEqualTo(7)

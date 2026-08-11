@@ -7,7 +7,7 @@ data class CourseDraft(
     val editingVenueId: Long? = null,
     val editingCourseId: Long? = null,
     val venueName: String = "",
-    val courseName: String = "A코스",
+    val courseName: String = "",
     val pars: List<Int> = List(9) { 3 },
     val step: Int = 0,
 )
@@ -52,13 +52,6 @@ object CourseWizardLogic {
         name.isNotBlank() && !isDuplicateCourseName(name, existingCourseNames)
 
     fun holeStepValid(pars: List<Int>): Boolean = pars.isNotEmpty()
-
-    /** Next unused course letter as "X코스". */
-    fun suggestCourseName(existingCourseNames: List<String>): String {
-        val used = existingCourseNames.mapNotNull { it.trim().firstOrNull() }.toSet()
-        val next = ('A'..'Z').firstOrNull { it !in used } ?: 'A'
-        return "${next}코스"
-    }
 
     /** Existing venue id matching [name], or [editingVenueId], else null. */
     fun resolveVenueId(name: String, existing: List<VenueEntity>, editingVenueId: Long?): Long? {
