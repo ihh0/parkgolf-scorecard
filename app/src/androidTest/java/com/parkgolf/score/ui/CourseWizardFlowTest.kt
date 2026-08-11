@@ -48,7 +48,7 @@ class CourseWizardFlowTest {
 
     @Test fun createCourse_throughAllSteps_showsSuccessScreen() {
         ActivityScenario.launch(MainActivity::class.java)
-        onView(withId(R.id.btnMyCourses)).perform(click())
+        onView(withId(R.id.itemCourseManagement)).perform(click())
         onView(withId(R.id.btnAddVenue)).perform(click())
         onView(withId(R.id.etVenueName)).perform(replaceText("테스트구장"), closeSoftKeyboard())
         onView(withId(R.id.btnNext)).perform(click())
@@ -61,7 +61,7 @@ class CourseWizardFlowTest {
 
     @Test fun backOnFirstStep_showsCancelDialog() {
         ActivityScenario.launch(MainActivity::class.java)
-        onView(withId(R.id.btnMyCourses)).perform(click())
+        onView(withId(R.id.itemCourseManagement)).perform(click())
         onView(withId(R.id.btnAddVenue)).perform(click())
         onView(withId(R.id.etVenueName)).perform(replaceText("취소구장"), closeSoftKeyboard())
         onView(withId(R.id.btnBack)).perform(click())
