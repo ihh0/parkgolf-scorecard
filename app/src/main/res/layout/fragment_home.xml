@@ -1,75 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:padding="@dimen/screen_padding">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="?attr/parkBackground">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textSize="@dimen/title_text"
-            android:textStyle="bold"
-            android:layout_marginTop="24dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <Button
-            android:id="@+id/btnStart"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:minHeight="88dp"
-            android:text="@string/start_round"
-            android:textSize="@dimen/title_text"
-            android:layout_marginTop="40dp"
-            app:layout_constraintTop_toBottomOf="@id/title"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <Button
-            android:id="@+id/btnHistory"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:minHeight="@dimen/touch_min"
-            android:text="@string/past_records"
-            android:textSize="@dimen/button_text"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@id/btnStart"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <Button
-            android:id="@+id/btnMyCourses"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:minHeight="@dimen/touch_min"
-            android:text="@string/my_courses"
-            android:textSize="@dimen/button_text"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@id/btnHistory"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
 
         <ImageButton
             android:id="@+id/btnSettings"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="48dp" android:layout_height="48dp"
+            android:layout_gravity="end"
             android:background="@drawable/bg_card"
             android:src="@drawable/ic_settings"
             android:scaleType="center"
-            android:contentDescription="@string/settings_label"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:contentDescription="@string/settings_label" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <FrameLayout
+            android:layout_width="@dimen/logo_size" android:layout_height="@dimen/logo_size"
+            android:layout_gravity="center_horizontal" android:layout_marginTop="32dp"
+            android:background="@drawable/bg_logo" android:elevation="8dp">
+            <ImageView
+                android:layout_width="@dimen/logo_icon" android:layout_height="@dimen/logo_icon"
+                android:layout_gravity="center" android:src="@drawable/ic_flag_solid"
+                android:importantForAccessibility="no" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" android:layout_marginTop="20dp"
+            android:text="@string/app_title" android:textSize="@dimen/app_title_text"
+            android:textStyle="bold" android:textColor="?attr/parkForeground" />
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" android:layout_marginTop="2dp"
+            android:text="@string/app_subtitle" android:textSize="@dimen/app_subtitle_text"
+            android:textColor="?attr/parkMutedForeground" />
+
+        <include android:id="@+id/itemGameStart" layout="@layout/view_home_menu_item"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="48dp" />
+        <include android:id="@+id/itemGameRecords" layout="@layout/view_home_menu_item"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+        <include android:id="@+id/itemCourseManagement" layout="@layout/view_home_menu_item"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
 </ScrollView>
