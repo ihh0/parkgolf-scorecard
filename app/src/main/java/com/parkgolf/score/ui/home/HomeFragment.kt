@@ -10,6 +10,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.parkgolf.score.App
 import com.parkgolf.score.R
 import com.parkgolf.score.databinding.FragmentHomeBinding
+import com.parkgolf.score.databinding.ViewHomeMenuItemBinding
 import com.parkgolf.score.ui.RoundSessionViewModel
 import kotlinx.coroutines.launch
 
@@ -20,15 +21,21 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         val binding = FragmentHomeBinding.bind(view)
         val repo = App.repo(requireActivity().application)
 
-        binding.btnStart.setOnClickListener {
-            findNavController().navigate(R.id.startFragment)
-        }
-        binding.btnHistory.setOnClickListener {
-            findNavController().navigate(R.id.historyFragment)
-        }
-        binding.btnMyCourses.setOnClickListener {
-            findNavController().navigate(R.id.myCoursesFragment)
-        }
+        bindItem(
+            binding.itemGameStart, R.drawable.ic_play_circle,
+            R.string.menu_game_start, R.string.menu_game_start_desc,
+        ) { findNavController().navigate(R.id.startFragment) }
+
+        bindItem(
+            binding.itemGameRecords, R.drawable.ic_clipboard_list,
+            R.string.menu_game_records, R.string.menu_game_records_desc,
+        ) { findNavController().navigate(R.id.historyFragment) }
+
+        bindItem(
+            binding.itemCourseManagement, R.drawable.ic_layout_list,
+            R.string.menu_course_management, R.string.menu_course_management_desc,
+        ) { findNavController().navigate(R.id.myCoursesFragment) }
+
         binding.btnSettings.setOnClickListener {
             findNavController().navigate(R.id.settingsFragment)
         }
@@ -48,5 +55,18 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     .show()
             }
         }
+    }
+
+    private fun bindItem(
+        item: ViewHomeMenuItemBinding,
+        iconRes: Int,
+        titleRes: Int,
+        descRes: Int,
+        onClick: () -> Unit,
+    ) {
+        item.ivIcon.setImageResource(iconRes)
+        item.tvTitle.setText(titleRes)
+        item.tvDesc.setText(descRes)
+        item.root.setOnClickListener { onClick() }
     }
 }
