@@ -11,4 +11,11 @@
     <dimen name="radius_sm">10dp</dimen>
     <dimen name="radius_pill">999dp</dimen>
     <dimen name="border_width">2dp</dimen>
+    <dimen name="logo_size">112dp</dimen>
+    <dimen name="logo_icon">52dp</dimen>
+    <dimen name="menu_icon_box">56dp</dimen>
+    <dimen name="menu_icon">28dp</dimen>
+    <dimen name="app_title_text">34sp</dimen>
+    <dimen name="app_subtitle_text">22sp</dimen>
+    <dimen name="menu_desc_text">13sp</dimen>
 </resources>
