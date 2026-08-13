@@ -5,9 +5,6 @@
     <string name="start_round">＋ 라운드 시작</string>
     <string name="past_records">📋 지난 기록</string>
     <string name="my_courses">🏳️ 내 구장 관리</string>
-    <string name="recent_courses">최근 구장</string>
-    <string name="saved_presets">내 구장 (저장한 프리셋)</string>
-    <string name="nearby_courses_soon">📍 주변 구장 — 다음 업데이트에서 추가</string>
     <string name="new_course">＋ 새 구장 만들기</string>
     <string name="next_hole">다음 홀 ▶</string>
     <string name="prev_hole">◀ 이전 홀</string>
@@ -27,14 +24,8 @@
     <string name="resume_round">진행 중인 라운드를 이어서 할까요?</string>
     <string name="resume">이어하기</string>
     <string name="discard">새로 시작</string>
-    <string name="start_where">어디서 플레이하세요?</string>
-    <string name="hole_config">홀 구성</string>
     <string name="total_holes">총 %1$d홀</string>
-    <string name="players_title">함께 하는 사람</string>
-    <string name="add_player">＋ 동반자 추가</string>
-    <string name="start_play">시작</string>
     <string name="companion_default">동반자 %1$d</string>
-    <string name="next_step">다음 ▶</string>
     <string name="round_complete">라운드 완료</string>
     <string name="to_home">홈으로</string>
     <string name="rank_suffix">%1$d위</string>
@@ -96,7 +87,6 @@
     <string name="confirm_exit_game">현재 게임을 저장하지 않고 나가시겠습니까?</string>
     <!-- Non-home screen titles -->
     <string name="title_start">게임 시작</string>
-    <string name="title_course_setup">코스 선택</string>
     <string name="title_player_setup">경기 인원 구성</string>
     <string name="recent_venue_label">최근 사용한 구장</string>
     <string name="recent_last_used">%1$s 마지막 사용</string>

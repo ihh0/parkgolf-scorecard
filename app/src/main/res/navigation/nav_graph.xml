@@ -8,8 +8,6 @@
         android:name="com.parkgolf.score.ui.home.HomeFragment" />
     <fragment android:id="@+id/startFragment"
         android:name="com.parkgolf.score.ui.start.StartFragment" />
-    <fragment android:id="@+id/courseSetupFragment"
-        android:name="com.parkgolf.score.ui.start.CourseSetupFragment" />
     <fragment android:id="@+id/playerSetupFragment"
         android:name="com.parkgolf.score.ui.start.PlayerSetupFragment" />
     <fragment android:id="@+id/holeInputFragment"
