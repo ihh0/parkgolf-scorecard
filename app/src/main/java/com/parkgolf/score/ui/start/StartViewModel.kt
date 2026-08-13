@@ -10,6 +10,13 @@ class StartViewModel : ViewModel() {
             completed.sortedByDescending { it.date }
                 .distinctBy { it.venueName }
                 .take(limit)
-                .map { RecentCourse(it.venueName, it.holes.size, it.date) }
+                .map {
+                    RecentCourse(
+                        venueName = it.venueName,
+                        courseName = it.holes.map { h -> h.courseName }.distinct().firstOrNull() ?: "",
+                        holeCount = it.holes.size,
+                        lastPlayed = it.date,
+                    )
+                }
     }
 }
