@@ -97,7 +97,21 @@
     <!-- Non-home screen titles -->
     <string name="title_start">게임 시작</string>
     <string name="title_course_setup">코스 선택</string>
-    <string name="title_player_setup">함께 하는 사람</string>
+    <string name="title_player_setup">경기 인원 구성</string>
+    <string name="recent_venue_label">최근 사용한 구장</string>
+    <string name="recent_last_used">%1$s 마지막 사용</string>
+    <string name="my_courses_label">내 코스</string>
+    <string name="nearby_label">주변 구장</string>
+    <string name="nearby_placeholder">주변 구장은 준비 중입니다</string>
+    <string name="hole_count">%1$d홀</string>
+    <string name="new_template_button">새 코스 템플릿 작성</string>
+    <string name="player_count_title">경기 인원</string>
+    <string name="player_count_subtitle">함께 경기할 인원을 구성하세요</string>
+    <string name="add_player_button">인원 추가</string>
+    <string name="player_default_name">플레이어 %1$d</string>
+    <string name="player_name_hint">이름 입력</string>
+    <string name="start_game_button">게임 시작</string>
+    <string name="player_delete">인원 삭제</string>
     <string name="title_grid">전체 보기</string>
     <string name="title_summary">라운드 완료</string>
     <string name="title_history">게임 기록</string>

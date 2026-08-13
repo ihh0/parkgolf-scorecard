@@ -18,4 +18,7 @@
     <dimen name="app_title_text">34sp</dimen>
     <dimen name="app_subtitle_text">22sp</dimen>
     <dimen name="menu_desc_text">13sp</dimen>
+    <dimen name="player_index_size">40dp</dimen>
+    <dimen name="section_gap">28dp</dimen>
+    <dimen name="recent_card_pad">20dp</dimen>
 </resources>
