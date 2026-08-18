@@ -16,6 +16,7 @@ import com.parkgolf.score.databinding.ItemRankRowBinding
 import com.parkgolf.score.domain.Scoring
 import com.parkgolf.score.domain.model.RoundStatus
 import com.parkgolf.score.ui.RoundSessionViewModel
+import com.parkgolf.score.ui.common.onBackPressed
 import kotlinx.coroutines.launch
 
 class RoundSummaryFragment : Fragment(R.layout.fragment_round_summary) {
@@ -24,9 +25,17 @@ class RoundSummaryFragment : Fragment(R.layout.fragment_round_summary) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val binding = FragmentRoundSummaryBinding.bind(view)
         binding.topBar.tvBarTitle.text = getString(R.string.title_summary)
-        binding.topBar.btnBack.setOnClickListener { findNavController().popBackStack() }
         val repo = App.repo(requireActivity().application)
         val round = session.round.value ?: run { findNavController().popBackStack(); return }
+
+        // '뒤로'는 점수 기록의 마지막 홀로 돌아간다(1번 홀이 아니라).
+        val backToLastHole = {
+            findNavController().previousBackStackEntry
+                ?.savedStateHandle?.set("jumpToHole", round.holes.size - 1)
+            findNavController().popBackStack()
+        }
+        binding.topBar.btnBack.setOnClickListener { backToLastHole() }
+        onBackPressed { backToLastHole() }
 
         val course = round.holes.map { it.courseName }.distinct().firstOrNull() ?: ""
         binding.tvVenue.text = if (course.isBlank()) round.venueName else "${round.venueName} · $course"
