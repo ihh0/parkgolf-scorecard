@@ -13,4 +13,7 @@
     <color name="theme_blue">#1A6FA4</color>
     <color name="theme_orange">#C2601A</color>
     <color name="theme_purple">#6B3FA0</color>
+    <color name="medal_gold">#F5A623</color>
+    <color name="medal_silver">#A8A8A8</color>
+    <color name="medal_bronze">#CD7F32</color>
 </resources>

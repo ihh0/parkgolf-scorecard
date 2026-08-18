@@ -102,8 +102,8 @@
     <string name="player_name_hint">이름 입력</string>
     <string name="start_game_button">게임 시작</string>
     <string name="player_delete">인원 삭제</string>
-    <string name="title_grid">전체 보기</string>
-    <string name="title_summary">라운드 완료</string>
+    <string name="title_grid">전체 점수 보기</string>
+    <string name="title_summary">경기 완료</string>
     <string name="title_history">게임 기록</string>
     <string name="title_round_detail">기록 상세</string>
     <string name="title_my_courses">코스 관리</string>
@@ -126,4 +126,18 @@
     <string name="menu_game_records_desc">지난 경기 기록을 확인하세요</string>
     <string name="menu_course_management">코스 관리</string>
     <string name="menu_course_management_desc">저장된 코스를 편집하거나 삭제하세요</string>
+    <string name="title_game_play">점수 기록</string>
+    <string name="cumulative_strokes">누적 %1$d타</string>
+    <string name="hole_counter">%1$d / %2$d</string>
+    <string name="view_full_scores">전체 점수 보기</string>
+    <string name="game_complete_title">경기 완료</string>
+    <string name="game_finish">게임 완료</string>
+    <string name="prev_hole_plain">이전 홀</string>
+    <string name="next_hole_plain">다음 홀</string>
+    <string name="par_versus">파%1$d 대비 %2$s</string>
+    <string name="even_label">이븐</string>
+    <string name="save_and_home">저장하고 홈으로</string>
+    <string name="grid_hole_col">홀</string>
+    <string name="grid_par_col">파</string>
+    <string name="grid_total_row">합계</string>
 </resources>

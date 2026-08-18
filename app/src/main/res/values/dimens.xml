@@ -21,4 +21,7 @@
     <dimen name="player_index_size">40dp</dimen>
     <dimen name="section_gap">28dp</dimen>
     <dimen name="recent_card_pad">20dp</dimen>
+    <dimen name="dot_size">9dp</dimen>
+    <dimen name="dot_current_width">24dp</dimen>
+    <dimen name="medal_size">48dp</dimen>
 </resources>
