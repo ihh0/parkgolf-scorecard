@@ -49,7 +49,7 @@ class RoundSummaryFragment : Fragment(R.layout.fragment_round_summary) {
             if (row.rank in 1..3) {
                 val c = ContextCompat.getColor(requireContext(), medalColors[row.rank - 1])
                 item.ivMedal.isVisible = true
-                item.ivMedal.backgroundTintList = android.content.res.ColorStateList.valueOf(c)
+                item.tvRankNum.backgroundTintList = android.content.res.ColorStateList.valueOf(c)
                 item.tvRankNum.text = ""
                 item.tvRankLabel.isVisible = true
                 item.tvRankLabel.text = getString(R.string.rank_suffix, row.rank)
