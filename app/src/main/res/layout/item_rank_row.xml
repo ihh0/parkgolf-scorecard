@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:gravity="center_vertical"
-    android:minHeight="@dimen/touch_min"
-    android:background="?attr/parkSecondary"
-    android:padding="12dp"
-    android:layout_marginBottom="8dp">
-    <TextView android:id="@+id/tvRank"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:textSize="@dimen/body_text" android:textStyle="bold"
-        android:layout_marginEnd="12dp" />
-    <TextView android:id="@+id/tvPlayer"
-        android:layout_width="0dp" android:layout_height="wrap_content"
-        android:layout_weight="1" android:textSize="@dimen/body_text" />
-    <TextView android:id="@+id/tvTotal"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:textSize="@dimen/body_text" android:textStyle="bold"
-        android:layout_marginEnd="12dp" />
-    <TextView android:id="@+id/tvRelative"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:textSize="@dimen/body_text" android:textStyle="bold" />
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rankCard"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:gravity="center_vertical"
+    android:background="@drawable/bg_card" android:padding="18dp"
+    android:layout_marginBottom="12dp">
+    <FrameLayout android:layout_width="@dimen/medal_size" android:layout_height="@dimen/medal_size">
+        <TextView android:id="@+id/tvRankNum"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:background="@drawable/bg_medal_circle" android:gravity="center"
+            android:textStyle="bold" android:textColor="?attr/parkMutedForeground" />
+        <ImageView android:id="@+id/ivMedal"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:padding="12dp" android:src="@drawable/ic_medal"
+            android:visibility="gone" android:importantForAccessibility="no" />
+    </FrameLayout>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="16dp">
+        <TextView android:id="@+id/tvRankLabel"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textStyle="bold" android:textSize="12sp" android:visibility="gone" />
+        <TextView android:id="@+id/tvPlayer"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="@dimen/body_text" android:textStyle="bold" android:textColor="?attr/parkForeground" />
+        <TextView android:id="@+id/tvRelative"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="?attr/parkMutedForeground" android:layout_marginTop="2dp" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="vertical" android:gravity="end">
+        <TextView android:id="@+id/tvTotal"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="32sp" android:textStyle="bold" android:textColor="?attr/parkForeground" />
+    </LinearLayout>
 </LinearLayout>
