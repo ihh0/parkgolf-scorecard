@@ -1,21 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical" android:background="?attr/parkBackground">
     <include android:id="@+id/topBar" layout="@layout/view_top_bar" />
-    <LinearLayout
-        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
-        android:orientation="vertical" android:padding="@dimen/screen_padding">
-        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvVenues"
-            android:layout_width="match_parent" android:layout_height="0dp"
-            android:layout_weight="1" />
-        <TextView android:id="@+id/tvEmpty"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:text="@string/no_courses_yet" android:gravity="center"
-            android:textColor="?attr/parkMutedForeground" android:visibility="gone" />
-        <Button android:id="@+id/btnAddVenue"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:minHeight="@dimen/touch_min" android:text="@string/new_course"
-            android:textSize="@dimen/button_text" />
-    </LinearLayout>
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView android:id="@+id/scrollContent"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:fillViewport="true">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="@dimen/screen_padding">
+                <LinearLayout android:id="@+id/containerVenues"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+                <LinearLayout android:id="@+id/btnNewTemplate"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="@dimen/touch_min" android:orientation="horizontal"
+                    android:gravity="center" android:background="@drawable/bg_dashed"
+                    android:paddingVertical="18dp" android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="4dp">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                        android:src="@drawable/ic_plus" app:tint="?attr/parkPrimary"
+                        android:importantForAccessibility="no" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp" android:text="@string/new_template_button"
+                        android:textSize="@dimen/button_text" android:textStyle="bold"
+                        android:textColor="?attr/parkPrimary" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 빈 상태 -->
+        <LinearLayout android:id="@+id/emptyView"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical" android:gravity="center"
+            android:padding="@dimen/screen_padding" android:visibility="gone">
+            <FrameLayout android:layout_width="80dp" android:layout_height="80dp">
+                <View android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:background="@drawable/bg_circle_muted" />
+                <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:src="@drawable/ic_map_pin" android:padding="22dp"
+                    app:tint="?attr/parkMutedForeground" android:importantForAccessibility="no" />
+            </FrameLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/courses_empty_title" android:textColor="?attr/parkForeground"
+                android:textSize="20sp" android:textStyle="bold" android:layout_marginTop="16dp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/courses_empty_desc" android:textColor="?attr/parkMutedForeground"
+                android:textSize="16sp" android:layout_marginTop="4dp" />
+            <Button android:id="@+id/btnEmptyAdd"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/create_template" app:icon="@drawable/ic_plus"
+                app:iconGravity="textStart" android:layout_marginTop="20dp"
+                android:minHeight="@dimen/touch_min" android:textStyle="bold" />
+        </LinearLayout>
+    </FrameLayout>
 </LinearLayout>
