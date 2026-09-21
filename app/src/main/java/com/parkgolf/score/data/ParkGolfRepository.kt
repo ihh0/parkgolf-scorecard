@@ -21,5 +21,6 @@ interface ParkGolfRepository {
     suspend fun upsertCourse(course: CourseEntity): Long
     suspend fun deleteVenue(venue: VenueEntity)
     suspend fun deleteCourse(course: CourseEntity)
+    suspend fun deleteVenueWithCourses(venueId: Long)
     fun observeCourses(): Flow<List<CourseEntity>>
 }

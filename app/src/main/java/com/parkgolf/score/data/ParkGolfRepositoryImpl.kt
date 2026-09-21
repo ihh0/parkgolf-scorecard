@@ -48,5 +48,9 @@ class ParkGolfRepositoryImpl(
 
     override suspend fun deleteVenue(venue: VenueEntity) = venueDao.delete(venue)
     override suspend fun deleteCourse(course: CourseEntity) = courseDao.delete(course)
+    override suspend fun deleteVenueWithCourses(venueId: Long) {
+        courseDao.forVenue(venueId).forEach { courseDao.delete(it) }
+        venueDao.byId(venueId)?.let { venueDao.delete(it) }
+    }
     override fun observeCourses(): Flow<List<CourseEntity>> = courseDao.observeAll()
 }
