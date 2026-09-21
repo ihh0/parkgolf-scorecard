@@ -40,19 +40,23 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             findNavController().navigate(R.id.settingsFragment)
         }
 
-        viewLifecycleOwner.lifecycleScope.launch {
-            val current = repo.currentInProgressRound()
-            if (current != null && session.round.value == null) {
-                MaterialAlertDialogBuilder(requireContext())
-                    .setMessage(R.string.resume_round)
-                    .setPositiveButton(R.string.resume) { _, _ ->
-                        session.startRound(current)
-                        findNavController().navigate(R.id.holeInputFragment)
-                    }
-                    .setNegativeButton(R.string.discard) { _, _ ->
-                        viewLifecycleOwner.lifecycleScope.launch { repo.deleteRound(current.id) }
-                    }
-                    .show()
+        // 이어하기 팝업은 앱 실행당 한 번만 물어본다(홈으로 돌아올 때마다 반복 금지).
+        if (!session.resumePrompted) {
+            viewLifecycleOwner.lifecycleScope.launch {
+                val current = repo.currentInProgressRound()
+                if (current != null && session.round.value == null && !session.resumePrompted) {
+                    session.resumePrompted = true
+                    MaterialAlertDialogBuilder(requireContext())
+                        .setMessage(R.string.resume_round)
+                        .setPositiveButton(R.string.resume) { _, _ ->
+                            session.startRound(current)
+                            findNavController().navigate(R.id.holeInputFragment)
+                        }
+                        .setNegativeButton(R.string.discard) { _, _ ->
+                            viewLifecycleOwner.lifecycleScope.launch { repo.deleteRound(current.id) }
+                        }
+                        .show()
+                }
             }
         }
     }
