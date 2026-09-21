@@ -141,4 +141,12 @@
     <string name="stat_avg">평균</string>
     <string name="stat_best">최저</string>
     <string name="stat_worst">최고</string>
+
+    <!-- course management redesign -->
+    <string name="course_count">%1$d개 코스</string>
+    <string name="courses_empty_title">저장된 코스 없음</string>
+    <string name="courses_empty_desc">코스 템플릿을 작성해 추가하세요</string>
+    <string name="create_template">코스 템플릿 작성</string>
+    <string name="delete_venue_confirm">이 구장을 삭제할까요?</string>
+    <string name="delete_course_confirm">이 코스를 삭제할까요?</string>
 </resources>
