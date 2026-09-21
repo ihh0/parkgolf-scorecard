@@ -1,25 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical" android:background="?attr/parkBackground">
     <include android:id="@+id/topBar" layout="@layout/view_top_bar" />
-    <LinearLayout
-        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
-        android:orientation="vertical" android:padding="@dimen/screen_padding">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:orientation="horizontal" android:layout_marginBottom="12dp">
+
+    <!-- 통계 요약 카드 -->
+    <LinearLayout android:id="@+id/statsCard"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:background="@drawable/bg_card"
+        android:layout_marginHorizontal="@dimen/screen_padding" android:layout_marginTop="12dp"
+        android:paddingVertical="16dp">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/stat_avg" android:textColor="?attr/parkMutedForeground"
+                android:textSize="14sp" />
             <TextView android:id="@+id/tvAvg"
-                android:layout_width="0dp" android:layout_height="wrap_content"
-                android:layout_weight="1" android:gravity="center" android:textStyle="bold" />
-            <TextView android:id="@+id/tvBest"
-                android:layout_width="0dp" android:layout_height="wrap_content"
-                android:layout_weight="1" android:gravity="center" android:textStyle="bold" />
-            <TextView android:id="@+id/tvWorst"
-                android:layout_width="0dp" android:layout_height="wrap_content"
-                android:layout_weight="1" android:gravity="center" android:textStyle="bold" />
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textColor="?attr/parkForeground" android:textSize="22sp"
+                android:textStyle="bold" android:layout_marginTop="2dp" />
         </LinearLayout>
-        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvRounds"
-            android:layout_width="match_parent" android:layout_height="0dp"
-            android:layout_weight="1" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/stat_best" android:textColor="?attr/parkMutedForeground"
+                android:textSize="14sp" />
+            <TextView android:id="@+id/tvBest"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textColor="?attr/parkForeground" android:textSize="22sp"
+                android:textStyle="bold" android:layout_marginTop="2dp" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/stat_worst" android:textColor="?attr/parkMutedForeground"
+                android:textSize="14sp" />
+            <TextView android:id="@+id/tvWorst"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textColor="?attr/parkForeground" android:textSize="22sp"
+                android:textStyle="bold" android:layout_marginTop="2dp" />
+        </LinearLayout>
     </LinearLayout>
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvRounds"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/screen_padding" android:paddingTop="12dp"
+            android:paddingBottom="12dp" android:clipToPadding="false" />
+
+        <!-- 빈 상태 -->
+        <LinearLayout android:id="@+id/emptyView"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical" android:gravity="center" android:visibility="gone">
+            <FrameLayout android:layout_width="80dp" android:layout_height="80dp">
+                <View android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:background="@drawable/bg_circle_muted" />
+                <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:src="@drawable/ic_trophy" android:padding="22dp"
+                    app:tint="?attr/parkMutedForeground" android:importantForAccessibility="no" />
+            </FrameLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/records_empty_title" android:textColor="?attr/parkForeground"
+                android:textSize="20sp" android:textStyle="bold" android:layout_marginTop="16dp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/records_empty_desc" android:textColor="?attr/parkMutedForeground"
+                android:textSize="16sp" android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </FrameLayout>
 </LinearLayout>
