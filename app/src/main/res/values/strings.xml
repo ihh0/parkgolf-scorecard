@@ -98,7 +98,7 @@
     <string name="title_grid">전체 점수 보기</string>
     <string name="title_summary">경기 완료</string>
     <string name="title_history">게임 기록</string>
-    <string name="title_round_detail">기록 상세</string>
+    <string name="title_round_detail">경기 결과</string>
     <string name="title_my_courses">코스 관리</string>
     <string name="title_settings">설정</string>
     <string name="settings_label">설정</string>
@@ -133,4 +133,12 @@
     <string name="grid_hole_col">홀</string>
     <string name="grid_par_col">파</string>
     <string name="grid_total_row">합계</string>
+
+    <!-- records redesign -->
+    <string name="records_empty_title">기록 없음</string>
+    <string name="records_empty_desc">게임을 완료하면 여기에 기록됩니다</string>
+    <string name="view_result">경기 결과 보기</string>
+    <string name="stat_avg">평균</string>
+    <string name="stat_best">최저</string>
+    <string name="stat_worst">최고</string>
 </resources>
