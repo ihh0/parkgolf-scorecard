@@ -70,5 +70,23 @@ class Mapping(unittest.TestCase):
         self.assertEqual(m["region"]["sigungu"], "관악구")
 
 
+class Filter(unittest.TestCase):
+    def test_exclude_soccer_in_mixed_file(self):
+        e = {"name": "옻골축구장", "holdings": "인조잔디 축구장 1면"}
+        self.assertFalse(bv.is_parkgolf(e, "대구광역시 북구_생활체육시설_20260212.csv"))
+
+    def test_include_parkgolf_in_mixed_file(self):
+        e = {"name": "○○파크골프장", "holdings": "파크골프장 9홀"}
+        self.assertTrue(bv.is_parkgolf(e, "대구광역시 북구_생활체육시설_20260212.csv"))
+
+    def test_include_by_holdings_only(self):
+        e = {"name": "산격체육공원", "holdings": "파크골프 9홀 + 산책로"}
+        self.assertTrue(bv.is_parkgolf(e, "대구광역시 북구_생활체육시설_20260212.csv"))
+
+    def test_parkgolf_dedicated_file_row_always_true(self):
+        e = {"name": "지곡파크골프장", "holdings": None}
+        self.assertTrue(bv.is_parkgolf(e, "경상북도_파크골프장 현황_20250310.csv"))
+
+
 if __name__ == "__main__":
     unittest.main()

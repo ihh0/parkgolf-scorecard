@@ -95,6 +95,25 @@ def _to_float(x):
         return None
 
 
+# ---------------------------------------------------------------------------
+# 비-파크골프 필터
+# ---------------------------------------------------------------------------
+
+MIXED_FILES = ("생활체육시설",)        # 파크골프 외 시설 혼합 -> 행 단위 필터
+EXCLUDE_FILES = ("골프장내장객현황",)   # 파일 전체 제외(로더에서 스킵)
+
+
+def _has_pg(*vals):
+    return any(v and ("파크골프" in v or "파크 골프" in v) for v in vals)
+
+
+def is_parkgolf(entry, filename):
+    """혼합 파일은 name/보유시설에 '파크골프' 있는 행만, 전용 파일은 전부 채택."""
+    if any(k in filename for k in MIXED_FILES):
+        return _has_pg(entry.get("name"), entry.get("holdings"))
+    return True
+
+
 def map_row(row, filename):
     """원천 CSV 한 행(dict) -> 정규화된 공통 필드 dict."""
     row = {norm_header(k): v for k, v in row.items()}
