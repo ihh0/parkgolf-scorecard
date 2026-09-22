@@ -56,12 +56,13 @@ def region_from_address(addr: str):
     if not addr:
         return {"sido": None, "sigungu": None}
     parts = addr.split()
-    sido = next((s for s in _SIDO if addr.startswith(s)), parts[0] if parts else None)
-    if sido and addr.startswith(sido):
+    sido = next((s for s in _SIDO if addr.startswith(s)), None)
+    if sido:
         rest = addr[len(sido):].strip().split()
+        sigungu = rest[0] if rest else None
     else:
-        rest = parts[1:]
-    sigungu = rest[0] if rest else None
+        # 시/도 접두가 없는 주소: 첫 토큰을 시군구로 본다.
+        sigungu = parts[0] if parts else None
     return {"sido": sido, "sigungu": sigungu}
 
 
@@ -322,3 +323,82 @@ def geocode(addr, cache, fetch):
     v = fetch(addr)
     cache[addr] = list(v) if v else None
     return v
+
+
+# ---------------------------------------------------------------------------
+# build + main
+# ---------------------------------------------------------------------------
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+REPO = os.path.dirname(HERE)
+DATADIR = os.path.join(REPO, "데이터")
+CACHE_PATH = os.path.join(HERE, "geocode_cache.json")
+OUT_PATH = os.path.join(REPO, "app", "src", "main", "assets", "parkgolf_venues.json")
+
+
+def _geocode_entry(entry, cache, fetch):
+    """도로명 -> 지번 순으로 지오코딩 시도. (lat, lng) 또는 None."""
+    for raw in (entry.get("roadAddress"), entry.get("jibunAddress")):
+        addr = clean_addr(raw)
+        if not addr:
+            continue
+        r = geocode(addr, cache, fetch)
+        if r:
+            return r
+    return None
+
+
+def build(datadir, cache, key=None, sleep=0.0, log=print):
+    entries = load_all(datadir)
+    for e in entries:
+        e["coordSource"] = "original" if e["lat"] is not None else "none"
+
+    def fetch(addr):
+        if not key:
+            return None
+        r = vworld_fetch(addr, key, "ROAD") or vworld_fetch(addr, key, "PARCEL")
+        if sleep:
+            time.sleep(sleep)
+        return r
+
+    geocoded = failed = 0
+    for e in entries:
+        if e["lat"] is not None:
+            continue
+        r = _geocode_entry(e, cache, fetch)
+        if r:
+            e["lat"], e["lng"] = r
+            e["coordSource"] = "geocoded"
+            geocoded += 1
+        else:
+            failed += 1
+
+    venues = group_venues(entries)
+
+    log(f"entries: {len(entries)}  ->  venues: {len(venues)}")
+    log(f"coords  original: {sum(1 for v in venues if v['coordSource']=='original')}"
+        f"  geocoded: {sum(1 for v in venues if v['coordSource']=='geocoded')}"
+        f"  none: {sum(1 for v in venues if v['coordSource']=='none')}")
+    log(f"geocoding this run  success: {geocoded}  failed: {failed}"
+        f"  (key {'set' if key else 'MISSING'})")
+    return venues
+
+
+def main():
+    cache = {}
+    if os.path.exists(CACHE_PATH):
+        with open(CACHE_PATH, encoding="utf-8") as f:
+            cache = json.load(f)
+    key = os.environ.get("VWORLD_KEY")
+    venues = build(DATADIR, cache, key=key, sleep=0.1)
+
+    os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
+    with open(OUT_PATH, "w", encoding="utf-8") as f:
+        json.dump(venues, f, ensure_ascii=False, indent=2)
+    with open(CACHE_PATH, "w", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False, indent=2, sort_keys=True)
+    print(f"wrote {OUT_PATH} ({len(venues)} venues)")
+
+
+if __name__ == "__main__":
+    main()

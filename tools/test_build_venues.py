@@ -27,6 +27,13 @@ class Helpers(unittest.TestCase):
         r2 = bv.region_from_address("서울특별시 관악구 남현동 1")
         self.assertEqual(r2, {"sido": "서울특별시", "sigungu": "관악구"})
 
+    def test_region_missing_province_prefix(self):
+        # 시/도 접두가 없으면 sido=None, 첫 토큰을 시군구로.
+        self.assertEqual(bv.region_from_address("가평군 청평면 대성리 388-13"),
+                         {"sido": None, "sigungu": "가평군"})
+        self.assertEqual(bv.region_from_address("춘천시 서면 박사로 800"),
+                         {"sido": None, "sigungu": "춘천시"})
+
 
 class Mapping(unittest.TestCase):
     def test_geochang_standard(self):
