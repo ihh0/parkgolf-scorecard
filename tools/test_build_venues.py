@@ -151,5 +151,35 @@ class Grouping(unittest.TestCase):
         self.assertEqual(len(vs), 2)
 
 
+class Geo(unittest.TestCase):
+    def test_cache_hit_no_fetch(self):
+        calls = []
+        cache = {"서울 A": [37.5, 127.0]}
+        r = bv.geocode("서울 A", cache, lambda a: calls.append(a) or (0, 0))
+        self.assertEqual(r, (37.5, 127.0))
+        self.assertEqual(calls, [])
+
+    def test_cache_miss_calls_and_stores(self):
+        calls = []
+        cache = {}
+        r = bv.geocode("서울 B", cache, lambda a: calls.append(a) or (37.1, 127.1))
+        self.assertEqual(r, (37.1, 127.1))
+        self.assertEqual(calls, ["서울 B"])
+        self.assertEqual(cache["서울 B"], [37.1, 127.1])
+
+    def test_fetch_failure_stores_none(self):
+        cache = {}
+        r = bv.geocode("없는주소", cache, lambda a: None)
+        self.assertIsNone(r)
+        self.assertIsNone(cache["없는주소"])
+
+    def test_parse_vworld_ok(self):
+        j = {"response": {"status": "OK", "result": {"point": {"x": "127.02", "y": "37.53"}}}}
+        self.assertEqual(bv.parse_vworld(j), (37.53, 127.02))
+
+    def test_parse_vworld_fail(self):
+        self.assertIsNone(bv.parse_vworld({"response": {"status": "NOT_FOUND"}}))
+
+
 if __name__ == "__main__":
     unittest.main()

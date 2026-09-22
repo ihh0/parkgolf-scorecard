@@ -11,6 +11,9 @@ import csv
 import json
 import os
 import math
+import time
+import urllib.parse
+import urllib.request
 
 # ---------------------------------------------------------------------------
 # 값/헤더/주소/리전 순수 헬퍼
@@ -278,3 +281,44 @@ def group_venues(entries):
             "source": rep["source"],
         })
     return venues
+
+
+# ---------------------------------------------------------------------------
+# 지오코더 (VWorld + 캐시, I/O 주입식)
+# ---------------------------------------------------------------------------
+
+
+def parse_vworld(j):
+    """VWorld getcoord 응답 -> (lat, lng) 또는 None."""
+    try:
+        if j["response"]["status"] != "OK":
+            return None
+        p = j["response"]["result"]["point"]
+        return (float(p["y"]), float(p["x"]))   # y=위도, x=경도
+    except (KeyError, TypeError, ValueError):
+        return None
+
+
+def vworld_fetch(addr, key, addr_type="ROAD"):
+    """VWorld Geocoder 2.0 호출. 실패 시 None."""
+    q = urllib.parse.urlencode({
+        "service": "address", "request": "getcoord", "version": "2.0",
+        "crs": "epsg:4326", "address": addr, "refine": "true", "simple": "false",
+        "format": "json", "type": addr_type, "key": key,
+    })
+    url = "https://api.vworld.kr/req/address?" + q
+    try:
+        with urllib.request.urlopen(url, timeout=10) as r:
+            return parse_vworld(json.load(r))
+    except Exception:
+        return None
+
+
+def geocode(addr, cache, fetch):
+    """캐시 우선 조회, 미스 시 fetch 호출 후 캐시에 기록. (lat, lng) 또는 None."""
+    if addr in cache:
+        v = cache[addr]
+        return tuple(v) if v else None
+    v = fetch(addr)
+    cache[addr] = list(v) if v else None
+    return v
