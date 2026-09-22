@@ -81,6 +81,14 @@ ALIAS = {
 }
 
 
+def holes_from_holdings(s):
+    """'정규홀(27홀)' 같은 보유시설 문구에서 홀수(최댓값=정규홀)를 추출."""
+    if not s:
+        return None
+    nums = [int(n) for n in re.findall(r"(\d+)\s*홀", s)]
+    return max(nums) if nums else None
+
+
 def _first(row, keys):
     for k in keys:
         if k in row and str(row[k]).strip():
@@ -127,7 +135,8 @@ def map_row(row, filename):
         "jibunAddress": jibun,
         "lat": _to_float(_first(row, aliasN["lat"])),
         "lng": _to_float(_first(row, aliasN["lng"])),
-        "holes": to_int(_first(row, aliasN["holes"])),
+        "holes": to_int(_first(row, aliasN["holes"]))
+        or holes_from_holdings(_first(row, aliasN["holdings"])),
         "courseCount": to_int(_first(row, aliasN["courseCount"])),
         "phone": _first(row, aliasN["phone"]),
         "operator": _first(row, aliasN["operator"]),
@@ -136,3 +145,30 @@ def map_row(row, filename):
         "source": filename,
         "date": _first(row, aliasN["date"]),
     }
+
+
+# ---------------------------------------------------------------------------
+# 로더 + 파일 라우팅
+# ---------------------------------------------------------------------------
+
+
+def load_csv(path):
+    with open(path, encoding="cp949") as f:
+        return list(csv.DictReader(f))
+
+
+def load_all(datadir):
+    """데이터 디렉터리의 모든 CSV -> 정규화·필터된 항목 리스트."""
+    out = []
+    for fn in sorted(os.listdir(datadir)):
+        if not fn.lower().endswith(".csv"):
+            continue
+        if any(k in fn for k in EXCLUDE_FILES):   # 제주 내장객현황 등 파일 통째 제외
+            continue
+        for row in load_csv(os.path.join(datadir, fn)):
+            m = map_row(row, fn)
+            if not m["name"]:
+                continue
+            if is_parkgolf(m, fn):
+                out.append(m)
+    return out

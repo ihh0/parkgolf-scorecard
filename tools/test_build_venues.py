@@ -70,6 +70,25 @@ class Mapping(unittest.TestCase):
         self.assertEqual(m["region"]["sigungu"], "관악구")
 
 
+class HolesFromHoldings(unittest.TestCase):
+    def test_regular_holes(self):
+        self.assertEqual(bv.holes_from_holdings("정규홀(27홀)"), 27)
+        self.assertEqual(bv.holes_from_holdings("정규홀(18홀)"), 18)
+
+    def test_takes_max_regulation(self):
+        self.assertEqual(bv.holes_from_holdings("정규홀(36홀)연습홀(1홀)"), 36)
+
+    def test_none_when_no_holes(self):
+        self.assertIsNone(bv.holes_from_holdings("인조잔디 축구장 1면"))
+        self.assertIsNone(bv.holes_from_holdings(None))
+
+    def test_map_row_holes_fallback_to_holdings(self):
+        row = {"시설명": "무태파크골프장", "보유시설": "정규홀(18홀)",
+               "위도": "35.9", "경도": "128.6", "소재지지번주소": "대구 북구 x"}
+        m = bv.map_row(row, "대구광역시 북구_생활체육시설_x.csv")
+        self.assertEqual(m["holes"], 18)
+
+
 class Filter(unittest.TestCase):
     def test_exclude_soccer_in_mixed_file(self):
         e = {"name": "옻골축구장", "holdings": "인조잔디 축구장 1면"}
