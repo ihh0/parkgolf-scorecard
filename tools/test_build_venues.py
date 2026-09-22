@@ -107,5 +107,49 @@ class Filter(unittest.TestCase):
         self.assertTrue(bv.is_parkgolf(e, "경상북도_파크골프장 현황_20250310.csv"))
 
 
+def _entry(name, lat=None, lng=None, holes=18, sigungu="거창군",
+           source="경상남도 거창군_파크골프장_20260811.csv"):
+    return {
+        "name": name, "roadAddress": "도로명", "jibunAddress": "지번",
+        "lat": lat, "lng": lng, "holes": holes, "courseCount": None,
+        "phone": None, "operator": None, "holdings": None,
+        "region": {"sido": "경상남도", "sigungu": sigungu},
+        "source": source, "date": None,
+        "coordSource": "original" if lat is not None else "none",
+    }
+
+
+class Grouping(unittest.TestCase):
+    def test_haversine_zero_and_known(self):
+        self.assertAlmostEqual(bv.haversine(35.0, 127.0, 35.0, 127.0), 0.0, places=6)
+        d = bv.haversine(37.5665, 126.9780, 35.1796, 129.0756)  # 서울-부산 ≈ 325km
+        self.assertTrue(300 < d < 340)
+
+    def test_multicourse_same_place(self):
+        es = [_entry("거창스포츠파크 파크골프장 1구장", 35.6951, 127.9263, 18),
+              _entry("거창스포츠파크 파크골프장 2구장", 35.6951, 127.9263, 18)]
+        vs = bv.group_venues(es)
+        self.assertEqual(len(vs), 1)
+        self.assertEqual(vs[0]["name"], "거창스포츠파크 파크골프장")
+        self.assertEqual(sorted(c["holes"] for c in vs[0]["courses"]), [18, 18])
+
+    def test_dedup_across_sources_prefers_standard_coords(self):
+        es = [_entry("지곡파크골프장", None, None, 18, "포항시",
+                     source="경상북도_파크골프장 현황_20250310.csv"),
+              _entry("지곡파크골프장", 36.01, 129.34, 18, "포항시",
+                     source="경주시시설관리공단_파크골프장 표준데이터_x.csv")]
+        vs = bv.group_venues(es)
+        self.assertEqual(len(vs), 1)
+        self.assertEqual(len(vs[0]["courses"]), 1)
+        self.assertAlmostEqual(vs[0]["lat"], 36.01)   # 표준 좌표 채택
+        self.assertEqual(vs[0]["coordSource"], "original")
+
+    def test_coordless_different_names_stay_separate(self):
+        es = [_entry("주상면 파크골프장", None, None, 9),
+              _entry("웅양면 파크골프장", None, None, 18)]
+        vs = bv.group_venues(es)
+        self.assertEqual(len(vs), 2)
+
+
 if __name__ == "__main__":
     unittest.main()

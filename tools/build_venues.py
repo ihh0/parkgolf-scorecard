@@ -10,6 +10,7 @@ import re
 import csv
 import json
 import os
+import math
 
 # ---------------------------------------------------------------------------
 # 값/헤더/주소/리전 순수 헬퍼
@@ -172,3 +173,108 @@ def load_all(datadir):
             if is_parkgolf(m, fn):
                 out.append(m)
     return out
+
+
+# ---------------------------------------------------------------------------
+# 그룹핑 + 중복 제거
+# ---------------------------------------------------------------------------
+
+
+def haversine(lat1, lng1, lat2, lng2):
+    """두 좌표 간 거리(km)."""
+    r = 6371.0
+    p1, p2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dl = math.radians(lng2 - lng1)
+    a = math.sin(dphi / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
+    return 2 * r * math.asin(math.sqrt(a))
+
+
+_SUFFIX_RE = re.compile(r"\s*(제?\s*\d+\s*구장|[A-Za-z]코스)$")
+
+
+def split_suffix(name):
+    """'…파크골프장 1구장' -> (stem, '1구장'). 접미 없으면 (name, None)."""
+    m = _SUFFIX_RE.search(name or "")
+    if m:
+        return name[:m.start()].strip(), re.sub(r"\s+", "", m.group(1))
+    return (name or "").strip(), None
+
+
+def source_priority(filename):
+    """대표 필드 선택 우선순위: 표준데이터 > 시설 > 현황."""
+    if "표준" in filename:
+        return 3
+    if "시설" in filename:
+        return 2
+    return 1
+
+
+def group_venues(entries):
+    """같은 구장(이름줄기 + 시군구)끼리 묶어 구장 단위 + courses[]로 정규화."""
+    groups = {}
+    for e in entries:
+        stem, suf = split_suffix(e["name"])
+        key = (stem, e["region"].get("sigungu") or e["region"].get("sido"))
+        groups.setdefault(key, []).append((suf, e))
+
+    venues = []
+    for (stem, _reg), items in groups.items():
+        ents = [e for _, e in items]
+
+        def rank(e):
+            return (source_priority(e["source"]), 1 if e["lat"] is not None else 0)
+
+        rep = max(ents, key=rank)
+        coord_ents = [e for e in ents if e["lat"] is not None]
+        coord = max(coord_ents, key=lambda e: source_priority(e["source"])) if coord_ents else None
+
+        def pick(field):
+            if rep.get(field):
+                return rep[field]
+            for e in ents:
+                if e.get(field):
+                    return e[field]
+            return None
+
+        # courses: 접미 있는 항목은 각각 코스, 접미 없는 항목은 홀수로 중복 제거
+        courses = []
+        for suf, e in items:
+            if suf:
+                courses.append({"name": suf, "holes": e["holes"]})
+        seen_holes = set()
+        for suf, e in items:
+            if suf:
+                continue
+            h = e["holes"]
+            if h in seen_holes:
+                continue
+            seen_holes.add(h)
+            courses.append({"name": "", "holes": h})
+
+        # 이름 없는 코스가 여러 개면 A코스/B코스… 부여
+        blanks = [c for c in courses if c["name"] == ""]
+        if len(courses) > 1 and blanks:
+            used = {c["name"] for c in courses if c["name"]}
+            letters = (ch + "코스" for ch in "ABCDEFGHIJ")
+            for c in blanks:
+                for L in letters:
+                    if L not in used:
+                        c["name"] = L
+                        used.add(L)
+                        break
+
+        venues.append({
+            "name": stem,
+            "region": rep["region"],
+            "roadAddress": pick("roadAddress"),
+            "jibunAddress": pick("jibunAddress"),
+            "lat": coord["lat"] if coord else None,
+            "lng": coord["lng"] if coord else None,
+            "coordSource": (coord.get("coordSource", "original") if coord else "none"),
+            "courses": courses,
+            "phone": pick("phone"),
+            "operator": pick("operator"),
+            "source": rep["source"],
+        })
+    return venues
