@@ -1,0 +1,4621 @@
+[
+  {
+    "name": "가평파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "가평군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "가평군 청평면 대성리 388-13번지",
+    "lat": 37.692174,
+    "lng": 127.384366,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": null
+      }
+    ],
+    "phone": "031-8078-8075",
+    "operator": "가평군시설관리공단",
+    "source": "가평군시설관리공단_가평파크골프장_20260721.csv"
+  },
+  {
+    "name": "서면파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "춘천시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "춘천시 서면 박사로 800",
+    "lat": 37.88811437265436,
+    "lng": 127.6877135623354,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-250-3502",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "소양강파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "춘천시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "춘천시 동면 장학리 459-11",
+    "lat": 37.91622800169495,
+    "lng": 127.74656189846291,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": "033-250-3502",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "학성파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "원주시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "원주시 학성동 36번지",
+    "lat": 37.35207741391132,
+    "lng": 127.94348803936053,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-737-2874",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "태장파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "원주시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "원주시 태장동 1346-103번지",
+    "lat": 37.36407939586098,
+    "lng": 127.95085052415573,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-737-2874",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "취병파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "원주시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "원주시 문막읍 취병리 438-37번지",
+    "lat": 37.305746189748135,
+    "lng": 127.80760746390789,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-737-2874",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "문막파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "원주시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "원주시 문막읍 문막리 1071-17번지",
+    "lat": 37.30629516320984,
+    "lng": 127.81188056398926,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-737-2874",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "행구수변공원파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "원주시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "원주시 행구동 1029번지",
+    "lat": 37.34217169311107,
+    "lng": 127.99636237871641,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "033-737-2874",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "간현파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "원주시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "원주시 간현리 1116-36번지",
+    "lat": 37.34939861083062,
+    "lng": 127.83588354805077,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-737-2874",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "주문진 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "강릉시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "강릉시 주문진읍 교항리 103-9",
+    "lat": 37.882747217692824,
+    "lng": 128.82635628762532,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "033-640-5963",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "강릉파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "강릉시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "강릉시 입암동 606-3",
+    "lat": 37.762433925369095,
+    "lng": 128.91148438589548,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-640-5963",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "사천체육공원 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "강릉시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "강릉시 사천면 석교리 1028-1",
+    "lat": 37.825924000646424,
+    "lng": 128.8469969642935,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-640-5963",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "무릉파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "동해시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "동해시 삼화로 163-10(삼화동)",
+    "lat": 37.478551420522436,
+    "lng": 129.05665816447475,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 27
+      }
+    ],
+    "phone": "033-530-2347",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "전천파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "동해시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "동해시 나안동 220",
+    "lat": 37.48305355225904,
+    "lng": 129.11451072058628,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "033-530-2347",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "스포츠파크 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "태백시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "태백시 백두대간로 179 (태백스포츠파크 내)",
+    "lat": 37.20038792660513,
+    "lng": 128.97453994661842,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-550-2192",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "백산파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "태백시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "태백시 백산동 119-8",
+    "lat": 37.14446799887776,
+    "lng": 129.03262282816587,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "033-550-2192",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "속초 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "속초시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "속초시 노학동 1000-340번지",
+    "lat": 38.19307416993287,
+    "lng": 128.53282442098762,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-639-1565",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "미로파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "무사리"
+    },
+    "roadAddress": null,
+    "jibunAddress": "무사리 산62-10번지",
+    "lat": 37.42124538826615,
+    "lng": 129.11707674952294,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 27
+      }
+    ],
+    "phone": "033-570-3819",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "홍천 강변 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "홍천군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "홍천군 홍천읍 갈마곡리 266-1",
+    "lat": 37.69619944135765,
+    "lng": 127.89837560232209,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-430-2441",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "내면 광원리 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "홍천군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "홍천군 내면 광원리 1656",
+    "lat": 37.83274776306515,
+    "lng": 128.41654811073272,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-430-2441",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "전천 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "횡성군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "횡성군 횡성읍 읍상리 577-1",
+    "lat": 37.48243532240543,
+    "lng": 127.99011946322,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-340-5962",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "명품 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "횡성군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "횡성군 횡성읍 정암리 514-16",
+    "lat": 37.469719128446,
+    "lng": 128.01954550097935,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-340-5962",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "청일 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "횡성군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "횡성군 청일면 유평리 613-1",
+    "lat": 37.56810337583882,
+    "lng": 128.1229920694432,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-340-5962",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "둔내(둔방) 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "횡성군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "횡성군 둔내면 둔방내리 563-3",
+    "lat": 37.50654009731261,
+    "lng": 128.2107076953319,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "033-340-5962",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "둔내(우용) 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "횡성군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "횡성군 둔내면 우용리 649-25",
+    "lat": 37.49673610639879,
+    "lng": 128.20785556379042,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "033-340-5962",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "영월군 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "영월군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "영월군 영월읍 하송리 81-74번지일원",
+    "lat": 37.17268486401893,
+    "lng": 128.4578855663504,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "033-370-2978",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "평창파크골프장",
+    "region": {
+      "sido": "강원특별자치도",
+      "sigungu": "평창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "강원특별자치도 평창군 평창읍 종부리 965",
+    "lat": 37.35873788867339,
+    "lng": 128.3841916610039,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-330-2161",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "대화파크골프장",
+    "region": {
+      "sido": "강원특별자치도",
+      "sigungu": "평창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "강원특별자치도 평창군 대화면 대화리 734-5",
+    "lat": 37.48337438319405,
+    "lng": 128.45960896003203,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-330-2161",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "용평파크골프장",
+    "region": {
+      "sido": "강원특별자치도",
+      "sigungu": "평창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "강원특별자치도 평창군 용평면 장평리 649",
+    "lat": 37.59345215931012,
+    "lng": 128.40887932028062,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "033-330-2161",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "봉평파크골프장",
+    "region": {
+      "sido": "강원특별자치도",
+      "sigungu": "평창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "강원특별자치도 평창군 봉평면 덕거리 952",
+    "lat": 37.653269604930216,
+    "lng": 128.3892794822895,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-330-2161",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "녹송파크골프장",
+    "region": {
+      "sido": "강원특별자치도",
+      "sigungu": "정선군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "강원특별자치도 정선군 정선읍 봉양리 37-3",
+    "lat": 37.38387390818442,
+    "lng": 128.66877274448882,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-560-2950",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "북평파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "정선군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "정선군 북평면 북평리 149-1",
+    "lat": 37.44963517886014,
+    "lng": 128.6752251301079,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-560-2950",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "철원파크골프장",
+    "region": {
+      "sido": "강원특별자치도",
+      "sigungu": "철원군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "강원특별자치도 철원군 갈말읍 군탄리 1084",
+    "lat": 38.155464843064294,
+    "lng": 127.30216990156245,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-450-5292",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "산천어 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "화천군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "화천군 하남면 춘화로 3061-17",
+    "lat": 38.075990159730026,
+    "lng": 127.6881023543502,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": "033-441-0797",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "생활체육공원 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "화천군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "화천군 하남면 춘화로 3225-56",
+    "lat": 38.09403271095006,
+    "lng": 127.6986469404173,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-441-0797",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "한반도섬 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "양구군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "양구군 양구읍 동수리 334-17",
+    "lat": 38.12657617753507,
+    "lng": 127.97773306018848,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": "033-480-7163",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "방산면 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "양구군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "양구군 방산면 현리 147-1",
+    "lat": 38.21264678324938,
+    "lng": 127.9380664812861,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "033-480-7163",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "인제(살구미) 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "인제군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "인제군 인제읍 남북리 460-3번지 일원",
+    "lat": 38.058277968583084,
+    "lng": 128.16805155328774,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-460-4357",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "인제(살구미) 파크골프장 보조경기장",
+    "region": {
+      "sido": null,
+      "sigungu": "인제읍"
+    },
+    "roadAddress": null,
+    "jibunAddress": "인제읍 살구미길 36",
+    "lat": 38.05656681419659,
+    "lng": 128.16649705959912,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "033-460-4357",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "고성 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "고성군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "고성군 토성면 도원리 115-27",
+    "lat": 38.27542769845232,
+    "lng": 128.50592720253087,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "033-680-3715",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "남대천파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "양양군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "양양군 양양읍 송암리 540",
+    "lat": 38.09029228838215,
+    "lng": 128.63782876716778,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 54
+      }
+    ],
+    "phone": "033-670-2606",
+    "operator": null,
+    "source": "강원특별자치도_파크골프장 현황_20250307.csv"
+  },
+  {
+    "name": "거창스포츠파크 파크골프장",
+    "region": {
+      "sido": "경상남도",
+      "sigungu": "거창군"
+    },
+    "roadAddress": "경상남도 거창군 거창읍 심소정길 39-36",
+    "jibunAddress": "경상남도 거창군 거창읍 양평리 1160",
+    "lat": 35.69513581,
+    "lng": 127.9263505,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "1구장",
+        "holes": 18
+      },
+      {
+        "name": "2구장",
+        "holes": 18
+      }
+    ],
+    "phone": "055-940-8720",
+    "operator": "경상남도 거창군 체육시설사업소",
+    "source": "경상남도 거창군_파크골프장_20260811.csv"
+  },
+  {
+    "name": "거창스포츠파크 강변 파크골프장",
+    "region": {
+      "sido": "경상남도",
+      "sigungu": "거창군"
+    },
+    "roadAddress": "경상남도 거창군 거창읍 강남로 249",
+    "jibunAddress": "경상남도 거창군 거창읍 대평리 12",
+    "lat": 35.68319653,
+    "lng": 127.9388087,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "055-940-8720",
+    "operator": "경상남도 거창군 체육시설사업소",
+    "source": "경상남도 거창군_파크골프장_20260811.csv"
+  },
+  {
+    "name": "제2창포원 파크골프장",
+    "region": {
+      "sido": "경상남도",
+      "sigungu": "거창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상남도 거창군 남하면 무릉리 497",
+    "lat": 35.64873121379087,
+    "lng": 127.95214471697224,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": "055-942-8779",
+    "operator": "경상남도 거창군 체육시설사업소",
+    "source": "경상남도 거창군_파크골프장_20260811.csv"
+  },
+  {
+    "name": "주상면 파크골프장",
+    "region": {
+      "sido": "경상남도",
+      "sigungu": "거창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상남도 거창군 주상면 도평리 1225",
+    "lat": 35.74620046,
+    "lng": 127.9138714,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "055-940-7636",
+    "operator": "경상남도 거창군 주상면사무소",
+    "source": "경상남도 거창군_파크골프장_20260811.csv"
+  },
+  {
+    "name": "웅양면 파크골프장",
+    "region": {
+      "sido": "경상남도",
+      "sigungu": "거창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상남도 거창군 웅양면 산포리 산261-20",
+    "lat": 35.82779957,
+    "lng": 127.9283349,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "055-940-7410",
+    "operator": "경상남도 거창군 웅양면사무소",
+    "source": "경상남도 거창군_파크골프장_20260811.csv"
+  },
+  {
+    "name": "고제면 파크골프장",
+    "region": {
+      "sido": "경상남도",
+      "sigungu": "거창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상남도 거창군 고제면 봉계리 525",
+    "lat": 35.8796172,
+    "lng": 127.8721858,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "055-940-7463",
+    "operator": "경상남도 거창군 고제면사무소",
+    "source": "경상남도 거창군_파크골프장_20260811.csv"
+  },
+  {
+    "name": "위천면 파크골프장",
+    "region": {
+      "sido": "경상남도",
+      "sigungu": "거창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상남도 거창군 위천면 상천리 527-5",
+    "lat": 35.73898811,
+    "lng": 127.8191472,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "055-940-7563",
+    "operator": "경상남도 거창군 위천면사무소",
+    "source": "경상남도 거창군_파크골프장_20260811.csv"
+  },
+  {
+    "name": "가조면 파크골프장",
+    "region": {
+      "sido": "경상남도",
+      "sigungu": "거창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상남도 거창군 가조면 일부리 1060-3",
+    "lat": 35.70178082,
+    "lng": 128.0210598,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "1구장",
+        "holes": 9
+      },
+      {
+        "name": "2구장",
+        "holes": 9
+      }
+    ],
+    "phone": "055-940-7812",
+    "operator": "경상남도 거창군 가조면사무소",
+    "source": "경상남도 거창군_파크골프장_20260811.csv"
+  },
+  {
+    "name": "가북면 파크골프장",
+    "region": {
+      "sido": "경상남도",
+      "sigungu": "거창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상남도 거창군 가북면 몽석리 1177-1",
+    "lat": 35.79223188,
+    "lng": 128.0139547,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "055-940-7863",
+    "operator": "경상남도 거창군 가북면사무소",
+    "source": "경상남도 거창군_파크골프장_20260811.csv"
+  },
+  {
+    "name": "신원면 파크골프장",
+    "region": {
+      "sido": "경상남도",
+      "sigungu": "거창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상남도 거창군 신원면 구사리 1625-18",
+    "lat": 35.579371567786666,
+    "lng": 127.95546865750683,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "055-940-7762",
+    "operator": "경상남도 거창군 신원면사무소",
+    "source": "경상남도 거창군_파크골프장_20260811.csv"
+  },
+  {
+    "name": "지곡파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "포항시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 포항시 남구 지곡로212번길 11 일원",
+    "lat": 36.026491970878496,
+    "lng": 129.3263265543132,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "포항시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "곡강파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "포항시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 포항시 북구 흥해읍 용전리 965",
+    "lat": 36.11985392201818,
+    "lng": 129.33938599992553,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": "포항시시설관리공단",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "형산강파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "포항시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 포항시 남구 해도동 130-1번지 일원",
+    "lat": 36.01753823108919,
+    "lng": 129.36839445245687,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": "포항시시설관리공단",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "알천파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "경주시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 경주시 구황동 7-1일원",
+    "lat": 35.84058869348668,
+    "lng": 129.23077683766797,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "경주시시설관리공단",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "경주파크골프",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "경주시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 경주시 석장동 1175-11일원",
+    "lat": 35.85103487118712,
+    "lng": 129.19846273954477,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "1구장",
+        "holes": 18
+      },
+      {
+        "name": "2구장",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "경주시시설관리공단",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "서경주파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "경주시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 경주시 건천읍 천포리 1139일원",
+    "lat": 35.84059788726397,
+    "lng": 129.09261752312287,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "경주시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "남경주파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "경주시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 경주시 외동읍 입실리 207일원",
+    "lat": 35.71577608249446,
+    "lng": 129.33227879352748,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "경주시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "동경주파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "경주시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 경주시 양남면 나아리 958",
+    "lat": 35.70436091761242,
+    "lng": 129.46733134468184,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": "월성원자력본부",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "김천파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "김천시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 김천시 지좌동 140-1일원",
+    "lat": null,
+    "lng": null,
+    "coordSource": "none",
+    "courses": [
+      {
+        "name": "",
+        "holes": 27
+      }
+    ],
+    "phone": null,
+    "operator": "김천시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "용상파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "안동시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 안동시 용상동 1553-1",
+    "lat": 36.56119518875795,
+    "lng": 128.74397689390003,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "안동시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "강남파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "안동시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 안동시 정상동 779",
+    "lat": 36.55140419100486,
+    "lng": 128.75051647785446,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": "안동시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "안동댐파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "안동시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 안동시 성곡동 213",
+    "lat": 36.57573133556468,
+    "lng": 128.77674847628737,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "안동시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "옥동파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "안동시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 안동시 옥동 1381-15",
+    "lat": 36.555644770708085,
+    "lng": 128.68220804360078,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "안동시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "동락파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "구미시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 구미시 진평동 947-31번지 일원",
+    "lat": 36.09316706649105,
+    "lng": 128.4020020502856,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": "구미시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "도개파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "구미시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 구미시 도개면 궁기리 829-1번지 일원",
+    "lat": 36.299382110642775,
+    "lng": 128.324846159145,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": "구미시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "구미파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "구미시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 구미시 고아읍 괴평리 1123번지 일원",
+    "lat": 36.158480070932924,
+    "lng": 128.38481676204884,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 63
+      }
+    ],
+    "phone": null,
+    "operator": "구미시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "해평파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "구미시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 구미시 해평면 낙산리 1095-34번지 일원",
+    "lat": 36.24253019513173,
+    "lng": 128.34510327647286,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "구미시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "양포파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "구미시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 구미시 양호동 607-2번지 일원",
+    "lat": 36.12829627277918,
+    "lng": 128.38710376597373,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "구미시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "선산파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "구미시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 구미시 선산읍 원리 1057-26번지 일원",
+    "lat": 36.22251781733692,
+    "lng": 128.34912256211132,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": "구미시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "장애인파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "구미시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 구미시 원평동 964-1",
+    "lat": 36.12947503763247,
+    "lng": 128.34120267274227,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "구미시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "옥성파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "구미시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 구미시 옥성면 농소리 1034-1번지 일원",
+    "lat": 36.30761170963841,
+    "lng": 128.29932127510818,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "구미시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "조교파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "영천시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 영천시 조교동 52-2",
+    "lat": 35.96813708280108,
+    "lng": 128.96602804963646,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": "영천시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "장애인파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "영천시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 영천시 조교동 883-1",
+    "lat": 35.97118052934171,
+    "lng": 128.96786957565075,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "영천시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "오수파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "영천시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 영천시 오수동 434-26",
+    "lat": 35.95384121604393,
+    "lng": 128.91959158362582,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": "영천시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "상주 병성천 파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "상주시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 상주시 외답동 882-1번지 일원",
+    "lat": 36.4229112441396,
+    "lng": 128.19176164485765,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 54
+      }
+    ],
+    "phone": null,
+    "operator": "상주시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "상주 함창 파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "상주시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 상주시 함창읍 태봉리 614-8번지 일원",
+    "lat": 36.55042327488765,
+    "lng": 128.18809048789115,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "상주시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "영강천변파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "문경시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 문경시 우지동 535-1",
+    "lat": 36.62230340326576,
+    "lng": 128.2053456217016,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 45
+      }
+    ],
+    "phone": null,
+    "operator": "문경시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "농암 대정 파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "문경시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 문경시 농암면 종곡리 536-5",
+    "lat": 36.593138442614666,
+    "lng": 128.00434981676486,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "문경시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "동로면 황장산 파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "문경시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 문경시 동로면 적성리 525-11",
+    "lat": 36.7726940382791,
+    "lng": 128.31496071570984,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "문경시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "가은 청솔공원 파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "문경시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 문경시 가은읍 성저리",
+    "lat": 36.63060247508738,
+    "lng": 128.04501444903497,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "문경시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "경산파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "경산시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 경산시 대평동 75-2번지 일원",
+    "lat": 35.84139157317683,
+    "lng": 128.72778911198503,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "경산시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "하양파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "경산시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 경산시 하양읍 동서리 173-5번지 일원",
+    "lat": 35.910292019436554,
+    "lng": 128.83426391967782,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "경산시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "하양물빛파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "경산시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 경산시 하양읍 대조리 921-51번지 일원",
+    "lat": 35.89246045678736,
+    "lng": 128.79231970338674,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 27
+      }
+    ],
+    "phone": null,
+    "operator": "경산시",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "비안파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "의성군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 의성군 비안면 동부리 162-1",
+    "lat": 36.33435881743496,
+    "lng": 128.4991674901201,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": "의성군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "청송파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "청송군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 청송군 청송읍 송생리 784-1",
+    "lat": 36.38602019437642,
+    "lng": 129.08613787181835,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "청송군체육회",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "삼지연파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "영양군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 영양군 영양읍 삼지리 270번지 일원",
+    "lat": null,
+    "lng": null,
+    "coordSource": "none",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "영양군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "영해생활체육공원파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "영덕군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 영덕군 영해면 성내리 129-1",
+    "lat": 36.52404900655573,
+    "lng": 129.40711348093836,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "영덕군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "장애인파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "영덕군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 영덕군 영덕읍 우곡리 산 31-8",
+    "lat": 36.41187633896995,
+    "lng": 129.3852188258491,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "영덕군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "송천파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "영덕군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 영덕군 병곡면 송천리 434-1",
+    "lat": 36.553874575396556,
+    "lng": 129.41660576128697,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": "영덕군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "오십천파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "영덕군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 영덕군 영덕읍 천전리 364-1번지",
+    "lat": 36.41646761870352,
+    "lng": 129.36407716283907,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "영덕군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "청도군 파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "청도군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 청도군 청도읍 원리192 일원",
+    "lat": 35.611512396624576,
+    "lng": 128.77043003120298,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 27
+      }
+    ],
+    "phone": null,
+    "operator": "청도군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "각북파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "청도군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 청도군 각북면 남산리 1460-3 일원",
+    "lat": 35.69194342201947,
+    "lng": 128.5822520792965,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "청도군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "대가야파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "고령군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 고령군 대가야읍 장기리 320-1",
+    "lat": 35.72074265662877,
+    "lng": 128.2771571272679,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": "고령군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "다산파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "고령군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 고령군 다산면 호촌리 592-1",
+    "lat": 35.81904873414295,
+    "lng": 128.47301592725785,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 27
+      }
+    ],
+    "phone": null,
+    "operator": "고령군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "성주파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "성주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 성주군 성주읍 대황리 52-3번지",
+    "lat": 35.91525185676236,
+    "lng": 128.2779057062403,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "성주군체육회",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "선남파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "성주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 성주군 선남면 관화리 1091-16번지",
+    "lat": 35.90148477622964,
+    "lng": 128.34661333036243,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": "성주군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "벽진파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "성주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 성주군 벽진면 봉계리 1442-78번지",
+    "lat": 35.940841274159965,
+    "lng": 128.22161733045397,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "성주군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "용암파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "성주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 성주군 용암면 상언리 576-1번지",
+    "lat": 35.84175299742286,
+    "lng": 128.33278857728996,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "성주군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "수륜파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "성주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 성주군 수륜면 신정리 657-1번지",
+    "lat": 35.84867895134214,
+    "lng": 128.19667347217023,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "성주군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "초전파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "성주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 성주군 초전면 문덕리 775-9번지",
+    "lat": 35.96067149405306,
+    "lng": 128.24826423466703,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "성주군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "별고을파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "성주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 성주군 대가면 옥성리 1번지",
+    "lat": 35.91244080261606,
+    "lng": 128.2559838378393,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "성주군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "가천파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "성주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 성주군 가천면 금봉리 812-11번지",
+    "lat": 35.88454849451296,
+    "lng": 128.15101620663606,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "성주군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "성주호파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "성주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 성주군 금수면 후평리 4-1번지 일원",
+    "lat": null,
+    "lng": null,
+    "coordSource": "none",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "성주군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "왜관파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "칠곡군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 칠곡군 왜관읍 왜관리 1292-3",
+    "lat": 35.97444797468498,
+    "lng": 128.39479514173422,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "칠곡군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "석적파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "칠곡군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 칠곡군 석적읍 남율리 408",
+    "lat": 36.05816236101801,
+    "lng": 128.39942713735627,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "칠곡군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "덕산파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "칠곡군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 칠곡군 약목면 덕산리 348-1",
+    "lat": 36.036346984120726,
+    "lng": 128.40173672211637,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "칠곡군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "북삼파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "칠곡군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 칠곡군 북삼읍 어로리 743-1",
+    "lat": 36.04511096236267,
+    "lng": 128.3319343166539,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "칠곡군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "예천한천파크골프장(1구장)",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "예천군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 예천군 예천읍 서본리 124",
+    "lat": 36.64261555593119,
+    "lng": 128.44701804271494,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "예천군파크골프협회",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "예천한천파크골프장(2구장)",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "예천군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 예천군 예천읍 대심리 295-5",
+    "lat": 36.63946675464972,
+    "lng": 128.44104507165932,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "예천군파크골프협회",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "내성천파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "봉화군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 봉화군 봉화읍 내성리 506",
+    "lat": 36.890397414447634,
+    "lng": 128.7379706794227,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": "봉화군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "남울진파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "울진군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 울진군 평해읍 평해리 538-4",
+    "lat": 36.723700100881146,
+    "lng": 129.4457002423655,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": "울진군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "울진파크골프장",
+    "region": {
+      "sido": "경상북도",
+      "sigungu": "울진군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경상북도 울진군 근남면 수산리 369-1",
+    "lat": 36.96641993780895,
+    "lng": 129.3964362345992,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": "울진군",
+    "source": "경상북도_파크골프장 현황_20250310.csv"
+  },
+  {
+    "name": "경주파크골프",
+    "region": {
+      "sido": null,
+      "sigungu": "경북"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경북 경주시 충효동 7-1 일원",
+    "lat": 35.85111589,
+    "lng": 129.1984062,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "1구장",
+        "holes": 18
+      }
+    ],
+    "phone": "054-750-8595",
+    "operator": "경주시시설관리공단",
+    "source": "경주시시설관리공단_파크골프장 표준데이터_20260727.csv"
+  },
+  {
+    "name": "경주파크골프",
+    "region": {
+      "sido": null,
+      "sigungu": "석장동"
+    },
+    "roadAddress": null,
+    "jibunAddress": "석장동 1175-11",
+    "lat": 35.84928536,
+    "lng": 129.1982367,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "2구장",
+        "holes": 18
+      }
+    ],
+    "phone": "054-750-8595",
+    "operator": "경주시시설관리공단",
+    "source": "경주시시설관리공단_파크골프장 표준데이터_20260727.csv"
+  },
+  {
+    "name": "알천파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "경북"
+    },
+    "roadAddress": null,
+    "jibunAddress": "경북 경주시 구황동 7-1",
+    "lat": 35.84035045,
+    "lng": 129.2448187,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "054-750-8590",
+    "operator": "경주시시설관리공단",
+    "source": "경주시시설관리공단_파크골프장 표준데이터_20260727.csv"
+  },
+  {
+    "name": "검단동강변파크골프장",
+    "region": {
+      "sido": "대구광역시",
+      "sigungu": "북구"
+    },
+    "roadAddress": null,
+    "jibunAddress": "대구광역시 북구 검단동 276번지 일원",
+    "lat": 35.92499736,
+    "lng": 128.6207275,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 27
+      }
+    ],
+    "phone": "053-665-3954",
+    "operator": "대구광역시 북구청",
+    "source": "대구광역시 북구_생활체육시설_20260212.csv"
+  },
+  {
+    "name": "무태파크골프장",
+    "region": {
+      "sido": "대구광역시",
+      "sigungu": "북구"
+    },
+    "roadAddress": null,
+    "jibunAddress": "대구광역시 북구 서변동 1630-1번지 일원",
+    "lat": 35.91748544,
+    "lng": 128.5999649,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "A코스",
+        "holes": 18
+      },
+      {
+        "name": "B코스",
+        "holes": null
+      }
+    ],
+    "phone": "053-665-3954",
+    "operator": "대구광역시 북구청",
+    "source": "대구광역시 북구_생활체육시설_20260212.csv"
+  },
+  {
+    "name": "금호파크골프장",
+    "region": {
+      "sido": "대구광역시",
+      "sigungu": "북구"
+    },
+    "roadAddress": null,
+    "jibunAddress": "대구광역시 북구 금호동 393-2번지 일원",
+    "lat": 35.89262917,
+    "lng": 128.520409,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "A코스",
+        "holes": 36
+      },
+      {
+        "name": "B코스",
+        "holes": null
+      }
+    ],
+    "phone": "053-665-3954",
+    "operator": "대구광역시 북구청",
+    "source": "대구광역시 북구_생활체육시설_20260212.csv"
+  },
+  {
+    "name": "검단파크골프장",
+    "region": {
+      "sido": "대구광역시",
+      "sigungu": "북구"
+    },
+    "roadAddress": null,
+    "jibunAddress": "대구광역시 북구 검단동 277(금호강 좌안)",
+    "lat": 35.92459946,
+    "lng": 128.6206696,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": null
+      }
+    ],
+    "phone": "053-665-3934",
+    "operator": "북구청 체육진흥과",
+    "source": "대구광역시 북구_파크골프장_20260824.csv"
+  },
+  {
+    "name": "여의도한강 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "여의도"
+    },
+    "roadAddress": null,
+    "jibunAddress": "여의도 한강시민공원 내 (영등포구 여의도동 8)",
+    "lat": 37.521174175117025,
+    "lng": 126.91855436334902,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": null
+      }
+    ],
+    "phone": null,
+    "operator": "한강사업 본부",
+    "source": "서울특별시_파크골프장 현황_20230508.csv"
+  },
+  {
+    "name": "월드컵공원 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "상암동"
+    },
+    "roadAddress": null,
+    "jibunAddress": "상암동 노을공원 내 (마포구 상암동 478-1)",
+    "lat": 37.574353391044895,
+    "lng": 126.87333838482824,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": null
+      }
+    ],
+    "phone": null,
+    "operator": "서부공원 여가센터",
+    "source": "서울특별시_파크골프장 현황_20230508.csv"
+  },
+  {
+    "name": "서남물재생센터 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "서남물재생센터"
+    },
+    "roadAddress": null,
+    "jibunAddress": "서남물재생센터 내 (강서구 양천로 201)",
+    "lat": 37.57745916017712,
+    "lng": 126.82024228844023,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": null
+      }
+    ],
+    "phone": null,
+    "operator": "㈜서남환경",
+    "source": "서울특별시_파크골프장 현황_20230508.csv"
+  },
+  {
+    "name": "잠실운동장 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "잠실종합운동장"
+    },
+    "roadAddress": null,
+    "jibunAddress": "잠실종합운동장 내 (송파구 잠실동 10-2)",
+    "lat": 37.51318300641729,
+    "lng": 127.07618409119794,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": null
+      }
+    ],
+    "phone": null,
+    "operator": "체육시설 관리사업소",
+    "source": "서울특별시_파크골프장 현황_20230508.csv"
+  },
+  {
+    "name": "중랑천 파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "월계동"
+    },
+    "roadAddress": null,
+    "jibunAddress": "월계동 중랑천 내 (노원구 월계동 230-10)",
+    "lat": 37.63723774606841,
+    "lng": 127.05840655641879,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": null
+      }
+    ],
+    "phone": null,
+    "operator": "노원구",
+    "source": "서울특별시_파크골프장 현황_20230508.csv"
+  },
+  {
+    "name": "안양천 파크골프장 (양천)",
+    "region": {
+      "sido": null,
+      "sigungu": "목동"
+    },
+    "roadAddress": null,
+    "jibunAddress": "목동 안양천 내 (양천구 목동 411)",
+    "lat": 37.536724829694144,
+    "lng": 126.88221391477673,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": null
+      }
+    ],
+    "phone": null,
+    "operator": "양천구",
+    "source": "서울특별시_파크골프장 현황_20230508.csv"
+  },
+  {
+    "name": "안양천 파크골프장 (구로①)",
+    "region": {
+      "sido": null,
+      "sigungu": "신도립동"
+    },
+    "roadAddress": null,
+    "jibunAddress": "신도립동 안양천 내 (구로구 신도림동 271-64)",
+    "lat": 37.514018758360905,
+    "lng": 126.87871335569065,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": null
+      }
+    ],
+    "phone": null,
+    "operator": "구로구",
+    "source": "서울특별시_파크골프장 현황_20230508.csv"
+  },
+  {
+    "name": "안양천 파크골프장 (금천)",
+    "region": {
+      "sido": null,
+      "sigungu": "금천교"
+    },
+    "roadAddress": null,
+    "jibunAddress": "금천교 ~ 철산교 사이",
+    "lat": null,
+    "lng": null,
+    "coordSource": "none",
+    "courses": [
+      {
+        "name": "",
+        "holes": null
+      }
+    ],
+    "phone": null,
+    "operator": "금천구",
+    "source": "서울특별시_파크골프장 현황_20230508.csv"
+  },
+  {
+    "name": "안양천 파크골프장 (영등포)",
+    "region": {
+      "sido": null,
+      "sigungu": "양화동"
+    },
+    "roadAddress": null,
+    "jibunAddress": "양화동 4-1 일대 안양천변 (양평교~갈대3구장)",
+    "lat": 37.544888301784724,
+    "lng": 126.88589991921299,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": null
+      }
+    ],
+    "phone": null,
+    "operator": "영등포",
+    "source": "서울특별시_파크골프장 현황_20230508.csv"
+  },
+  {
+    "name": "안양천 파크골프장 (구로②)",
+    "region": {
+      "sido": null,
+      "sigungu": "고척교~양천구"
+    },
+    "roadAddress": null,
+    "jibunAddress": "고척교~양천구 경계구간",
+    "lat": null,
+    "lng": null,
+    "coordSource": "none",
+    "courses": [
+      {
+        "name": "",
+        "holes": null
+      }
+    ],
+    "phone": null,
+    "operator": "구로구",
+    "source": "서울특별시_파크골프장 현황_20230508.csv"
+  },
+  {
+    "name": "중랑천 파크골프장 (동대문구)",
+    "region": {
+      "sido": null,
+      "sigungu": "장안동"
+    },
+    "roadAddress": null,
+    "jibunAddress": "장안동 204-5일원 중랑천",
+    "lat": 37.56349836992571,
+    "lng": 127.07356185892448,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": null
+      }
+    ],
+    "phone": null,
+    "operator": "동대문구",
+    "source": "서울특별시_파크골프장 현황_20230508.csv"
+  },
+  {
+    "name": "중랑천 파크골프장 (광진구)",
+    "region": {
+      "sido": null,
+      "sigungu": "중곡동"
+    },
+    "roadAddress": null,
+    "jibunAddress": "중곡동 455-9  중랑천체육공원 (군자교~삼족오육교)",
+    "lat": 37.56417786677217,
+    "lng": 127.07517163268511,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": null
+      }
+    ],
+    "phone": null,
+    "operator": "광진구",
+    "source": "서울특별시_파크골프장 현황_20230508.csv"
+  },
+  {
+    "name": "관악파크골프장",
+    "region": {
+      "sido": "서울특별시",
+      "sigungu": "관악구"
+    },
+    "roadAddress": null,
+    "jibunAddress": "서울특별시 관악구 신림동 산108-10",
+    "lat": 37.4608,
+    "lng": 126.9275,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "02-2015-2759",
+    "operator": "관악구시설관리공단",
+    "source": "서울특별시관악구시설관리공단_관악파크골프장 표준데이터_20260723.csv"
+  },
+  {
+    "name": "금강파크골프장",
+    "region": {
+      "sido": "세종특별자치시",
+      "sigungu": "세종동"
+    },
+    "roadAddress": null,
+    "jibunAddress": "세종특별자치시 세종동 747-212",
+    "lat": 36.47471745371454,
+    "lng": 127.27104972207971,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": "044-301-3334",
+    "operator": "세종특별자치시",
+    "source": "세종특별자치시_파크골프장 현황_20250314.csv"
+  },
+  {
+    "name": "한솔파크골프장",
+    "region": {
+      "sido": "세종특별자치시",
+      "sigungu": "가람동"
+    },
+    "roadAddress": null,
+    "jibunAddress": "세종특별자치시 가람동 765",
+    "lat": 36.479014148632956,
+    "lng": 127.24586516752694,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "044-301-3334",
+    "operator": "세종특별자치시",
+    "source": "세종특별자치시_파크골프장 현황_20250314.csv"
+  },
+  {
+    "name": "오가낭뜰파크골프장",
+    "region": {
+      "sido": "세종특별자치시",
+      "sigungu": "아름동"
+    },
+    "roadAddress": null,
+    "jibunAddress": "세종특별자치시 아름동 804",
+    "lat": 36.523116857404354,
+    "lng": 127.25502204646266,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "044-301-3334",
+    "operator": "세종특별자치시",
+    "source": "세종특별자치시_파크골프장 현황_20250314.csv"
+  },
+  {
+    "name": "부강파크골프장",
+    "region": {
+      "sido": "세종특별자치시",
+      "sigungu": "부강면"
+    },
+    "roadAddress": null,
+    "jibunAddress": "세종특별자치시 부강면 금호리 823-3",
+    "lat": 36.51438840752505,
+    "lng": 127.36728969714594,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": "044-301-3334",
+    "operator": "세종특별자치시",
+    "source": "세종특별자치시_파크골프장 현황_20250314.csv"
+  },
+  {
+    "name": "중앙공원파크골프장",
+    "region": {
+      "sido": "세종특별자치시",
+      "sigungu": "세종동"
+    },
+    "roadAddress": null,
+    "jibunAddress": "세종특별자치시 세종동 1204",
+    "lat": 36.495147775867096,
+    "lng": 127.2760189993621,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "044-850-4343",
+    "operator": "세종시설관리공단",
+    "source": "세종특별자치시_파크골프장 현황_20250314.csv"
+  },
+  {
+    "name": "수질복원센터B파크골프장",
+    "region": {
+      "sido": "세종특별자치시",
+      "sigungu": "대평동"
+    },
+    "roadAddress": null,
+    "jibunAddress": "세종특별자치시 대평동 646",
+    "lat": 36.46819011287907,
+    "lng": 127.26580095885072,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "044-301-3115",
+    "operator": "세종특별자치시",
+    "source": "세종특별자치시_파크골프장 현황_20250314.csv"
+  },
+  {
+    "name": "조천변 파크골프장",
+    "region": {
+      "sido": "세종특별자치시",
+      "sigungu": "조치원읍"
+    },
+    "roadAddress": null,
+    "jibunAddress": "세종특별자치시 조치원읍 평리 120",
+    "lat": 36.60584368349982,
+    "lng": 127.3024895417161,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "044-304-5172",
+    "operator": "세종특별자치시",
+    "source": "세종특별자치시_파크골프장 현황_20250314.csv"
+  },
+  {
+    "name": "세종중앙공원 파크골프장",
+    "region": {
+      "sido": "세종특별자치시",
+      "sigungu": "중앙공원로"
+    },
+    "roadAddress": "세종특별자치시 중앙공원로 60",
+    "jibunAddress": "세종특별자치시 세종동 1204",
+    "lat": 36.4914387,
+    "lng": 127.2717834,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "044-850-4367",
+    "operator": "세종특별자치시시설공단(호수공원팀)",
+    "source": "세종특별자치시시설관리공단_파크골프장표준데이터_20260720.csv"
+  },
+  {
+    "name": "오가낭뜰근린공원 파크골프장",
+    "region": {
+      "sido": "세종특별자치시",
+      "sigungu": "한누리대로"
+    },
+    "roadAddress": "세종특별자치시 한누리대로 651",
+    "jibunAddress": "세종특별자치시 아름동 804(충남대학병원쪽)",
+    "lat": 36.52215315,
+    "lng": 127.2588403,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "044-850-4277",
+    "operator": "세종특별자치시시설공단(생활체육팀)",
+    "source": "세종특별자치시시설관리공단_파크골프장표준데이터_20260720.csv"
+  },
+  {
+    "name": "한솔파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "해당없음"
+    },
+    "roadAddress": "해당없음",
+    "jibunAddress": "세종특별자치시 가람동 765",
+    "lat": 36.47901416,
+    "lng": 127.2458651,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "044-850-4277",
+    "operator": "세종특별자치시시설공단(생활체육팀)",
+    "source": "세종특별자치시시설관리공단_파크골프장표준데이터_20260720.csv"
+  },
+  {
+    "name": "수질복원센터B 파크골프장",
+    "region": {
+      "sido": "세종특별자치시",
+      "sigungu": "종합운동장4로"
+    },
+    "roadAddress": "세종특별자치시 종합운동장4로 11",
+    "jibunAddress": "세종특별자치시 대평동 646",
+    "lat": 36.46819004,
+    "lng": 127.2658013,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "044-850-4277",
+    "operator": "세종특별자치시시설공단(생활체육팀)",
+    "source": "세종특별자치시시설관리공단_파크골프장표준데이터_20260720.csv"
+  },
+  {
+    "name": "부강생활체육공원",
+    "region": {
+      "sido": "세종특별자치시",
+      "sigungu": "부강면"
+    },
+    "roadAddress": "세종특별자치시 부강면 부강금호로 170",
+    "jibunAddress": "세종특별자치시 부강면 금호리 823-3",
+    "lat": 36.51455276,
+    "lng": 127.3672999,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 16
+      }
+    ],
+    "phone": "044-850-4277",
+    "operator": "세종특별자치시시설공단(생활체육팀)",
+    "source": "세종특별자치시시설관리공단_파크골프장표준데이터_20260720.csv"
+  },
+  {
+    "name": "금강파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "해당없음"
+    },
+    "roadAddress": "해당없음",
+    "jibunAddress": "세종특별자치시 세종동 747-212",
+    "lat": 36.47465063,
+    "lng": 127.2710114,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": "044-850-4277",
+    "operator": "세종특별자치시시설공단(생활체육팀)",
+    "source": "세종특별자치시시설관리공단_파크골프장표준데이터_20260720.csv"
+  },
+  {
+    "name": "재인폭포파크골프장",
+    "region": {
+      "sido": null,
+      "sigungu": "없음"
+    },
+    "roadAddress": "없음",
+    "jibunAddress": "경기도 연천군 연천읍 고문리 127-1",
+    "lat": 38.06,
+    "lng": 127.12,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 27
+      }
+    ],
+    "phone": "031-834-7270",
+    "operator": "연천군시설관리공단",
+    "source": "연천군시설관리공단_재인폭포파크골프장 표준데이터_20260714.csv"
+  },
+  {
+    "name": "북부 체육공원",
+    "region": {
+      "sido": null,
+      "sigungu": "이천시"
+    },
+    "roadAddress": "이천시 백사면 모전리 4-22",
+    "jibunAddress": null,
+    "lat": 37.318182,
+    "lng": 127.421683,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": "031-631-2149",
+    "operator": "이천시시설관리공단",
+    "source": "이천시시설관리공단_파크골프장 표준데이터_20260724.csv"
+  },
+  {
+    "name": "목포 실내체육관 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "목포시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 목포시 상동 349-1",
+    "lat": 34.824888454022144,
+    "lng": 126.40703387189103,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "부주산 국제파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "목포시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 목포시 부주로 159",
+    "lat": 34.81861845327018,
+    "lng": 126.44352280549899,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "남해 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "목포시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 목포시 연산동 864",
+    "lat": 34.81442319505513,
+    "lng": 126.38013488864193,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "서해 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "목포시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 목포시 연산동 825-2",
+    "lat": 34.81371635272926,
+    "lng": 126.37893557109629,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "상동 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "목포시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 목포시 상동 699-12",
+    "lat": 34.81427205806459,
+    "lng": 126.41988647309492,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "삼학도 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "목포시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 목포시 산정동 1481",
+    "lat": 34.78271359165686,
+    "lng": 126.39171127812537,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "북항 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "목포시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 목포시 연산동 1230",
+    "lat": 34.81276299753622,
+    "lng": 126.37130232538166,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "율촌 장도 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "여수시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 여수시 율촌면 여동리 390",
+    "lat": 34.89052885511731,
+    "lng": 127.60025066976532,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "상사 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "순천시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 순천시 상사면 응령리 678-7",
+    "lat": 34.93831431899309,
+    "lng": 127.45348278087891,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "해룡 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "순천시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 순천시 해룡면 선월리 8932",
+    "lat": null,
+    "lng": null,
+    "coordSource": "none",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "혁신도시 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "나주시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 나주시 빛가람동 4-346",
+    "lat": null,
+    "lng": null,
+    "coordSource": "none",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "광양 섬진강둔치파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "광양시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 광양시 진월면 월길리 2",
+    "lat": 35.04717027954598,
+    "lng": 127.76643205078531,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "선샤인 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "광양시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 광양시 도이동 846",
+    "lat": 34.922780544399146,
+    "lng": 127.66949471995777,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "동천 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "광양시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 광양시 광양읍 목성리 123-1 일원",
+    "lat": 34.96403373707665,
+    "lng": 127.59867428950815,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "백진공원 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "담양군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 담양군 담양읍 양각리 348",
+    "lat": 35.319083214484245,
+    "lng": 126.97861084194444,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "곡성 동악파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "곡성군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 곡성군 곡성읍 교촌리 47",
+    "lat": 35.28268891537902,
+    "lng": 127.2850752866871,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "오곡 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "곡성군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 곡성군 오곡면 오지리 1444-1",
+    "lat": 35.2699396901949,
+    "lng": 127.31728575890114,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "구례 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "구례군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 구례군 서시천로 106",
+    "lat": 35.218383803981965,
+    "lng": 127.46688870480335,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "복내 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "보성군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 보성군 복내리 536-16",
+    "lat": null,
+    "lng": null,
+    "coordSource": "none",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "보성 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "보성군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 보성군 보성읍 용문길 36-16",
+    "lat": 34.775044026571884,
+    "lng": 127.09584071204478,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "보성체육공원 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "보성군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 보성군 보성읍 능문길 18번지",
+    "lat": null,
+    "lng": null,
+    "coordSource": "none",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "벌교 숲공원 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "보성군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 보성군 벌교읍 체육공원길 35",
+    "lat": 34.84170494666161,
+    "lng": 127.34748406352502,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "능주 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "화순군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 화순군 능주면 관영리 148",
+    "lat": 34.99203814808635,
+    "lng": 126.96404804792795,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "화순 홍수조절지 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "화순군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 화순군 청풍면 풍암리 93-9",
+    "lat": 34.92677348538214,
+    "lng": 126.98347307821126,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 87
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "관산 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "장흥군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 장흥군 관산읍 옥당리 535-16",
+    "lat": 34.566188865489465,
+    "lng": 126.93485821538545,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "탐진강 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "장흥군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 장흥군 장흥읍 행원리 1108-5",
+    "lat": 34.691220244438256,
+    "lng": 126.89320372953672,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "강진 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "강진군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 강진군 해안관광로 1365",
+    "lat": 34.55715292616735,
+    "lng": 126.76433630231546,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "삼산 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "해남군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 해남군 삼산면 봉학리 154-7",
+    "lat": 34.52574052074344,
+    "lng": 126.55201674235879,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "산이 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "해남군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 해남군 산이면 초두길 10-14",
+    "lat": 34.64617053897294,
+    "lng": 126.44834450850135,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "송지 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "해남군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 해남군 송지면 산정리 472-5",
+    "lat": 34.363901143066514,
+    "lng": 126.51592197365619,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "삼호 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "영암군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 영암군 삼호읍 종합공원길 11",
+    "lat": 34.7598155773657,
+    "lng": 126.45431758951895,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "영암 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "영암군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 영암군 영암읍 영운재로 272",
+    "lat": null,
+    "lng": null,
+    "coordSource": "none",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "무안 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "무안군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 무안군 무안읍 성동리 1086-3",
+    "lat": null,
+    "lng": null,
+    "coordSource": "none",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "남악 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "무안군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 무안군 심향읍 남악리 2597",
+    "lat": null,
+    "lng": null,
+    "coordSource": "none",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "무안 늘어지 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "무안군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 무안군 몽탄면 이산리 53-8",
+    "lat": 34.92557217378467,
+    "lng": 126.53330078288923,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "함평 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "함평군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 함평군 함평읍 곤재로 83",
+    "lat": 35.05110255327773,
+    "lng": 126.51879072788994,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "한빛원자력 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "영광군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 영광군 홍농읍 성산리 494",
+    "lat": 35.41450808285482,
+    "lng": 126.4312203093153,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "불갑 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "영광군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 영광군 불갑면 방마리 483-5",
+    "lat": 35.21422542231714,
+    "lng": 126.52708081112408,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "장성 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "장성군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 장성군 황룡면 월평리 590-1",
+    "lat": 35.28935163244011,
+    "lng": 126.76579285558083,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "고금테마공원파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "완도군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 완도군 고금면 농산리 759-1",
+    "lat": null,
+    "lng": null,
+    "coordSource": "none",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "운림 삼별초공원 파크골프장",
+    "region": {
+      "sido": "전라남도",
+      "sigungu": "진도군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전라남도 진도군 의신면 사천길 15-21",
+    "lat": 34.465566392158536,
+    "lng": 126.29445176726182,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전남광주통합특별시_파크골프장현황_20260226.csv"
+  },
+  {
+    "name": "온고을 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "전주시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 전주시 덕진구 화전동 969 일원(삼례교 하부)",
+    "lat": 35.89587876754871,
+    "lng": 127.06801514236275,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "마전 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "전주시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 전주시 완산구 서신동 738-7 일원",
+    "lat": 35.82641366917876,
+    "lng": 127.11170106065502,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "군산 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "군산시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 군산시 수송동 851",
+    "lat": 35.96551798251365,
+    "lng": 126.72072593974903,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "만경강 목천지구 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "익산시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 익산시 오산면 목천리 967-1",
+    "lat": 35.911401638718274,
+    "lng": 126.92258029394654,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "북부권 어울림 파크골프장 (장애인 겸용)",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "익산시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 익산시 용안면 칠목리 152-2",
+    "lat": 36.0885063133621,
+    "lng": 126.96871471080595,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "신태인 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "정읍시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 정읍시 신태인읍 신용리 881",
+    "lat": 35.67793077700371,
+    "lng": 126.88483345312906,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "춘향골 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "남원시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 남원시 춘향골 체육공원내",
+    "lat": null,
+    "lng": null,
+    "coordSource": "none",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "남원 그린파크골프장 [주생 파크골프장]",
+    "region": {
+      "sido": null,
+      "sigungu": "남원시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "남원시 주생면 중동리 1009-43번지 일원",
+    "lat": 35.38431742251205,
+    "lng": 127.34471934920356,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "청하 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "김제시"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 김제시 청하면 강변로151 근처",
+    "lat": null,
+    "lng": null,
+    "coordSource": "none",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "삼례 수도산 공원  파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "완주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 완주군 삼례읍 후정리 112 내",
+    "lat": 35.90335389344057,
+    "lng": 127.06900897659013,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "봉동 생강골 공원 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "완주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 완주군 봉동읍 낙평리 795",
+    "lat": 35.93122464208528,
+    "lng": 127.15910844129426,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 36
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "이서 지사울공원 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "완주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 완주군 이서면 용서리 777-2 지사울공원",
+    "lat": 35.829235265228114,
+    "lng": 127.01973959676903,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "이서 설화공원 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "완주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 완주군 이서면 농생명로 100 국립원예특작과학원 내",
+    "lat": 35.83311196519533,
+    "lng": 127.03546409428671,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "고산 만경강 수변생태공원 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "완주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 완주군 고산면 읍내리 902 고산체육공원 내",
+    "lat": 35.97449676089097,
+    "lng": 127.2025510852862,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "삼례 금와습지 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "완주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 완주군 삼례읍 후정리142-1",
+    "lat": 35.90109476208933,
+    "lng": 127.06446957628953,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "둔산공원 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "완주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 완주군 봉동읍 둔산리 881",
+    "lat": 35.96236106558494,
+    "lng": 127.12872717942723,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "비봉생활체육공원 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "완주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 완주군 비봉면 소농리 454",
+    "lat": 35.99289124467661,
+    "lng": 127.13989012407961,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "상관생태공원 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "완주군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 완주군 상관면 신리 916",
+    "lat": 35.76430118262304,
+    "lng": 127.21463201082753,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "진안군 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "진안군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 진안군 진안읍 운산리 76",
+    "lat": 35.81584509138429,
+    "lng": 127.462585556306,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 27
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "부귀 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "진안군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 진안군 부귀면 두남리 731",
+    "lat": 35.85430202058104,
+    "lng": 127.42928652582094,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "안천 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "진안군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 진안군 안천면 신괴리 1042-10",
+    "lat": 35.88737101793713,
+    "lng": 127.54165950039551,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "동향 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "진안군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 진안군 동향면 능금리 2198-2",
+    "lat": 35.84146580341796,
+    "lng": 127.57515807893489,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "임실 의견 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "임실군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 임실군 오수면 오수리 3",
+    "lat": 35.548483331323425,
+    "lng": 127.33230905888693,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 27
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "유등 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "순창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 순창군 유등면 외이리 555-2",
+    "lat": 35.360893871621215,
+    "lng": 127.18539273773695,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "순창 섬진강 체육공원 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "순창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 순창군 유등면 오교리 524-1",
+    "lat": 35.372575400225195,
+    "lng": 127.19625889754776,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "스포츠타운 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "고창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 고창군 고창읍 월암리 407-2 (고창스포츠타운내)",
+    "lat": 35.42948175175166,
+    "lng": 126.72568748168766,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 18
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "고수 주민체육 체험시설 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "고창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 고창군 고수면 상평리 321",
+    "lat": 35.38464889069448,
+    "lng": 126.69168309387814,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "상하 체육테마공원 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "고창군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 고창군 상하면 선운대로 810",
+    "lat": 35.44543539288207,
+    "lng": 126.49174861645791,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "부안 파크골프장",
+    "region": {
+      "sido": "전북특별자치도",
+      "sigungu": "부안군"
+    },
+    "roadAddress": null,
+    "jibunAddress": "전북특별자치도 부안군 줄포면 우포리 516-1",
+    "lat": 35.58321082315196,
+    "lng": 126.66780915237368,
+    "coordSource": "geocoded",
+    "courses": [
+      {
+        "name": "",
+        "holes": 9
+      }
+    ],
+    "phone": null,
+    "operator": null,
+    "source": "전북특별자치도_파크골프장 현황_20250228.csv"
+  },
+  {
+    "name": "중랑구립파크골프장",
+    "region": {
+      "sido": "서울특별시",
+      "sigungu": "중랑구"
+    },
+    "roadAddress": "서울특별시 중랑구",
+    "jibunAddress": "서울 중랑구 묵동 361-5",
+    "lat": 37.6089848,
+    "lng": 127.0719513,
+    "coordSource": "original",
+    "courses": [
+      {
+        "name": "",
+        "holes": null
+      }
+    ],
+    "phone": "070-8822-3577",
+    "operator": "중랑구시설관리공단",
+    "source": "중랑구시설관리공단_중랑구립파크골프장 시설정보_20260716.csv"
+  }
+]

@@ -316,13 +316,35 @@ def vworld_fetch(addr, key, addr_type="ROAD"):
 
 
 def geocode(addr, cache, fetch):
-    """캐시 우선 조회, 미스 시 fetch 호출 후 캐시에 기록. (lat, lng) 또는 None."""
-    if addr in cache:
-        v = cache[addr]
-        return tuple(v) if v else None
+    """캐시(성공분)만 신뢰. 미스 시 fetch. 실패는 캐시하지 않아 다음 실행에 재시도."""
+    cached = cache.get(addr)
+    if cached:
+        return tuple(cached)
     v = fetch(addr)
-    cache[addr] = list(v) if v else None
+    if v:
+        cache[addr] = list(v)
     return v
+
+
+# 파일명 -> 시/도(주소에 시/도 접두가 없을 때 보강용)
+FILE_SIDO = [
+    ("강원", "강원특별자치도"), ("경상북도", "경상북도"), ("경상남도", "경상남도"),
+    ("전북", "전북특별자치도"), ("전남광주", "전라남도"), ("전라남도", "전라남도"),
+    ("세종", "세종특별자치시"), ("서울", "서울특별시"),
+    ("가평", "경기도"), ("연천", "경기도"), ("이천", "경기도"),
+    ("중랑", "서울특별시"), ("관악", "서울특별시"), ("경주", "경상북도"), ("대구", "대구광역시"),
+]
+
+
+def province_hint(filename):
+    for token, sido in FILE_SIDO:
+        if token in filename:
+            return sido
+    return None
+
+
+def _has_province(addr):
+    return any(addr.startswith(s) for s in _SIDO)
 
 
 # ---------------------------------------------------------------------------
@@ -336,15 +358,33 @@ CACHE_PATH = os.path.join(HERE, "geocode_cache.json")
 OUT_PATH = os.path.join(REPO, "app", "src", "main", "assets", "parkgolf_venues.json")
 
 
+def extract_paren(s):
+    """'여의도 한강시민공원 내 (영등포구 여의도동 8)' -> '영등포구 여의도동 8'."""
+    if not s:
+        return None
+    m = re.search(r"\(([^)]+)\)", s)
+    return m.group(1).strip() if m else None
+
+
 def _geocode_entry(entry, cache, fetch):
-    """도로명 -> 지번 순으로 지오코딩 시도. (lat, lng) 또는 None."""
+    """도로명 -> 지번 순. 괄호 안 주소·시/도 접두 보강 후보를 순서대로 시도."""
+    hint = province_hint(entry.get("source", ""))
     for raw in (entry.get("roadAddress"), entry.get("jibunAddress")):
         addr = clean_addr(raw)
         if not addr:
             continue
-        r = geocode(addr, cache, fetch)
-        if r:
-            return r
+        variants = [addr]
+        inner = extract_paren(addr)
+        if inner:
+            variants.append(inner)
+        for a in variants:
+            candidates = [a]
+            if hint and not _has_province(a):
+                candidates.append(hint + " " + a)
+            for cand in candidates:
+                r = geocode(cand, cache, fetch)
+                if r:
+                    return r
     return None
 
 

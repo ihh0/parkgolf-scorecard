@@ -174,11 +174,20 @@ class Geo(unittest.TestCase):
         self.assertEqual(calls, ["서울 B"])
         self.assertEqual(cache["서울 B"], [37.1, 127.1])
 
-    def test_fetch_failure_stores_none(self):
+    def test_fetch_failure_not_cached(self):
         cache = {}
         r = bv.geocode("없는주소", cache, lambda a: None)
         self.assertIsNone(r)
-        self.assertIsNone(cache["없는주소"])
+        self.assertNotIn("없는주소", cache)   # 실패는 캐시하지 않음(재시도 가능)
+
+    def test_province_hint_from_filename(self):
+        self.assertEqual(bv.province_hint("강원특별자치도_파크골프장 현황_x.csv"), "강원특별자치도")
+        self.assertEqual(bv.province_hint("가평군시설관리공단_가평파크골프장_x.csv"), "경기도")
+
+    def test_extract_paren(self):
+        self.assertEqual(bv.extract_paren("여의도 한강시민공원 내 (영등포구 여의도동 8)"),
+                         "영등포구 여의도동 8")
+        self.assertIsNone(bv.extract_paren("금천교 ~ 철산교 사이"))
 
     def test_parse_vworld_ok(self):
         j = {"response": {"status": "OK", "result": {"point": {"x": "127.02", "y": "37.53"}}}}
