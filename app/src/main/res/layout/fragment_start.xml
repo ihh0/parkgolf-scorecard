@@ -67,10 +67,42 @@
                     android:layout_marginStart="8dp" android:text="@string/nearby_label"
                     android:textStyle="bold" android:textColor="?attr/parkMutedForeground" />
             </LinearLayout>
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:background="@drawable/bg_card" android:gravity="center"
-                android:padding="20dp" android:text="@string/nearby_placeholder"
-                android:textColor="?attr/parkMutedForeground" />
+            <LinearLayout android:id="@+id/nearbySection"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout android:id="@+id/btnFindNearby"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="@dimen/touch_min" android:orientation="horizontal"
+                    android:gravity="center" android:background="@drawable/bg_dashed"
+                    android:paddingVertical="18dp" android:foreground="?attr/selectableItemBackground">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                        android:src="@drawable/ic_navigation" app:tint="?attr/parkPrimary"
+                        android:importantForAccessibility="no" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp" android:text="@string/nearby_find"
+                        android:textSize="@dimen/button_text" android:textStyle="bold"
+                        android:textColor="?attr/parkPrimary" />
+                </LinearLayout>
+                <TextView android:id="@+id/tvNearbyStatus"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card" android:gravity="center" android:padding="20dp"
+                    android:textColor="?attr/parkMutedForeground" android:visibility="gone" />
+                <LinearLayout android:id="@+id/nearbyActions"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center" android:visibility="gone"
+                    android:layout_marginTop="8dp">
+                    <Button android:id="@+id/btnNearbyRetry"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/nearby_retry" android:minHeight="@dimen/touch_min" />
+                    <Button android:id="@+id/btnNearbySettings"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/nearby_open_settings" android:layout_marginStart="8dp"
+                        android:minHeight="@dimen/touch_min" android:visibility="gone" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/nearbyContainer"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
