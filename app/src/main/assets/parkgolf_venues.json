@@ -1166,9 +1166,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "경기도 군포시 수변공원내",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 37.3503197570378,
+    "lng": 126.920132192209,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -1401,9 +1401,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "경기도 안성시 아양택지지구 568",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 37.003199,
+    "lng": 127.256648,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -1867,9 +1867,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "경기도 화성시 동탄면 방교동789",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 37.1815404,
+    "lng": 127.0904292,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -1993,9 +1993,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "경상남도 김해시 장유면 칠산로 127",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 35.1872578145169,
+    "lng": 128.836417284216,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -2014,9 +2014,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "경상남도 김해시 장유면 칠산로 127-25",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 35.1887114,
+    "lng": 128.8354529,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -2182,9 +2182,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "경상남도 밀양시 삼량진읍 송지리 456-6",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 35.391698941161,
+    "lng": 128.840212904304,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -2581,9 +2581,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "경상남도 양산시 삼신교통부지",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 35.4262381582601,
+    "lng": 129.183121055012,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -2602,9 +2602,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "경상남도 양산시 웅상읍 소주동 소남교 둔치",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 35.4112788,
+    "lng": 129.1633769,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -4471,9 +4471,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "경상북도 문경시 창리강길45",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 36.6935691,
+    "lng": 128.1250454,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -5542,9 +5542,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "경상북도 청도군 대전철엽신길 69",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 35.6563679295613,
+    "lng": 128.635020792401,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -6613,9 +6613,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "대구광역시 달성군 현풍면 원교리 889-2 원오교",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 35.6917323157497,
+    "lng": 128.418973550198,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -7033,9 +7033,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "부산광역시 강서구 신호공단",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 35.0917499092036,
+    "lng": 128.887140453233,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -7054,9 +7054,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "부산광역시 강서구 신호산단로 72번길 46",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 35.1837104,
+    "lng": 128.9829143,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -8007,9 +8007,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "세종특별자치시 연기면 세종동 1204",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 36.5192737,
+    "lng": 127.2778286,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -8196,9 +8196,9 @@
     },
     "roadAddress": null,
     "jibunAddress": null,
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 35.5555611646063,
+    "lng": 129.080117350245,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -8217,9 +8217,9 @@
     },
     "roadAddress": null,
     "jibunAddress": null,
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 36.6807485956748,
+    "lng": 127.437555925126,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -8238,9 +8238,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "인천광역시 계양구 봉수대로855",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 37.5305703,
+    "lng": 126.7336201,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -8301,9 +8301,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "인천광역시 서구 봉수대로806",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 37.5452067885602,
+    "lng": 126.665099463955,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -8322,9 +8322,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "인천광역시 서구 첨단서로 130 공촌유수지체육시설",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 37.5432183993832,
+    "lng": 126.619927318745,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -8385,9 +8385,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "인천광역시 연수구 승기천",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 37.4063664536846,
+    "lng": 126.68610672938,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -8406,9 +8406,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "인천광역시 중구 운북동 1279",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 37.5182379982779,
+    "lng": 126.535961787632,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -8469,9 +8469,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "전라남도 곡성군 오곡천변내",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 35.2699389613742,
+    "lng": 127.317284734004,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -8826,9 +8826,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "전라남도 무안군 심향읍 남악리 2597",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 34.8134182,
+    "lng": 126.479036,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -9498,9 +9498,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "전북특별자치도 남원시 춘향골 체육공원내",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 35.4308207145339,
+    "lng": 127.405414681414,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",
@@ -11619,9 +11619,9 @@
     },
     "roadAddress": null,
     "jibunAddress": "충청북도 충주시 수안보생활체육공원 내",
-    "lat": null,
-    "lng": null,
-    "coordSource": "none",
+    "lat": 36.8396532136071,
+    "lng": 128.006316796562,
+    "coordSource": "manual",
     "courses": [
       {
         "name": "",

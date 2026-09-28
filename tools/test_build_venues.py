@@ -98,6 +98,24 @@ class Grouping(unittest.TestCase):
         self.assertEqual(len(bv.group_venues(es)), 2)
 
 
+class ManualOverride(unittest.TestCase):
+    def test_fills_only_coordless_by_name(self):
+        es = [_entry("군포시파크골프장", None, None),
+              _entry("이미있음", 37.0, 127.0)]
+        n = bv.apply_manual_overrides(es, {"군포시파크골프장": (37.35, 126.92),
+                                           "이미있음": (1.0, 1.0)})
+        self.assertEqual(n, 1)
+        self.assertAlmostEqual(es[0]["lat"], 37.35)
+        self.assertEqual(es[0]["coordSource"], "manual")
+        self.assertAlmostEqual(es[1]["lat"], 37.0)   # 이미 좌표 있으면 유지
+
+    def test_all_manual_names_present_in_table(self):
+        # 표 자체의 좌표가 국내 범위인지 sanity
+        for name, (lat, lng) in bv.MANUAL_COORDS.items():
+            self.assertTrue(33 <= lat <= 39, name)
+            self.assertTrue(124 <= lng <= 132, name)
+
+
 class Geo(unittest.TestCase):
     def test_cache_hit_no_fetch(self):
         calls = []
