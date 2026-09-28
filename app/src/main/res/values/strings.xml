@@ -149,4 +149,15 @@
     <string name="create_template">코스 템플릿 작성</string>
     <string name="delete_venue_confirm">이 구장을 삭제할까요?</string>
     <string name="delete_course_confirm">이 코스를 삭제할까요?</string>
+
+    <!-- nearby -->
+    <string name="nearby_find">주변 구장 찾기</string>
+    <string name="nearby_loading">주변 구장을 찾는 중…</string>
+    <string name="nearby_denied">주변 구장을 보려면 위치 권한이 필요합니다</string>
+    <string name="nearby_error">위치를 확인하지 못했습니다</string>
+    <string name="nearby_empty">주변에 표시할 구장이 없습니다</string>
+    <string name="nearby_retry">다시 시도</string>
+    <string name="nearby_open_settings">설정 열기</string>
+    <string name="nearby_distance_m">%1$dm</string>
+    <string name="nearby_distance_km">%1$.1fkm</string>
 </resources>
