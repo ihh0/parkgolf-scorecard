@@ -13,6 +13,14 @@ class CourseWizardViewModel : ViewModel() {
 
     fun initNew(suggestedCourseName: String) { _draft.value = CourseDraft(courseName = suggestedCourseName) }
 
+    fun initPrefill(venueName: String, courseName: String, holeCount: Int) {
+        _draft.value = CourseDraft(
+            venueName = venueName,
+            courseName = courseName,
+            pars = List(holeCount.coerceAtLeast(1)) { 3 },
+        )
+    }
+
     fun loadForEdit(venueId: Long, courseId: Long, venueName: String, courseName: String, pars: List<Int>) {
         _draft.value = CourseDraft(
             editingVenueId = venueId, editingCourseId = courseId,

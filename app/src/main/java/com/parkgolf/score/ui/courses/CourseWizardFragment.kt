@@ -53,15 +53,24 @@ class CourseWizardFragment : Fragment(R.layout.fragment_course_wizard) {
 
         if (savedInstanceState == null) {
             val handle = findNavController().previousBackStackEntry?.savedStateHandle
-            val venueId = handle?.get<Long>("wizardVenueId") ?: 0L
-            val courseId = handle?.get<Long>("wizardCourseId") ?: 0L
-            if (venueId == 0L || courseId == 0L) vm.initNew("")
-            else viewLifecycleOwner.lifecycleScope.launch {
-                val venue = repo.observeVenues().first().firstOrNull { it.id == venueId }
-                val course = repo.coursesForVenue(venueId).firstOrNull { it.id == courseId }
-                if (venue != null && course != null)
-                    vm.loadForEdit(venue.id, course.id, venue.name, course.name, course.pars)
-                else vm.initNew("")
+            val prefillVenue = handle?.get<String>("prefillVenueName")
+            if (prefillVenue != null) {
+                vm.initPrefill(
+                    prefillVenue,
+                    handle.get<String>("prefillCourseName") ?: "",
+                    handle.get<Int>("prefillHoles") ?: 9,
+                )
+            } else {
+                val venueId = handle?.get<Long>("wizardVenueId") ?: 0L
+                val courseId = handle?.get<Long>("wizardCourseId") ?: 0L
+                if (venueId == 0L || courseId == 0L) vm.initNew("")
+                else viewLifecycleOwner.lifecycleScope.launch {
+                    val venue = repo.observeVenues().first().firstOrNull { it.id == venueId }
+                    val course = repo.coursesForVenue(venueId).firstOrNull { it.id == courseId }
+                    if (venue != null && course != null)
+                        vm.loadForEdit(venue.id, course.id, venue.name, course.name, course.pars)
+                    else vm.initNew("")
+                }
             }
         }
 
