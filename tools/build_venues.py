@@ -1,13 +1,12 @@
 """파크골프 주변 구장 데이터 전처리 파이프라인.
 
-지역별로 형식이 제각각인 공공 CSV들을 정규화·필터·지오코딩·중복제거하여
-앱 자산 `app/src/main/assets/parkgolf_venues.json` 을 생성한다.
+대한파크골프협회 "전국 파크골프장 현황" PDF(구장명·주소·홀수)를 파싱하고
+주소를 VWorld로 지오코딩하여 앱 자산 `app/src/main/assets/parkgolf_venues.json` 을 생성한다.
 
 실행: python3 tools/build_venues.py   (지오코딩엔 환경변수 VWORLD_KEY 필요)
 """
 
 import re
-import csv
 import json
 import os
 import math
@@ -15,14 +14,12 @@ import time
 import urllib.parse
 import urllib.request
 
-# ---------------------------------------------------------------------------
-# 값/헤더/주소/리전 순수 헬퍼
-# ---------------------------------------------------------------------------
+SOURCE_NAME = "대한파크골프협회 2026 상반기 현황"
+DATA_DATE = "2026-01-31"
 
-
-def norm_header(s: str) -> str:
-    """헤더의 모든 공백 제거. '시 설 명' -> '시설명'."""
-    return re.sub(r"\s+", "", s or "")
+# ---------------------------------------------------------------------------
+# 값/주소/리전 순수 헬퍼
+# ---------------------------------------------------------------------------
 
 
 def to_int(s):
@@ -67,120 +64,76 @@ def region_from_address(addr: str):
 
 
 # ---------------------------------------------------------------------------
-# 스키마 라우팅: 원천 컬럼 -> 공통 필드 (별칭 사전)
+# PDF 파싱 (연번 · 시도 · 지역번호 · 구장명 · 주소 · 홀수)
 # ---------------------------------------------------------------------------
 
-ALIAS = {
-    "name": ["파크골프장명", "시설명"],
-    "roadAddress": ["소재지도로명주소"],
-    "jibunAddress": ["소재지지번주소", "지번주소", "주소", "위치"],
-    "lat": ["위도"],
-    "lng": ["경도"],
-    # NOTE: '규모(미터제곱)'·'면적*'은 면적이므로 홀수 별칭에서 제외.
-    "holes": ["홀수", "규모(홀)"],
-    "courseCount": ["코스수"],
-    "phone": ["전화번호", "연락처", "운영기관연락처", "예약문의전화번호", "관리기관전화번호"],
-    "operator": ["운영기관", "관리기관", "운영기관명", "운영기관명(관리기관명)", "관리기관명"],
-    "date": ["데이터기준일자"],
-    "holdings": ["보유시설"],   # 생활체육시설 필터용
-}
+_RECORD_RE = re.compile(r"^\s*\d+\s+\S+\s+\d+\s+.+\s+\d+\s*$")
 
 
-def holes_from_holdings(s):
-    """'정규홀(27홀)' 같은 보유시설 문구에서 홀수(최댓값=정규홀)를 추출."""
-    if not s:
+def parse_record(line):
+    """PDF 표 한 줄 -> {name, sido, address, holes}. 형식 불일치면 None.
+
+    토큰: 연번 sido 지역번호 <구장명…> [sido <주소…>] 홀수
+    주소는 항상 sido로 시작하므로, 인덱스3 이후 sido의 '마지막' 등장을 주소 시작으로 본다
+    (구장명에 sido가 들어가는 예: '충청북도 도립파크골프장'도 올바르게 분리).
+    주소가 없는 행(울산 알프스/미호)은 address="".
+    """
+    t = line.split()
+    if len(t) < 5 or not t[0].isdigit() or not t[2].isdigit() or not t[-1].isdigit():
         return None
-    nums = [int(n) for n in re.findall(r"(\d+)\s*홀", s)]
-    return max(nums) if nums else None
-
-
-def _first(row, keys):
-    for k in keys:
-        if k in row and str(row[k]).strip():
-            return str(row[k]).strip()
-    return None
-
-
-def _to_float(x):
-    try:
-        return float(x)
-    except (TypeError, ValueError):
+    sido = t[1]
+    holes = int(t[-1])
+    addr_i = None
+    for i in range(len(t) - 2, 2, -1):
+        if t[i] == sido:
+            addr_i = i
+            break
+    if addr_i is not None:
+        name = " ".join(t[3:addr_i])
+        address = " ".join(t[addr_i:-1])
+    else:
+        name = " ".join(t[3:-1])
+        address = ""
+    if not name:
         return None
+    return {"name": name, "sido": sido, "address": address, "holes": holes}
 
 
-# ---------------------------------------------------------------------------
-# 비-파크골프 필터
-# ---------------------------------------------------------------------------
-
-MIXED_FILES = ("생활체육시설",)        # 파크골프 외 시설 혼합 -> 행 단위 필터
-EXCLUDE_FILES = ("골프장내장객현황",)   # 파일 전체 제외(로더에서 스킵)
-
-
-def _has_pg(*vals):
-    return any(v and ("파크골프" in v or "파크 골프" in v) for v in vals)
-
-
-def is_parkgolf(entry, filename):
-    """혼합 파일은 name/보유시설에 '파크골프' 있는 행만, 전용 파일은 전부 채택."""
-    if any(k in filename for k in MIXED_FILES):
-        return _has_pg(entry.get("name"), entry.get("holdings"))
-    return True
-
-
-def map_row(row, filename):
-    """원천 CSV 한 행(dict) -> 정규화된 공통 필드 dict."""
-    row = {norm_header(k): v for k, v in row.items()}
-    aliasN = {f: [norm_header(k) for k in ks] for f, ks in ALIAS.items()}
-    road = _first(row, aliasN["roadAddress"])
-    jibun = _first(row, aliasN["jibunAddress"])
-    addr = road or jibun or ""
+def _to_entry(rec):
+    address = rec["address"]
     return {
-        "name": _first(row, aliasN["name"]),
-        "roadAddress": road,
-        "jibunAddress": jibun,
-        "lat": _to_float(_first(row, aliasN["lat"])),
-        "lng": _to_float(_first(row, aliasN["lng"])),
-        "holes": to_int(_first(row, aliasN["holes"]))
-        or holes_from_holdings(_first(row, aliasN["holdings"])),
-        "courseCount": to_int(_first(row, aliasN["courseCount"])),
-        "phone": _first(row, aliasN["phone"]),
-        "operator": _first(row, aliasN["operator"]),
-        "holdings": _first(row, aliasN["holdings"]),
-        "region": region_from_address(addr),
-        "source": filename,
-        "date": _first(row, aliasN["date"]),
+        "name": rec["name"],
+        "roadAddress": None,
+        "jibunAddress": address or None,
+        "lat": None,
+        "lng": None,
+        "holes": rec["holes"],
+        "courseCount": None,
+        "phone": None,
+        "operator": None,
+        "region": {"sido": rec["sido"], "sigungu": region_from_address(address)["sigungu"]},
+        "source": SOURCE_NAME,
+        "date": DATA_DATE,
     }
 
 
-# ---------------------------------------------------------------------------
-# 로더 + 파일 라우팅
-# ---------------------------------------------------------------------------
+def extract_pdf(pdf_path):
+    """PDF 전체 -> 정규화 항목 리스트."""
+    from pypdf import PdfReader
 
-
-def load_csv(path):
-    with open(path, encoding="cp949") as f:
-        return list(csv.DictReader(f))
-
-
-def load_all(datadir):
-    """데이터 디렉터리의 모든 CSV -> 정규화·필터된 항목 리스트."""
-    out = []
-    for fn in sorted(os.listdir(datadir)):
-        if not fn.lower().endswith(".csv"):
-            continue
-        if any(k in fn for k in EXCLUDE_FILES):   # 제주 내장객현황 등 파일 통째 제외
-            continue
-        for row in load_csv(os.path.join(datadir, fn)):
-            m = map_row(row, fn)
-            if not m["name"]:
-                continue
-            if is_parkgolf(m, fn):
-                out.append(m)
-    return out
+    reader = PdfReader(pdf_path)
+    entries = []
+    for page in reader.pages:
+        for ln in (page.extract_text() or "").splitlines():
+            if _RECORD_RE.match(ln):
+                rec = parse_record(ln)
+                if rec:
+                    entries.append(_to_entry(rec))
+    return entries
 
 
 # ---------------------------------------------------------------------------
-# 그룹핑 + 중복 제거
+# 그룹핑 + 중복 제거 (멀티코스 '1구장/2구장' 병합)
 # ---------------------------------------------------------------------------
 
 
@@ -205,15 +158,6 @@ def split_suffix(name):
     return (name or "").strip(), None
 
 
-def source_priority(filename):
-    """대표 필드 선택 우선순위: 표준데이터 > 시설 > 현황."""
-    if "표준" in filename:
-        return 3
-    if "시설" in filename:
-        return 2
-    return 1
-
-
 def group_venues(entries):
     """같은 구장(이름줄기 + 시군구)끼리 묶어 구장 단위 + courses[]로 정규화."""
     groups = {}
@@ -225,13 +169,8 @@ def group_venues(entries):
     venues = []
     for (stem, _reg), items in groups.items():
         ents = [e for _, e in items]
-
-        def rank(e):
-            return (source_priority(e["source"]), 1 if e["lat"] is not None else 0)
-
-        rep = max(ents, key=rank)
-        coord_ents = [e for e in ents if e["lat"] is not None]
-        coord = max(coord_ents, key=lambda e: source_priority(e["source"])) if coord_ents else None
+        rep = max(ents, key=lambda e: 1 if e["lat"] is not None else 0)
+        coord = next((e for e in ents if e["lat"] is not None), None)
 
         def pick(field):
             if rep.get(field):
@@ -241,7 +180,6 @@ def group_venues(entries):
                     return e[field]
             return None
 
-        # courses: 접미 있는 항목은 각각 코스, 접미 없는 항목은 홀수로 중복 제거
         courses = []
         for suf, e in items:
             if suf:
@@ -256,7 +194,6 @@ def group_venues(entries):
             seen_holes.add(h)
             courses.append({"name": "", "holes": h})
 
-        # 이름 없는 코스가 여러 개면 A코스/B코스… 부여
         blanks = [c for c in courses if c["name"] == ""]
         if len(courses) > 1 and blanks:
             used = {c["name"] for c in courses if c["name"]}
@@ -275,7 +212,7 @@ def group_venues(entries):
             "jibunAddress": pick("jibunAddress"),
             "lat": coord["lat"] if coord else None,
             "lng": coord["lng"] if coord else None,
-            "coordSource": (coord.get("coordSource", "original") if coord else "none"),
+            "coordSource": (coord.get("coordSource", "geocoded") if coord else "none"),
             "courses": courses,
             "phone": pick("phone"),
             "operator": pick("operator"),
@@ -326,25 +263,61 @@ def geocode(addr, cache, fetch):
     return v
 
 
-# 파일명 -> 시/도(주소에 시/도 접두가 없을 때 보강용)
-FILE_SIDO = [
-    ("강원", "강원특별자치도"), ("경상북도", "경상북도"), ("경상남도", "경상남도"),
-    ("전북", "전북특별자치도"), ("전남광주", "전라남도"), ("전라남도", "전라남도"),
-    ("세종", "세종특별자치시"), ("서울", "서울특별시"),
-    ("가평", "경기도"), ("연천", "경기도"), ("이천", "경기도"),
-    ("중랑", "서울특별시"), ("관악", "서울특별시"), ("경주", "경상북도"), ("대구", "대구광역시"),
-]
+def extract_paren(s):
+    """'… (망상컨벤션센터 옆)' 안의 내용을 반환. 없으면 None."""
+    if not s:
+        return None
+    m = re.search(r"\(([^)]+)\)", s)
+    return m.group(1).strip() if m else None
 
 
-def province_hint(filename):
-    for token, sido in FILE_SIDO:
-        if token in filename:
-            return sido
+def _strip_paren(s):
+    return re.sub(r"\s*\([^)]*\)", "", s).strip()
+
+
+def _space_digits(s):
+    """한글 바로 뒤 숫자 사이에 공백('관광로363번길92' -> '관광로 363번길 92')."""
+    return re.sub(r"([가-힣])(\d)", r"\1 \2", s)
+
+
+def address_candidates(addr):
+    """지오코딩 후보 주소들을 정밀→개략 순서로 생성.
+
+    원본 → 한글/숫자 공백 정규화 → 괄호 제거 → 괄호 내부 →
+    (실패 대비) 꼬리 토큰을 하나씩 줄인 접두(랜드마크 제거, 동/리 단위까지).
+    """
+    addr = clean_addr(addr)
+    if not addr:
+        return []
+    cands = []
+
+    def add(x):
+        x = (x or "").strip()
+        if x and x not in cands:
+            cands.append(x)
+
+    spaced = _space_digits(addr)
+    add(addr)
+    add(spaced)
+    add(_strip_paren(spaced))
+    inner = extract_paren(addr)
+    if inner:
+        add(inner)
+    # 꼬리 토큰 절삭 폴백(랜드마크·불완전 번지 제거). 최소 3토큰(시도·시군구·동/리).
+    toks = _strip_paren(spaced).split()
+    for n in range(len(toks) - 1, 2, -1):
+        add(" ".join(toks[:n]))
+    return cands
+
+
+def _geocode_entry(entry, cache, fetch):
+    """주소 후보를 정밀→개략 순으로 지오코딩 시도."""
+    for raw in (entry.get("roadAddress"), entry.get("jibunAddress")):
+        for cand in address_candidates(raw):
+            r = geocode(cand, cache, fetch)
+            if r:
+                return r
     return None
-
-
-def _has_province(addr):
-    return any(addr.startswith(s) for s in _SIDO)
 
 
 # ---------------------------------------------------------------------------
@@ -353,45 +326,15 @@ def _has_province(addr):
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
-DATADIR = os.path.join(REPO, "데이터")
+PDF_PATH = os.path.join(REPO, "2026년 전국 파크골프장 현황(2026년 상반기).pdf")
 CACHE_PATH = os.path.join(HERE, "geocode_cache.json")
 OUT_PATH = os.path.join(REPO, "app", "src", "main", "assets", "parkgolf_venues.json")
 
 
-def extract_paren(s):
-    """'여의도 한강시민공원 내 (영등포구 여의도동 8)' -> '영등포구 여의도동 8'."""
-    if not s:
-        return None
-    m = re.search(r"\(([^)]+)\)", s)
-    return m.group(1).strip() if m else None
-
-
-def _geocode_entry(entry, cache, fetch):
-    """도로명 -> 지번 순. 괄호 안 주소·시/도 접두 보강 후보를 순서대로 시도."""
-    hint = province_hint(entry.get("source", ""))
-    for raw in (entry.get("roadAddress"), entry.get("jibunAddress")):
-        addr = clean_addr(raw)
-        if not addr:
-            continue
-        variants = [addr]
-        inner = extract_paren(addr)
-        if inner:
-            variants.append(inner)
-        for a in variants:
-            candidates = [a]
-            if hint and not _has_province(a):
-                candidates.append(hint + " " + a)
-            for cand in candidates:
-                r = geocode(cand, cache, fetch)
-                if r:
-                    return r
-    return None
-
-
-def build(datadir, cache, key=None, sleep=0.0, log=print):
-    entries = load_all(datadir)
+def build(pdf_path, cache, key=None, sleep=0.0, log=print):
+    entries = extract_pdf(pdf_path)
     for e in entries:
-        e["coordSource"] = "original" if e["lat"] is not None else "none"
+        e["coordSource"] = "none"
 
     def fetch(addr):
         if not key:
@@ -403,8 +346,6 @@ def build(datadir, cache, key=None, sleep=0.0, log=print):
 
     geocoded = failed = 0
     for e in entries:
-        if e["lat"] is not None:
-            continue
         r = _geocode_entry(e, cache, fetch)
         if r:
             e["lat"], e["lng"] = r
@@ -416,8 +357,7 @@ def build(datadir, cache, key=None, sleep=0.0, log=print):
     venues = group_venues(entries)
 
     log(f"entries: {len(entries)}  ->  venues: {len(venues)}")
-    log(f"coords  original: {sum(1 for v in venues if v['coordSource']=='original')}"
-        f"  geocoded: {sum(1 for v in venues if v['coordSource']=='geocoded')}"
+    log(f"coords  geocoded: {sum(1 for v in venues if v['coordSource']=='geocoded')}"
         f"  none: {sum(1 for v in venues if v['coordSource']=='none')}")
     log(f"geocoding this run  success: {geocoded}  failed: {failed}"
         f"  (key {'set' if key else 'MISSING'})")
@@ -430,7 +370,7 @@ def main():
         with open(CACHE_PATH, encoding="utf-8") as f:
             cache = json.load(f)
     key = os.environ.get("VWORLD_KEY")
-    venues = build(DATADIR, cache, key=key, sleep=0.1)
+    venues = build(PDF_PATH, cache, key=key, sleep=0.1)
 
     os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
     with open(OUT_PATH, "w", encoding="utf-8") as f:
