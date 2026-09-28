@@ -69,6 +69,7 @@
     <string name="save_done_title">저장 완료!</string>
     <string name="saved_info">%1$s의 %2$s이 저장되었습니다</string>
     <string name="new_template">새 템플릿 작성</string>
+    <string name="start_with_this_course">이 코스로 게임 시작</string>
     <string name="to_course_list">목록으로</string>
     <string name="save_now">저장하기</string>
     <!-- Top bar & back confirmation -->

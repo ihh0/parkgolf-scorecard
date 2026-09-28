@@ -19,6 +19,7 @@ import com.parkgolf.score.data.db.entity.VenueEntity
 import com.parkgolf.score.databinding.FragmentCourseWizardBinding
 import com.parkgolf.score.ui.common.confirmYesNo
 import com.parkgolf.score.ui.common.onBackPressed
+import com.parkgolf.score.ui.start.SelectionHolder
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
@@ -27,6 +28,9 @@ class CourseWizardFragment : Fragment(R.layout.fragment_course_wizard) {
     private val vm: CourseWizardViewModel by viewModels()
     private var venues: List<VenueEntity> = emptyList()
     private var existingCourseNames: List<String> = emptyList()
+    private var savedVenueId = 0L
+    private var savedCourseId = 0L
+    private var savedVenueName = ""
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val binding = FragmentCourseWizardBinding.bind(view)
@@ -98,8 +102,12 @@ class CourseWizardFragment : Fragment(R.layout.fragment_course_wizard) {
         }
         onBackPressed { if (vm.draft.value?.step == 0) attemptExit() else vm.prev() }
 
-        binding.stepSuccess.btnNewTemplate.setOnClickListener {
-            vm.initNew(""); showEditing(binding)
+        binding.stepSuccess.btnStartGame.setOnClickListener {
+            SelectionHolder.reset()
+            SelectionHolder.venueId = savedVenueId
+            SelectionHolder.venueName = savedVenueName
+            SelectionHolder.chosenCourseIds.add(savedCourseId)
+            findNavController().navigate(R.id.playerSetupFragment)
         }
         binding.stepSuccess.btnToList.setOnClickListener { findNavController().popBackStack() }
 
@@ -245,12 +253,15 @@ class CourseWizardFragment : Fragment(R.layout.fragment_course_wizard) {
             val venueId = resolved ?: repo.upsertVenue(VenueEntity(name = draft.venueName.trim()))
             if (draft.editingVenueId != null)
                 repo.upsertVenue(VenueEntity(id = venueId, name = draft.venueName.trim()))
-            repo.upsertCourse(
+            val courseId = repo.upsertCourse(
                 CourseEntity(
                     id = draft.editingCourseId ?: 0L, venueId = venueId,
                     name = draft.courseName.trim(), pars = draft.pars,
                 )
             )
+            savedVenueId = venueId
+            savedCourseId = courseId
+            savedVenueName = draft.venueName.trim()
             binding.stepSuccess.tvSavedInfo.text =
                 getString(R.string.saved_info, draft.venueName, draft.courseName)
             binding.flipper.displayedChild = 4
