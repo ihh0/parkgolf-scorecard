@@ -366,7 +366,7 @@ def _geocode_entry(entry, cache, fetch):
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
-PDF_PATH = os.path.join(REPO, "2026년 전국 파크골프장 현황(2026년 상반기).pdf")
+PDF_PATH = os.path.join(REPO, "data", "2026년 전국 파크골프장 현황(2026년 상반기).pdf")
 CACHE_PATH = os.path.join(HERE, "geocode_cache.json")
 OUT_PATH = os.path.join(REPO, "app", "src", "main", "assets", "parkgolf_venues.json")
 
