@@ -84,7 +84,7 @@
     <string name="title_player_setup">경기 인원 구성</string>
     <string name="recent_venue_label">최근 사용한 구장</string>
     <string name="recent_last_used">%1$s 마지막 사용</string>
-    <string name="my_courses_label">내 코스</string>
+    <string name="my_courses_label">저장한 코스</string>
     <string name="nearby_label">주변 구장</string>
     <string name="nearby_placeholder">주변 구장은 준비 중입니다</string>
     <string name="hole_count">%1$d홀</string>
