@@ -1,4 +1,4 @@
-# 파크골프 스코어 (Parkgolf Score)
+# 파크골프 스코어카드 (Parkgolf Scorecard)
 
 시니어 친화적인 **오프라인 우선** 파크골프 점수 기록 안드로이드 앱. 큰 글씨·단순한 흐름으로 경기 중 점수를 쉽게 기록하고, 지난 기록과 코스를 관리하며, 위치 기반으로 주변 파크골프장을 찾을 수 있습니다.
 
@@ -20,7 +20,7 @@
 
 ## 설치 (APK)
 
-1. [Releases](../../releases)에서 최신 `parkgolf-score-vX.Y.Z.apk` 를 내려받습니다.
+1. [Releases](../../releases)에서 최신 `parkgolf-scorecard-vX.Y.Z.apk` 를 내려받습니다.
 2. Android 설정에서 **"출처를 알 수 없는 앱 설치"** 를 허용합니다.
 3. APK를 열어 설치합니다. (최소 Android 5.0 / API 21)
 4. 무결성 확인이 필요하면 함께 제공되는 `.sha256` 값과 대조하세요.
