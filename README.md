@@ -4,6 +4,14 @@
 
 > 네이티브 Android · Kotlin · View(XML) + ViewBinding · MVVM · Room · Jetpack Navigation · Material. 서버 없이 기기 내에서 동작합니다.
 
+## 스크린샷
+
+| 홈 | 주변 구장 (거리순) | 점수 기록 | 경기 완료 |
+|:---:|:---:|:---:|:---:|
+| <img src="docs/screenshots/01-home.png" width="200"/> | <img src="docs/screenshots/02-nearby.png" width="200"/> | <img src="docs/screenshots/04-score-recording.png" width="200"/> | <img src="docs/screenshots/05-game-complete.png" width="200"/> |
+| **게임 기록** | **코스 관리** | **코스 템플릿 마법사** | **설정 (테마)** |
+| <img src="docs/screenshots/06-records.png" width="200"/> | <img src="docs/screenshots/03-course-management.png" width="200"/> | <img src="docs/screenshots/08-course-wizard.png" width="200"/> | <img src="docs/screenshots/07-settings.png" width="200"/> |
+
 ## 주요 기능
 
 - **게임 진행 / 점수 기록** — 홀별 파, 플레이어별 누적 타수와 파 대비(±) 표시, 여러 명 동시 기록, 전체 점수표(가로 스크롤), 경기 완료 랭킹(메달)
@@ -65,6 +73,10 @@ VWORLD_KEY=<발급받은_키> python3 tools/build_venues.py
    shasum -a 256 app/build/outputs/apk/release/app-release.apk
    ```
 5. 태그(`vX.Y.Z`) 푸시 후 GitHub Release에 APK와 `.sha256` 첨부.
+
+## 아키텍처
+
+레이어 구조·주요 흐름·데이터 파이프라인은 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) 참고.
 
 ## 라이선스
 
