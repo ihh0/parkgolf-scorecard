@@ -7,9 +7,12 @@ build/
 captures/
 .externalNativeBuild/
 .cxx/
+.kotlin/
 *.apk
 *.aab
 *.keystore
+*.jks
+keystore.properties
 
 # Brainstorm companion
 .superpowers/
