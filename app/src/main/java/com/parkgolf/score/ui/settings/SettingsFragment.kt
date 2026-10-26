@@ -40,6 +40,28 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
             }
         }
 
+        val fontRows = mapOf(
+            FontScaleKey.NORMAL to Pair(binding.rowFontNormal, binding.checkFontNormal),
+            FontScaleKey.LARGE to Pair(binding.rowFontLarge, binding.checkFontLarge),
+            FontScaleKey.XLARGE to Pair(binding.rowFontXlarge, binding.checkFontXlarge),
+            FontScaleKey.XXLARGE to Pair(binding.rowFontXxlarge, binding.checkFontXxlarge),
+        )
+        val currentFont = store.fontScaleKey
+        fontRows.forEach { (key, pair) ->
+            val (row, check) = pair
+            val selected = key == currentFont
+            check.isVisible = selected
+            row.setBackgroundResource(
+                if (selected) R.drawable.bg_theme_selected else R.drawable.bg_card
+            )
+            row.setOnClickListener {
+                if (store.fontScaleKey != key) {
+                    store.fontScaleKey = key
+                    requireActivity().recreate()
+                }
+            }
+        }
+
         binding.etDefaultName.setText(store.defaultPlayerName)
         binding.etDefaultName.doAfterTextChanged { text ->
             val name = text?.toString()?.trim().orEmpty()

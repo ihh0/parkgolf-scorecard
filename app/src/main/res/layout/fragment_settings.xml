@@ -42,6 +42,45 @@
                 android:background="?attr/parkBorder" android:layout_marginVertical="24dp" />
 
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/font_size_title" android:textSize="@dimen/title_text"
+                android:textStyle="bold" android:textColor="?attr/parkForeground" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/font_size_desc" android:textColor="?attr/parkMutedForeground"
+                android:layout_marginTop="4dp" android:layout_marginBottom="16dp" />
+
+            <LinearLayout android:id="@+id/rowFontNormal" style="@style/ThemeRow">
+                <TextView android:layout_width="40dp" android:layout_height="wrap_content"
+                    android:gravity="center" android:text="@string/font_preview_glyph"
+                    android:textSize="18dp" android:textStyle="bold" android:textColor="?attr/parkForeground" />
+                <TextView style="@style/ThemeRowLabel" android:text="@string/font_normal" />
+                <ImageView android:id="@+id/checkFontNormal" style="@style/ThemeCheck" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/rowFontLarge" style="@style/ThemeRow">
+                <TextView android:layout_width="40dp" android:layout_height="wrap_content"
+                    android:gravity="center" android:text="@string/font_preview_glyph"
+                    android:textSize="21dp" android:textStyle="bold" android:textColor="?attr/parkForeground" />
+                <TextView style="@style/ThemeRowLabel" android:text="@string/font_large" />
+                <ImageView android:id="@+id/checkFontLarge" style="@style/ThemeCheck" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/rowFontXlarge" style="@style/ThemeRow">
+                <TextView android:layout_width="40dp" android:layout_height="wrap_content"
+                    android:gravity="center" android:text="@string/font_preview_glyph"
+                    android:textSize="23dp" android:textStyle="bold" android:textColor="?attr/parkForeground" />
+                <TextView style="@style/ThemeRowLabel" android:text="@string/font_xlarge" />
+                <ImageView android:id="@+id/checkFontXlarge" style="@style/ThemeCheck" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/rowFontXxlarge" style="@style/ThemeRow">
+                <TextView android:layout_width="40dp" android:layout_height="wrap_content"
+                    android:gravity="center" android:text="@string/font_preview_glyph"
+                    android:textSize="27dp" android:textStyle="bold" android:textColor="?attr/parkForeground" />
+                <TextView style="@style/ThemeRowLabel" android:text="@string/font_xxlarge" />
+                <ImageView android:id="@+id/checkFontXxlarge" style="@style/ThemeCheck" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="2dp"
+                android:background="?attr/parkBorder" android:layout_marginVertical="24dp" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:text="@string/default_name_title" android:textSize="@dimen/title_text"
                 android:textStyle="bold" android:textColor="?attr/parkForeground" />
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"

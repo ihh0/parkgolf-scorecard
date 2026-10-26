@@ -14,9 +14,14 @@ class SettingsStore(context: Context) {
         get() = prefs.getString(KEY_NAME, DEFAULT_NAME) ?: DEFAULT_NAME
         set(value) { prefs.edit().putString(KEY_NAME, value).apply() }
 
+    var fontScaleKey: FontScaleKey
+        get() = FontScaleKey.fromStored(prefs.getString(KEY_FONT_SCALE, null))
+        set(value) { prefs.edit().putString(KEY_FONT_SCALE, value.stored).apply() }
+
     companion object {
         const val DEFAULT_NAME = "나"
         private const val KEY_THEME = "theme"
         private const val KEY_NAME = "default_player_name"
+        private const val KEY_FONT_SCALE = "font_scale"
     }
 }
