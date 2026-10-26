@@ -70,7 +70,8 @@
             <Button android:id="@+id/btnNext"
                 android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
                 android:layout_marginStart="8dp" android:minHeight="@dimen/touch_min"
-                android:maxLines="1" android:text="@string/next_hole_plain" android:textSize="@dimen/button_text" />
+                android:maxLines="1" android:text="@string/next_hole_plain" android:textSize="@dimen/button_text"
+                app:icon="@drawable/ic_chevron_right" app:iconGravity="textEnd" />
         </LinearLayout>
         <Button android:id="@+id/btnGrid" style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent" android:layout_height="wrap_content"

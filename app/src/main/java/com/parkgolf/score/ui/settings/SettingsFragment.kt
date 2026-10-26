@@ -45,6 +45,8 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
             FontScaleKey.LARGE to Pair(binding.rowFontLarge, binding.checkFontLarge),
             FontScaleKey.XLARGE to Pair(binding.rowFontXlarge, binding.checkFontXlarge),
             FontScaleKey.XXLARGE to Pair(binding.rowFontXxlarge, binding.checkFontXxlarge),
+            FontScaleKey.XXXLARGE to Pair(binding.rowFontXxxlarge, binding.checkFontXxxlarge),
+            FontScaleKey.XXXXLARGE to Pair(binding.rowFontXxxxlarge, binding.checkFontXxxxlarge),
         )
         val currentFont = store.fontScaleKey
         fontRows.forEach { (key, pair) ->

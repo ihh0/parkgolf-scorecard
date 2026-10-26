@@ -110,7 +110,9 @@
     <string name="font_normal">보통</string>
     <string name="font_large">크게</string>
     <string name="font_xlarge">더 크게</string>
-    <string name="font_xxlarge">가장 크게</string>
+    <string name="font_xxlarge">아주 크게</string>
+    <string name="font_xxxlarge">더욱 크게</string>
+    <string name="font_xxxxlarge">가장 크게</string>
     <string name="font_preview_glyph">가</string>
     <string name="default_name_title">기본 이름</string>
     <string name="default_name_desc">게임 시작 시 첫 번째 플레이어로 표시되는 이름입니다</string>

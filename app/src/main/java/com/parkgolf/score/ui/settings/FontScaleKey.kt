@@ -5,7 +5,9 @@ enum class FontScaleKey(val stored: String, val multiplier: Float) {
     NORMAL("normal", 1.0f),
     LARGE("large", 1.15f),
     XLARGE("xlarge", 1.3f),
-    XXLARGE("xxlarge", 1.5f);
+    XXLARGE("xxlarge", 1.5f),
+    XXXLARGE("xxxlarge", 1.7f),
+    XXXXLARGE("xxxxlarge", 1.9f);
 
     companion object {
         fun fromStored(s: String?): FontScaleKey = entries.firstOrNull { it.stored == s } ?: NORMAL
