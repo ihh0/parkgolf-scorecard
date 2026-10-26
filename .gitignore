@@ -17,5 +17,8 @@ keystore.properties
 # Brainstorm companion
 .superpowers/
 
+# Local design docs / implementation plans (kept out of the public repo)
+docs/superpowers/
+
 # macOS
 .DS_Store
