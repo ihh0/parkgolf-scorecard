@@ -20,8 +20,6 @@
         android:name="com.parkgolf.score.ui.history.HistoryFragment" />
     <fragment android:id="@+id/roundDetailFragment"
         android:name="com.parkgolf.score.ui.history.RoundDetailFragment" />
-    <fragment android:id="@+id/myCoursesFragment"
-        android:name="com.parkgolf.score.ui.courses.MyCoursesFragment" />
     <fragment android:id="@+id/createCourseFragment"
         android:name="com.parkgolf.score.ui.start.CreateCourseFragment" />
     <fragment android:id="@+id/courseWizardFragment"

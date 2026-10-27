@@ -86,9 +86,7 @@
     <string name="recent_last_used">%1$s 마지막 사용</string>
     <string name="my_courses_label">저장한 코스</string>
     <string name="nearby_label">주변 구장</string>
-    <string name="nearby_placeholder">주변 구장은 준비 중입니다</string>
     <string name="hole_count">%1$d홀</string>
-    <string name="new_template_button">새 코스 템플릿 작성</string>
     <string name="player_count_title">경기 인원</string>
     <string name="player_count_subtitle">함께 경기할 인원을 구성하세요</string>
     <string name="add_player_button">인원 추가</string>
@@ -100,7 +98,6 @@
     <string name="title_summary">경기 완료</string>
     <string name="title_history">게임 기록</string>
     <string name="title_round_detail">경기 결과</string>
-    <string name="title_my_courses">코스 관리</string>
     <string name="title_settings">설정</string>
     <string name="settings_label">설정</string>
     <string name="theme_section_title">컬러 테마</string>
@@ -130,8 +127,6 @@
     <string name="menu_game_start_desc">구장을 선택하고 경기를 시작하세요</string>
     <string name="menu_game_records">게임 기록</string>
     <string name="menu_game_records_desc">지난 경기 기록을 확인하세요</string>
-    <string name="menu_course_management">코스 관리</string>
-    <string name="menu_course_management_desc">저장된 코스를 편집하거나 삭제하세요</string>
     <string name="title_game_play">점수 기록</string>
     <string name="cumulative_strokes">누적 %1$d타</string>
     <string name="hole_counter">%1$d / %2$d</string>
@@ -164,7 +159,6 @@
     <string name="delete_course_confirm">이 코스를 삭제할까요?</string>
 
     <!-- nearby -->
-    <string name="nearby_find">주변 구장 찾기</string>
     <string name="nearby_loading">주변 구장을 찾는 중…</string>
     <string name="nearby_denied">주변 구장을 보려면 위치 권한이 필요합니다</string>
     <string name="nearby_error">위치를 확인하지 못했습니다</string>
