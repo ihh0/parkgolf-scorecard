@@ -114,6 +114,7 @@
     <string name="create_course">코스 작성</string>
     <string name="create_course_empty">빈 코스 작성</string>
     <string name="title_create_course">코스 작성</string>
+    <string name="default_course_name">A코스</string>
     <string name="default_name_title">기본 이름</string>
     <string name="default_name_desc">게임 시작 시 첫 번째 플레이어로 표시되는 이름입니다</string>
     <string name="default_name_hint">이름을 입력하세요</string>

@@ -123,7 +123,8 @@ class CreateCourseFragment : Fragment(R.layout.fragment_create_course) {
             card.tvDistance.setTextColor(primary)
             venue.courses.forEachIndexed { idx, course ->
                 val row = ViewStartCourseRowBinding.inflate(inflater, card.coursesContainer, false)
-                row.tvCourseName.text = if (course.name.isNotBlank()) course.name else venue.name
+                row.tvCourseName.text =
+                    if (course.name.isNotBlank()) course.name else getString(R.string.default_course_name)
                 row.tvHoleCount.text = getString(R.string.hole_count, course.holes ?: 9)
                 row.divider.isGone = idx == venue.courses.lastIndex
                 row.rowCourse.setOnClickListener {
@@ -138,7 +139,8 @@ class CreateCourseFragment : Fragment(R.layout.fragment_create_course) {
     private fun prefillWizard(venueName: String, courseName: String, holes: Int) {
         findNavController().currentBackStackEntry?.savedStateHandle?.apply {
             set("prefillVenueName", venueName)
-            set("prefillCourseName", if (courseName.isNotBlank()) courseName else "A코스")
+            set("prefillCourseName",
+                if (courseName.isNotBlank()) courseName else getString(R.string.default_course_name))
             set("prefillHoles", holes)
         }
         findNavController().navigate(R.id.courseWizardFragment)
