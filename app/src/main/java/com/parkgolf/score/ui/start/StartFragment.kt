@@ -16,14 +16,18 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.color.MaterialColors
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.parkgolf.score.App
 import com.parkgolf.score.R
+import com.parkgolf.score.data.ParkGolfRepository
 import com.parkgolf.score.data.db.entity.CourseEntity
 import com.parkgolf.score.data.db.entity.VenueEntity
 import com.parkgolf.score.databinding.FragmentStartBinding
 import com.parkgolf.score.databinding.ViewNearbyVenueCardBinding
 import com.parkgolf.score.databinding.ViewStartCourseRowBinding
+import com.parkgolf.score.databinding.ViewStartSavedCourseRowBinding
 import com.parkgolf.score.databinding.ViewStartVenueCardBinding
+import com.parkgolf.score.domain.CourseFormat
 import com.parkgolf.score.ui.nearby.LocationProvider
 import com.parkgolf.score.ui.nearby.NearbyGeo
 import com.parkgolf.score.ui.nearby.NearbyRepository
@@ -202,15 +206,38 @@ class StartFragment : Fragment(R.layout.fragment_start) {
     ) {
         val card = ViewStartVenueCardBinding.inflate(inflater, binding.containerVenues, false)
         card.tvVenueName.text = venue.name
+        val repo = App.repo(requireActivity().application)
         courses.forEachIndexed { idx, course ->
-            val row = ViewStartCourseRowBinding.inflate(inflater, card.coursesContainer, false)
+            val row = ViewStartSavedCourseRowBinding.inflate(inflater, card.coursesContainer, false)
             row.tvCourseName.text = course.name
-            row.tvHoleCount.text = getString(R.string.hole_count, course.pars.size)
+            row.tvHolesPar.text = CourseFormat.holesPar(course.pars)
             row.divider.isGone = idx == courses.lastIndex
             row.rowCourse.setOnClickListener { selectCourse(venue.id, venue.name, course.id) }
+            row.btnEditCourse.setOnClickListener { openWizard(venue.id, course.id) }
+            row.btnDeleteCourse.setOnClickListener { confirmDeleteCourse(repo, venue, course) }
             card.coursesContainer.addView(row.root)
         }
         binding.containerVenues.addView(card.root)
+    }
+
+    private fun openWizard(venueId: Long, courseId: Long) {
+        findNavController().currentBackStackEntry?.savedStateHandle?.apply {
+            set("wizardVenueId", venueId)
+            set("wizardCourseId", courseId)
+        }
+        findNavController().navigate(R.id.courseWizardFragment)
+    }
+
+    private fun confirmDeleteCourse(repo: ParkGolfRepository, venue: VenueEntity, course: CourseEntity) {
+        MaterialAlertDialogBuilder(requireContext())
+            .setMessage(R.string.delete_course_confirm)
+            .setNegativeButton(R.string.cancel, null)
+            .setPositiveButton(R.string.delete) { _, _ ->
+                viewLifecycleOwner.lifecycleScope.launch {
+                    repo.deleteCourse(course)
+                    if (repo.coursesForVenue(venue.id).isEmpty()) repo.deleteVenue(venue)
+                }
+            }.show()
     }
 
     private fun selectCourse(venueId: Long, venueName: String, courseId: Long) {
