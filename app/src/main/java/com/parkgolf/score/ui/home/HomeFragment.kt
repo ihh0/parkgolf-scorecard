@@ -31,11 +31,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             R.string.menu_game_records, R.string.menu_game_records_desc,
         ) { findNavController().navigate(R.id.historyFragment) }
 
-        bindItem(
-            binding.itemCourseManagement, R.drawable.ic_layout_list,
-            R.string.menu_course_management, R.string.menu_course_management_desc,
-        ) { findNavController().navigate(R.id.myCoursesFragment) }
-
         binding.btnSettings.setOnClickListener {
             findNavController().navigate(R.id.settingsFragment)
         }

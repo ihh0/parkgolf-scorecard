@@ -43,8 +43,5 @@
         <include android:id="@+id/itemGameRecords" layout="@layout/view_home_menu_item"
             android:layout_width="match_parent" android:layout_height="wrap_content"
             android:layout_marginTop="16dp" />
-        <include android:id="@+id/itemCourseManagement" layout="@layout/view_home_menu_item"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:layout_marginTop="16dp" />
     </LinearLayout>
 </ScrollView>
