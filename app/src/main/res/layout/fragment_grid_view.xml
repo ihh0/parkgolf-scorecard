@@ -9,7 +9,6 @@
             android:fillViewport="true" android:scrollbars="horizontal">
             <TableLayout android:id="@+id/tableGrid"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:stretchColumns="*"
                 android:background="@drawable/bg_card" />
         </HorizontalScrollView>
     </ScrollView>

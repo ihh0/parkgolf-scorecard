@@ -1,11 +1,13 @@
 package com.parkgolf.score.ui.common
 
 import android.graphics.Typeface
+import android.graphics.drawable.GradientDrawable
 import android.view.Gravity
 import android.widget.LinearLayout
 import android.widget.TableLayout
 import android.widget.TableRow
 import android.widget.TextView
+import androidx.core.graphics.ColorUtils
 import com.google.android.material.color.MaterialColors
 import com.parkgolf.score.R
 import com.parkgolf.score.domain.Scoring
@@ -22,6 +24,12 @@ object ScoreTable {
         table.removeAllViews()
         val fg = MaterialColors.getColor(table, R.attr.parkForeground)
         val muted = MaterialColors.getColor(table, R.attr.parkMutedForeground)
+        val border = MaterialColors.getColor(table, R.attr.parkBorder)
+        val onePx = table.resources.displayMetrics.density.toInt().coerceAtLeast(1)
+        table.showDividers = TableLayout.SHOW_DIVIDER_MIDDLE
+        table.dividerDrawable = GradientDrawable().apply { setSize(0, onePx); setColor(border) }
+        table.isStretchAllColumns = false
+        val zebra = ColorUtils.setAlphaComponent(fg, 10) // ~4% 전경색 반투명
 
         fun cell(text: String, bold: Boolean = false, color: Int = fg): TextView =
             TextView(ctx).apply {
@@ -38,6 +46,7 @@ object ScoreTable {
 
         round.holes.forEachIndexed { h, hole ->
             val row = TableRow(ctx)
+            if (h % 2 == 1) row.setBackgroundColor(zebra)
             row.addView(cell(hole.holeNo.toString(), bold = true))
             row.addView(cell(hole.par.toString(), color = muted))
             round.players.indices.forEach { p ->
@@ -70,5 +79,6 @@ object ScoreTable {
             totals.addView(container)
         }
         table.addView(totals)
+        (2 until 2 + round.players.size).forEach { table.setColumnStretchable(it, true) }
     }
 }
