@@ -22,11 +22,11 @@ class RoundFactoryTest {
         assertThat(round.holes[17].par).isEqualTo(5)
     }
 
-    @Test fun initialScores_startAtPar_forEveryPlayer() {
+    @Test fun initialScores_startNull_forEveryPlayer() {
         val round = RoundFactory.newRound("V", listOf("나", "철수"), listOf(courseA), 1L)
         assertThat(round.scores).hasSize(2)
         assertThat(round.scores[0]).hasSize(9)
-        assertThat(round.scores[0]).containsExactlyElementsIn(List(9) { 3 })
+        assertThat(round.scores[0]).containsExactlyElementsIn(arrayOfNulls<Int>(9).toList())
         assertThat(round.status).isEqualTo(RoundStatus.IN_PROGRESS)
     }
 }

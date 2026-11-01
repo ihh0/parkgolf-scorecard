@@ -24,6 +24,17 @@ class RoundSessionViewModel : ViewModel() {
         round.value = ScoreEditor.adjust(r, playerIndex, holeIndex, delta)
     }
 
+    /** 홀에 도달하면 미입력(null) 점수를 par 기본값으로 확정. 실제로 바뀌면 true. */
+    fun commitDefaultForHole(holeIndex: Int): Boolean {
+        val r = round.value ?: return false
+        if (r.players.indices.all { r.scores[it][holeIndex] != null }) return false
+        val par = r.holes[holeIndex].par
+        val newScores = r.scores.map { it.toMutableList() }
+        r.players.indices.forEach { p -> if (newScores[p][holeIndex] == null) newScores[p][holeIndex] = par }
+        round.value = r.copy(scores = newScores)
+        return true
+    }
+
     fun cumulativeRelative(playerIndex: Int): Int {
         val r = round.value ?: return 0
         return Scoring.relativeToPar(r.scores[playerIndex], r.holes)

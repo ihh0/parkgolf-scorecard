@@ -10,6 +10,7 @@ import com.parkgolf.score.App
 import com.parkgolf.score.R
 import com.parkgolf.score.databinding.FragmentHoleInputBinding
 import com.parkgolf.score.databinding.ViewPlayerScoreRowBinding
+import com.parkgolf.score.data.ParkGolfRepository
 import com.parkgolf.score.domain.Scoring
 import com.parkgolf.score.ui.RoundSessionViewModel
 import com.parkgolf.score.ui.common.confirmYesNo
@@ -19,13 +20,14 @@ import kotlinx.coroutines.launch
 class HoleInputFragment : Fragment(R.layout.fragment_hole_input) {
     private val session: RoundSessionViewModel by activityViewModels()
     private lateinit var holeVm: HoleInputViewModel
+    private lateinit var repo: ParkGolfRepository
     private val dots = mutableListOf<View>()
     private var dotSize = 0
     private var dotWide = 0
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val binding = FragmentHoleInputBinding.bind(view)
-        val repo = App.repo(requireActivity().application)
+        repo = App.repo(requireActivity().application)
         val round = session.round.value ?: run { findNavController().popBackStack(); return }
         binding.topBar.tvBarTitle.text = getString(R.string.title_game_play)
         val exitToHome = {
@@ -45,10 +47,10 @@ class HoleInputFragment : Fragment(R.layout.fragment_hole_input) {
         }
         round.players.indices.forEach { p ->
             rows[p].btnPlus.setOnClickListener {
-                session.adjust(p, holeVm.holeIndex.value!!, +1); persist(repo); render(binding, rows)
+                session.adjust(p, holeVm.holeIndex.value!!, +1); persist(); render(binding, rows)
             }
             rows[p].btnMinus.setOnClickListener {
-                session.adjust(p, holeVm.holeIndex.value!!, -1); persist(repo); render(binding, rows)
+                session.adjust(p, holeVm.holeIndex.value!!, -1); persist(); render(binding, rows)
             }
         }
 
@@ -79,14 +81,15 @@ class HoleInputFragment : Fragment(R.layout.fragment_hole_input) {
         render(binding, rows)
     }
 
-    private fun persist(repo: com.parkgolf.score.data.ParkGolfRepository) {
+    private fun persist() {
         val r = session.round.value ?: return
         viewLifecycleOwner.lifecycleScope.launch { repo.saveRound(r) }
     }
 
     private fun render(binding: FragmentHoleInputBinding, rows: List<ViewPlayerScoreRowBinding>) {
-        val round = session.round.value ?: return
         val h = holeVm.holeIndex.value!!
+        if (session.commitDefaultForHole(h)) persist()
+        val round = session.round.value ?: return
         val hole = round.holes[h]
         val total = round.holes.size
 

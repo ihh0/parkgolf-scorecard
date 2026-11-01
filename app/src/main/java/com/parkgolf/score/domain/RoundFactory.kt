@@ -21,7 +21,7 @@ object RoundFactory {
                 holeNo++
             }
         }
-        val scores = players.map { holes.map { h -> h.par as Int? } }
+        val scores = players.map { holes.map { _ -> null as Int? } }
         return Round(
             date = date,
             venueName = venueName,
