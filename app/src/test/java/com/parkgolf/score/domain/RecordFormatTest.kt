@@ -35,4 +35,12 @@ class RecordFormatTest {
     @Test fun courseName_blank_when_none() {
         assertEquals("", RecordFormat.courseName(round(listOf("", ""))))
     }
+
+    @Test fun courseLabel_joins_venue_and_course() {
+        assertEquals("V A코스", RecordFormat.courseLabel(round(listOf("", "A코스"))))
+    }
+
+    @Test fun courseLabel_venue_only_when_course_blank() {
+        assertEquals("V", RecordFormat.courseLabel(round(listOf("", ""))))
+    }
 }

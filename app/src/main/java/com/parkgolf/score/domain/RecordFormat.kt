@@ -14,4 +14,10 @@ object RecordFormat {
     /** 라운드 홀들의 코스명 중 첫 비어있지 않은 값. 없으면 "". */
     fun courseName(round: Round): String =
         round.holes.map { it.courseName }.firstOrNull { it.isNotBlank() } ?: ""
+
+    /** 코스 필터/표시용 라벨. "구장명" 또는 "구장명 코스명"(코스명이 있을 때). */
+    fun courseLabel(round: Round): String {
+        val course = courseName(round)
+        return if (course.isBlank()) round.venueName else "${round.venueName} $course"
+    }
 }
