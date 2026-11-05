@@ -168,4 +168,19 @@
     <string name="nearby_open_settings">설정 열기</string>
     <string name="nearby_distance_m">%1$dm</string>
     <string name="nearby_distance_km">%1$.1fkm</string>
+
+    <!-- my stats -->
+    <string name="title_my_stats">내 통계</string>
+    <string name="open_my_stats">📊 내 통계 보기</string>
+    <string name="stats_period_recent10">최근 10게임</string>
+    <string name="stats_period_3m">3개월</string>
+    <string name="stats_period_all">전체</string>
+    <string name="stats_course_all">전체 코스</string>
+    <string name="stats_pick_course">코스 선택</string>
+    <string name="stats_games_count">게임 수</string>
+    <string name="stats_rel_avg">평균</string>
+    <string name="stats_rel_best">최저</string>
+    <string name="stats_rel_worst">최고</string>
+    <string name="stats_empty_title">통계를 표시할 기록이 없습니다</string>
+    <string name="stats_empty_desc">이 범위에 해당하는 완료 게임이 없어요</string>
 </resources>

@@ -30,6 +30,7 @@ class HistoryFragment : Fragment(R.layout.fragment_history) {
             onDelete = { round -> confirmDelete(repo, round) },
         )
         binding.rvRounds.adapter = adapter
+        binding.btnMyStats.setOnClickListener { findNavController().navigate(R.id.statsFragment) }
 
         viewLifecycleOwner.lifecycleScope.launch {
             repo.observeCompletedRounds().collect { rounds ->
@@ -38,6 +39,7 @@ class HistoryFragment : Fragment(R.layout.fragment_history) {
                 binding.emptyView.isVisible = empty
                 binding.rvRounds.isVisible = !empty
                 binding.statsCard.isVisible = !empty
+                binding.btnMyStats.isVisible = !empty
 
                 val stats = HistoryViewModel.computeStats(rounds, recentN = 10)
                 binding.tvAvg.text = stats.recentAverage?.let { "%.1f".format(it) } ?: "-"

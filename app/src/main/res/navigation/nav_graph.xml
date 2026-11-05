@@ -26,4 +26,6 @@
         android:name="com.parkgolf.score.ui.courses.CourseWizardFragment" />
     <fragment android:id="@+id/settingsFragment"
         android:name="com.parkgolf.score.ui.settings.SettingsFragment" />
+    <fragment android:id="@+id/statsFragment"
+        android:name="com.parkgolf.score.ui.stats.StatsFragment" />
 </navigation>
