@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">파크골프 스코어카드</string>
     <string name="total_par_value">총 파 %1$d</string>
-    <string name="start_round">＋ 라운드 시작</string>
+    <string name="start_round">＋ 경기 시작</string>
     <string name="past_records">📋 지난 기록</string>
     <string name="my_courses">🏳️ 내 구장 관리</string>
     <string name="new_course">＋ 새 구장 만들기</string>
@@ -17,11 +17,11 @@
     <string name="delete">삭제</string>
     <string name="save">저장</string>
     <string name="me">나</string>
-    <string name="resume_round">진행 중인 라운드를 이어서 할까요?</string>
+    <string name="resume_round">진행 중인 경기를 이어서 할까요?</string>
     <string name="resume">이어하기</string>
     <string name="discard">새로 시작</string>
     <string name="total_holes">총 %1$d홀</string>
-    <string name="companion_default">동반자 %1$d</string>
+    <string name="companion_default">참가자 %1$d</string>
     <string name="rank_suffix">%1$d위</string>
     <string name="strokes_suffix">%1$d타</string>
     <string name="venue_name_hint">구장 이름</string>
@@ -51,7 +51,7 @@
     <string name="course_saved">저장되었습니다</string>
     <string name="pick_course_to_edit">수정할 코스를 선택하세요</string>
     <!-- Wizard card UI -->
-    <string name="wizard_full_title">코스 템플릿 작성</string>
+    <string name="wizard_full_title">코스 작성</string>
     <string name="existing_venue">기존 구장</string>
     <string name="saved_venues">저장된 구장</string>
     <string name="existing_venue_banner">이미 저장된 구장입니다. 코스를 추가하면 해당 구장에 통합됩니다.</string>
@@ -64,11 +64,11 @@
     <string name="total_par_label">총 파</string>
     <string name="add_hole">＋ 홀 추가</string>
     <string name="save_confirm_title">저장 확인</string>
-    <string name="save_confirm_helper">아래 내용으로 템플릿을 저장합니다</string>
+    <string name="save_confirm_helper">아래 내용으로 코스를 저장합니다</string>
     <string name="par_preview_label">홀 파 미리보기</string>
     <string name="save_done_title">저장 완료!</string>
     <string name="saved_info">%1$s의 %2$s이 저장되었습니다</string>
-    <string name="new_template">새 템플릿 작성</string>
+    <string name="new_template">새 코스 작성</string>
     <string name="start_with_this_course">이 코스로 게임 시작</string>
     <string name="to_course_list">목록으로</string>
     <string name="save_now">저장하기</string>
@@ -89,11 +89,11 @@
     <string name="hole_count">%1$d홀</string>
     <string name="player_count_title">경기 인원</string>
     <string name="player_count_subtitle">함께 경기할 인원을 구성하세요</string>
-    <string name="add_player_button">인원 추가</string>
-    <string name="player_default_name">플레이어 %1$d</string>
+    <string name="add_player_button">참가자 추가</string>
+    <string name="player_default_name">참가자 %1$d</string>
     <string name="player_name_hint">이름 입력</string>
     <string name="start_game_button">게임 시작</string>
-    <string name="player_delete">인원 삭제</string>
+    <string name="player_delete">참가자 삭제</string>
     <string name="title_grid">전체 점수 보기</string>
     <string name="title_summary">경기 완료</string>
     <string name="title_history">게임 기록</string>
@@ -116,7 +116,7 @@
     <string name="title_create_course">코스 작성</string>
     <string name="default_course_name">A코스</string>
     <string name="default_name_title">기본 이름</string>
-    <string name="default_name_desc">게임 시작 시 첫 번째 플레이어로 표시되는 이름입니다</string>
+    <string name="default_name_desc">게임 시작 시 첫 번째 참가자로 표시되는 이름입니다</string>
     <string name="default_name_hint">이름을 입력하세요</string>
     <string name="theme_green">초록</string>
     <string name="theme_blue">파랑</string>
@@ -154,8 +154,8 @@
     <!-- course management redesign -->
     <string name="course_count">%1$d개 코스</string>
     <string name="courses_empty_title">저장된 코스 없음</string>
-    <string name="courses_empty_desc">코스 템플릿을 작성해 추가하세요</string>
-    <string name="create_template">코스 템플릿 작성</string>
+    <string name="courses_empty_desc">코스를 작성해 추가하세요</string>
+    <string name="create_template">코스 작성</string>
     <string name="delete_venue_confirm">이 구장을 삭제할까요?</string>
     <string name="delete_course_confirm">이 코스를 삭제할까요?</string>
 
