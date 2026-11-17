@@ -13,6 +13,7 @@ import com.parkgolf.score.databinding.ViewPlayerScoreRowBinding
 import com.parkgolf.score.data.ParkGolfRepository
 import com.parkgolf.score.domain.Scoring
 import com.parkgolf.score.ui.RoundSessionViewModel
+import com.parkgolf.score.ui.common.Haptics
 import com.parkgolf.score.ui.common.confirmYesNo
 import com.parkgolf.score.ui.common.onBackPressed
 import kotlinx.coroutines.launch
@@ -21,9 +22,6 @@ class HoleInputFragment : Fragment(R.layout.fragment_hole_input) {
     private val session: RoundSessionViewModel by activityViewModels()
     private lateinit var holeVm: HoleInputViewModel
     private lateinit var repo: ParkGolfRepository
-    private val dots = mutableListOf<View>()
-    private var dotSize = 0
-    private var dotWide = 0
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val binding = FragmentHoleInputBinding.bind(view)
@@ -54,23 +52,19 @@ class HoleInputFragment : Fragment(R.layout.fragment_hole_input) {
             }
         }
 
-        dotSize = resources.getDimensionPixelSize(R.dimen.dot_size)
-        dotWide = resources.getDimensionPixelSize(R.dimen.dot_current_width)
-        round.holes.indices.forEach { idx ->
-            val dot = View(requireContext())
-            val lp = android.widget.LinearLayout.LayoutParams(dotSize, dotSize)
-            lp.marginEnd = (dotSize * 0.7).toInt()
-            dot.layoutParams = lp
-            dot.setOnClickListener { holeVm.goTo(idx); render(binding, rows) }
-            binding.dotsContainer.addView(dot)
-            dots.add(dot)
-        }
-
         binding.btnNext.setOnClickListener {
-            if (holeVm.isLastHole()) findNavController().navigate(R.id.roundSummaryFragment)
-            else { holeVm.next(); render(binding, rows) }
+            if (holeVm.isLastHole()) {
+                Haptics.complete(requireContext())
+                findNavController().navigate(R.id.roundSummaryFragment)
+            } else {
+                Haptics.next(requireContext())
+                holeVm.next(); render(binding, rows)
+            }
         }
-        binding.btnPrev.setOnClickListener { holeVm.prev(); render(binding, rows) }
+        binding.btnPrev.setOnClickListener {
+            Haptics.prev(requireContext())
+            holeVm.prev(); render(binding, rows)
+        }
         binding.btnGrid.setOnClickListener { findNavController().navigate(R.id.gridViewFragment) }
 
         findNavController().currentBackStackEntry?.savedStateHandle
@@ -102,17 +96,7 @@ class HoleInputFragment : Fragment(R.layout.fragment_hole_input) {
         binding.btnNext.text =
             if (holeVm.isLastHole()) getString(R.string.game_finish) else getString(R.string.next_hole_plain)
 
-        dots.forEachIndexed { idx, dot ->
-            val bg = when {
-                idx == h -> R.drawable.bg_dot_current
-                idx < h -> R.drawable.bg_dot_done
-                else -> R.drawable.bg_dot_future
-            }
-            dot.setBackgroundResource(bg)
-            val lp = dot.layoutParams
-            lp.width = if (idx == h) dotWide else dotSize
-            dot.layoutParams = lp
-        }
+        binding.holeProgress.setProgress(total, h)
 
         round.players.indices.forEach { p ->
             val score = round.scores[p][h]
