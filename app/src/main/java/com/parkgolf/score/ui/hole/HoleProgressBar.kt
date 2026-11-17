@@ -5,6 +5,8 @@ import android.graphics.Canvas
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.ColorUtils
 import com.google.android.material.color.MaterialColors
 import com.parkgolf.score.R
 
@@ -29,7 +31,12 @@ class HoleProgressBar @JvmOverloads constructor(
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
 
     private val colorPrimary get() = MaterialColors.getColor(this, R.attr.parkPrimary)
-    private val colorMuted get() = MaterialColors.getColor(this, R.attr.parkBorder)
+    // parkBorder는 반투명이라 트랙선과 점이 겹치면 알파가 중첩돼 진해진다.
+    // 바가 올라간 카드색 위에 합성해 같은 톤의 불투명 연한 색으로 쓴다.
+    private val colorMuted get() = ColorUtils.compositeColors(
+        MaterialColors.getColor(this, R.attr.parkBorder),
+        ContextCompat.getColor(context, R.color.card)
+    )
     private val colorRing get() = MaterialColors.getColor(this, R.attr.parkBackground)
 
     fun setProgress(total: Int, currentIndex: Int) {
