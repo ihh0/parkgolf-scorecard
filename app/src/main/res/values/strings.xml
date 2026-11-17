@@ -21,7 +21,6 @@
     <string name="resume">이어하기</string>
     <string name="discard">새로 시작</string>
     <string name="total_holes">총 %1$d홀</string>
-    <string name="companion_default">참가자 %1$d</string>
     <string name="rank_suffix">%1$d위</string>
     <string name="strokes_suffix">%1$d타</string>
     <string name="venue_name_hint">구장 이름</string>

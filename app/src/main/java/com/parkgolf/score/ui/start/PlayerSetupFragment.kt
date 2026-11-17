@@ -43,10 +43,11 @@ class PlayerSetupFragment : Fragment(R.layout.fragment_player_setup) {
                 row.tvIndex.text = (i + 1).toString()
                 row.btnDelete.isEnabled = rows.size > 1
                 row.btnDelete.alpha = if (rows.size > 1) 1f else 0.2f
+                if (i >= 1) row.etName.hint = getString(R.string.player_default_name, i + 1)
             }
-            val canStart = rows.all { it.etName.text.toString().trim().isNotEmpty() }
-            binding.btnStartPlay.isEnabled = canStart
-            binding.btnStartPlay.alpha = if (canStart) 1f else 0.3f
+            // 빈 이름은 시작 시 "참가자 N"으로 폴백되므로 항상 시작 허용.
+            binding.btnStartPlay.isEnabled = true
+            binding.btnStartPlay.alpha = 1f
         }
         fun addRow(initial: String, focus: Boolean) {
             val row = ViewPlayerInputRowBinding.inflate(inflater, binding.playersContainer, false)
@@ -61,12 +62,12 @@ class PlayerSetupFragment : Fragment(R.layout.fragment_player_setup) {
             rows.add(row)
             binding.playersContainer.addView(row.root)
             refresh()
-            if (focus) { row.etName.requestFocus(); row.etName.selectAll() }
+            if (focus) row.etName.requestFocus()
         }
 
         addRow(defaultName, focus = false)
         binding.btnAddPlayer.setOnClickListener {
-            addRow(getString(R.string.player_default_name, rows.size + 1), focus = true)
+            addRow("", focus = true)
         }
 
         binding.btnStartPlay.setOnClickListener {
@@ -80,7 +81,7 @@ class PlayerSetupFragment : Fragment(R.layout.fragment_player_setup) {
                 val players = rows.mapIndexed { i, row ->
                     val t = row.etName.text.toString().trim()
                     if (t.isNotEmpty()) t
-                    else if (i == 0) defaultName else getString(R.string.companion_default, i)
+                    else if (i == 0) defaultName else getString(R.string.player_default_name, i + 1)
                 }
                 val venueName = SelectionHolder.venueName ?: ""
                 val round = RoundFactory.newRound(venueName, players, coursePars, System.currentTimeMillis())
