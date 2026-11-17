@@ -147,6 +147,7 @@
     <string name="records_empty_title">기록 없음</string>
     <string name="records_empty_desc">게임을 완료하면 여기에 기록됩니다</string>
     <string name="view_result">경기 결과 보기</string>
+    <string name="players_summary">%1$s 외 %2$d명</string>
     <string name="stat_avg">평균</string>
     <string name="stat_best">최저</string>
     <string name="stat_worst">최고</string>

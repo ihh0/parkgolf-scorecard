@@ -59,7 +59,10 @@ class HistoryAdapter(
             }
         }
 
-        holder.b.tvPlayers.text = r.players.joinToString(", ")
+        holder.b.tvPlayers.text = r.players.let { p ->
+            if (p.size <= 2) p.joinToString(", ")
+            else holder.b.root.context.getString(R.string.players_summary, p.first(), p.size - 1)
+        }
         holder.b.btnViewResult.setOnClickListener { onView(r.id) }
         holder.b.btnDelete.setOnClickListener { onDelete(r) }
     }
