@@ -22,4 +22,5 @@
     <dimen name="section_gap">28dp</dimen>
     <dimen name="recent_card_pad">20dp</dimen>
     <dimen name="medal_size">48dp</dimen>
+    <dimen name="scroll_fade">24dp</dimen>
 </resources>

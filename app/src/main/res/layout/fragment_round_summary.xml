@@ -5,7 +5,9 @@
     android:orientation="vertical" android:background="?attr/parkBackground">
     <include android:id="@+id/topBar" layout="@layout/view_top_bar" />
     <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
-        android:layout_weight="1" android:fillViewport="true" android:padding="@dimen/screen_padding">
+        android:layout_weight="1" android:fillViewport="true" android:padding="@dimen/screen_padding"
+        android:requiresFadingEdge="vertical"
+        android:fadingEdgeLength="@dimen/scroll_fade">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
             android:orientation="vertical">
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"

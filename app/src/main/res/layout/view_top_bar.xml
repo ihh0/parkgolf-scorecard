@@ -25,12 +25,13 @@
         <ImageView
             android:layout_width="22dp" android:layout_height="22dp"
             android:src="@drawable/ic_chevron_left"
-            android:importantForAccessibility="no" />
+            android:importantForAccessibility="no"
+            app:tint="?attr/parkMutedForeground" />
         <TextView
             android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:text="@string/back"
-            android:textColor="?attr/parkForeground"
+            android:textColor="?attr/parkMutedForeground"
             android:textSize="@dimen/body_text"
             android:textStyle="bold" />
     </LinearLayout>

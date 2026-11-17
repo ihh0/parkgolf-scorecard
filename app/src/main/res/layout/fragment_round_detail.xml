@@ -4,9 +4,13 @@
     android:orientation="vertical" android:background="?attr/parkBackground">
     <include android:id="@+id/topBar" layout="@layout/view_top_bar" />
     <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
-        android:layout_weight="1" android:padding="@dimen/screen_padding">
+        android:layout_weight="1" android:padding="@dimen/screen_padding"
+        android:requiresFadingEdge="vertical"
+        android:fadingEdgeLength="@dimen/scroll_fade">
         <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:fillViewport="true" android:scrollbars="horizontal">
+            android:fillViewport="true" android:scrollbars="horizontal"
+            android:requiresFadingEdge="horizontal"
+            android:fadingEdgeLength="@dimen/scroll_fade">
             <TableLayout android:id="@+id/tableGrid"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:background="@drawable/bg_card" />
