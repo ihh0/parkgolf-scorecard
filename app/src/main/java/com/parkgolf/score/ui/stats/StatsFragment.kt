@@ -40,6 +40,21 @@ class StatsFragment : Fragment(R.layout.fragment_stats) {
                 render(binding)
             }
         }
+
+        equalizeTabHeights(binding)
+    }
+
+    private fun equalizeTabHeights(binding: FragmentStatsBinding) {
+        val tabs = listOf(binding.tabRecent10, binding.tab3m, binding.tabAll)
+        binding.tabRecent10.post {
+            val max = tabs.maxOf { it.height }
+            if (max <= 0) return@post
+            tabs.forEach { t ->
+                if (t.layoutParams.height != max) {
+                    t.layoutParams = t.layoutParams.also { it.height = max }
+                }
+            }
+        }
     }
 
     private fun pickCourse(binding: FragmentStatsBinding) {
