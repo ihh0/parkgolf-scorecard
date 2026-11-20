@@ -183,4 +183,6 @@
     <string name="stats_rel_worst">최고</string>
     <string name="stats_empty_title">통계를 표시할 기록이 없습니다</string>
     <string name="stats_empty_desc">이 범위에 해당하는 완료 게임이 없어요</string>
+    <string name="stats_mode_bar">막대</string>
+    <string name="stats_mode_line">꺾은선</string>
 </resources>

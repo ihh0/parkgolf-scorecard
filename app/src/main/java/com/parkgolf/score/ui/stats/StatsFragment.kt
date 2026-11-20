@@ -22,6 +22,7 @@ class StatsFragment : Fragment(R.layout.fragment_stats) {
     private val vm: StatsViewModel by viewModels()
     private var rounds: List<Round> = emptyList()
     private var courseOptions: List<String> = emptyList()
+    private var chartMode = ChartMode.BAR
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val binding = FragmentStatsBinding.bind(view)
@@ -32,6 +33,8 @@ class StatsFragment : Fragment(R.layout.fragment_stats) {
         binding.tab3m.setOnClickListener { vm.period = StatsPeriod.THREE_MONTHS; render(binding) }
         binding.tabAll.setOnClickListener { vm.period = StatsPeriod.ALL; render(binding) }
         binding.btnCourseFilter.setOnClickListener { pickCourse(binding) }
+        binding.modeBar.setOnClickListener { chartMode = ChartMode.BAR; render(binding) }
+        binding.modeLine.setOnClickListener { chartMode = ChartMode.LINE; render(binding) }
 
         val repo = App.repo(requireActivity().application)
         viewLifecycleOwner.lifecycleScope.launch {
@@ -98,6 +101,10 @@ class StatsFragment : Fragment(R.layout.fragment_stats) {
         binding.tvWorst.text = s.worst?.let { RecordFormat.badgeText(it) } ?: "-"
 
         binding.chart.setData(state.graph)
+        binding.modeToggle.isVisible = !empty
+        styleTab(binding.modeBar, chartMode == ChartMode.BAR)
+        styleTab(binding.modeLine, chartMode == ChartMode.LINE)
+        binding.chart.setMode(chartMode)
     }
 
     private fun styleTab(tab: TextView, selected: Boolean) {
