@@ -20,7 +20,8 @@ class BarChartView @JvmOverloads constructor(
     private var data: List<GameRelativeScore> = emptyList()
     private var mode: ChartMode = ChartMode.BAR
     private val d = resources.displayMetrics.density
-    private val slotW = 56 * d
+    private val fsd = d * resources.configuration.fontScale
+    private val slotW = 56 * fsd
     private val barW = 30 * d
     private val maxChartH = 260 * d
 
@@ -30,10 +31,10 @@ class BarChartView @JvmOverloads constructor(
     }
     private val baselinePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply { strokeWidth = d }
     private val labelPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        textAlign = Paint.Align.CENTER; textSize = 13 * d
+        textAlign = Paint.Align.CENTER; textSize = 13 * fsd
     }
     private val axisPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        textAlign = Paint.Align.CENTER; textSize = 12 * d
+        textAlign = Paint.Align.CENTER; textSize = 12 * fsd
     }
 
     private val overColor = ContextCompat.getColor(context, R.color.chart_over)
@@ -54,9 +55,9 @@ class BarChartView @JvmOverloads constructor(
 
     override fun onDraw(canvas: Canvas) {
         if (data.isEmpty()) return
-        val topBand = 20 * d
-        val underLabelBand = 18 * d
-        val axisBand = 22 * d
+        val topBand = 13 * fsd + 7 * d
+        val underLabelBand = 13 * fsd + 5 * d
+        val axisBand = 12 * fsd + 10 * d
         val chartH = minOf(height.toFloat(), maxChartH)
         val chartTop = (height - chartH) / 2f
 
@@ -71,10 +72,6 @@ class BarChartView @JvmOverloads constructor(
 
         baselinePaint.color = borderColor
         canvas.drawLine(0f, baselineY, width.toFloat(), baselineY, baselinePaint)
-        labelPaint.color = mutedColor
-        labelPaint.textAlign = Paint.Align.LEFT
-        canvas.drawText("E", 2 * d, baselineY - 3 * d, labelPaint)
-        labelPaint.textAlign = Paint.Align.CENTER
 
         fun cx(i: Int) = i * slotW + slotW / 2
         fun colorFor(rel: Int) = when { rel > 0 -> overColor; rel < 0 -> underColor; else -> mutedColor }
@@ -92,7 +89,7 @@ class BarChartView @JvmOverloads constructor(
                 barPaint.color = colorFor(rel)
                 canvas.drawCircle(cx(i), py, 5 * d, barPaint)
                 labelPaint.color = fgColor
-                if (rel < 0) canvas.drawText(RecordFormat.badgeText(rel), cx(i), py + 16 * d, labelPaint)
+                if (rel < 0) canvas.drawText(RecordFormat.badgeText(rel), cx(i), py + 12 * fsd, labelPaint)
                 else canvas.drawText(RecordFormat.badgeText(rel), cx(i), py - 9 * d, labelPaint)
                 axisPaint.color = mutedColor
                 canvas.drawText((i + 1).toString(), cx(i), xAxisY, axisPaint)
@@ -113,7 +110,7 @@ class BarChartView @JvmOverloads constructor(
                     barPaint.color = underColor
                     canvas.drawRoundRect(c - barW / 2, baselineY, c + barW / 2, baselineY + barH, 4 * d, 4 * d, barPaint)
                     labelPaint.color = fgColor
-                    canvas.drawText(RecordFormat.badgeText(rel), c, baselineY + barH + 14 * d, labelPaint)
+                    canvas.drawText(RecordFormat.badgeText(rel), c, baselineY + barH + 12 * fsd, labelPaint)
                 }
                 axisPaint.color = mutedColor
                 canvas.drawText((i + 1).toString(), c, xAxisY, axisPaint)
