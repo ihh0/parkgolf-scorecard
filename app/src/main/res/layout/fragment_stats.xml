@@ -11,15 +11,30 @@
         <TextView android:id="@+id/tabRecent10"
             android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
             android:gravity="center" android:paddingVertical="10dp" android:layout_marginEnd="6dp"
-            android:text="@string/stats_period_recent10" android:textSize="15sp" />
+            android:text="@string/stats_period_recent10" android:textSize="15sp"
+            android:maxLines="1"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeMaxTextSize="15sp"
+            app:autoSizeStepGranularity="1sp" />
         <TextView android:id="@+id/tab3m"
             android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
             android:gravity="center" android:paddingVertical="10dp" android:layout_marginEnd="6dp"
-            android:text="@string/stats_period_3m" android:textSize="15sp" />
+            android:text="@string/stats_period_3m" android:textSize="15sp"
+            android:maxLines="1"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeMaxTextSize="15sp"
+            app:autoSizeStepGranularity="1sp" />
         <TextView android:id="@+id/tabAll"
             android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
             android:gravity="center" android:paddingVertical="10dp"
-            android:text="@string/stats_period_all" android:textSize="15sp" />
+            android:text="@string/stats_period_all" android:textSize="15sp"
+            android:maxLines="1"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeMaxTextSize="15sp"
+            app:autoSizeStepGranularity="1sp" />
     </LinearLayout>
 
     <TextView android:id="@+id/btnCourseFilter"
@@ -64,19 +79,36 @@
         </LinearLayout>
     </LinearLayout>
 
-    <HorizontalScrollView android:id="@+id/chartScroll"
+    <LinearLayout android:id="@+id/modeToggle"
         android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/screen_padding" android:layout_marginTop="10dp">
+        <TextView android:id="@+id/modeBar"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:gravity="center" android:paddingVertical="10dp" android:layout_marginEnd="6dp"
+            android:text="@string/stats_mode_bar" android:textSize="15sp" />
+        <TextView android:id="@+id/modeLine"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:gravity="center" android:paddingVertical="10dp"
+            android:text="@string/stats_mode_line" android:textSize="15sp" />
+    </LinearLayout>
+
+    <HorizontalScrollView android:id="@+id/chartScroll"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_marginHorizontal="@dimen/screen_padding" android:layout_marginTop="12dp"
+        android:layout_marginBottom="@dimen/stats_bottom_reserve"
         android:background="@drawable/bg_card" android:paddingVertical="8dp"
         android:scrollbars="none" android:fillViewport="true"
         android:requiresFadingEdge="horizontal"
         android:fadingEdgeLength="@dimen/scroll_fade">
         <com.parkgolf.score.ui.stats.BarChartView android:id="@+id/chart"
-            android:layout_width="wrap_content" android:layout_height="240dp" />
+            android:layout_width="wrap_content" android:layout_height="match_parent" />
     </HorizontalScrollView>
 
     <LinearLayout android:id="@+id/emptyView"
         android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:layout_marginBottom="@dimen/stats_bottom_reserve"
         android:orientation="vertical" android:gravity="center" android:visibility="gone"
         android:paddingHorizontal="@dimen/screen_padding">
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -86,6 +118,4 @@
             android:text="@string/stats_empty_desc" android:textColor="?attr/parkMutedForeground"
             android:textSize="15sp" android:layout_marginTop="4dp" android:gravity="center" />
     </LinearLayout>
-
-    <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
 </LinearLayout>
